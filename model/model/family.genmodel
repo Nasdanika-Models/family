@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.nasdanika.models.family/src/main/java" creationIcons="false"
+    editorDirectory="" modelPluginID="org.nasdanika.models.family" modelName="Family"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    featureDelegation="Dynamic" complianceLevel="17.0" suppressGenModelAnnotations="false"
+    copyrightFields="false" usedGenPackages="../../org.nasdanika.ncore/model/ncore.genmodel#//ncore"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>family.ecore</foreignModel>
+  <genPackages prefix="Family" basePackage="org.nasdanika.models" disposableProviderFactory="true"
+      ecorePackage="family.ecore#/">
+    <genClasses ecoreClass="family.ecore#//Family">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference family.ecore#//Family/members"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="family.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute family.ecore#//Person/dateOfBirth"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference family.ecore#//Person/children"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference family.ecore#//Person/parents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference family.ecore#//Person/mother"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference family.ecore#//Person/father"/>
+    </genClasses>
+    <genClasses ecoreClass="family.ecore#//Man"/>
+    <genClasses ecoreClass="family.ecore#//Woman"/>
+  </genPackages>
+</genmodel:GenModel>
