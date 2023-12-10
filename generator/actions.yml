@@ -3,7 +3,7 @@ app-action:
   text: Nasdanika Models
   location: https://github.com/Nasdanika-Models
   children:
-    - app-action-reference: "target/action-models/excel.xmi#/"
+    - app-action-reference: "target/action-models/family.xmi#/"
     - app-action:
         location: ${base-uri}search.html
         icon: fas fa-search
@@ -22,7 +22,11 @@ app-action:
               content-resource: classpath://org/nasdanika/html/model/app/gen/semantic-info.html
   navigation:
     - app-action:
-        location: https://github.com/Nasdanika-Models/excel
+        location: https://github.com/Nasdanika-Models/family
         icon: fab fa-github
         text: Sources
+    - app-link:
+        location: https://icons8.com/
+        icon: https://img.icons8.com/fluency/16/icons8-new-logo.png
+        tooltip: Icons from ICONS8    
           

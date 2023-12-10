@@ -1,6 +1,6 @@
-module org.nasdanika.models.excel.generator {
+module org.nasdanika.models.family.generator {
 		
-	requires transitive org.nasdanika.models.excel.processors;
+	requires transitive org.nasdanika.models.family.processors;
 	requires org.eclipse.emf.ecore.xmi;
 	
 }

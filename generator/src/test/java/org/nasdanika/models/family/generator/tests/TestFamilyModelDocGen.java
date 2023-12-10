@@ -1,4 +1,4 @@
-package org.nasdanika.models.excel.generator.tests;
+package org.nasdanika.models.family.generator.tests;
 
 import java.io.File;
 import java.io.IOException;
@@ -46,19 +46,20 @@ import org.nasdanika.html.model.app.graph.WidgetFactory;
 import org.nasdanika.html.model.app.graph.emf.EObjectReflectiveProcessorFactoryProvider;
 import org.nasdanika.models.ecore.graph.EcoreGraphFactory;
 import org.nasdanika.models.ecore.graph.processors.EcoreNodeProcessorFactory;
-import org.nasdanika.models.excel.processors.EcoreGenExcelProcessorsFactory;
-import org.nasdanika.models.excel.ExcelPackage;
+import org.nasdanika.models.family.FamilyPackage;
+import org.nasdanika.models.family.processors.EcoreGenFamilyProcessorsFactory;
+import org.nasdanika.ncore.NcorePackage;
 
 /**
  * Tests Ecore -> Graph -> Processor -> actions generation
  * @author Pavel
  *
  */
-public class TestExcelModelDocGen {
+public class TestFamilyModelDocGen {
 	
 	@Test
-	public void testGenerateExcelModelDoc() throws IOException, DiagnosticException {
-		List<EPackage> ePackages = Arrays.asList(EcorePackage.eINSTANCE, ExcelPackage.eINSTANCE);
+	public void testGenerateFamilyModelDoc() throws IOException, DiagnosticException {
+		List<EPackage> ePackages = Arrays.asList(EcorePackage.eINSTANCE, NcorePackage.eINSTANCE, FamilyPackage.eINSTANCE);
 		ProgressMonitor progressMonitor = new NullProgressMonitor(); // new PrintStreamProgressMonitor();
 		Transformer<EObject,Element> graphFactory = new Transformer<>(new EcoreGraphFactory());
 		Map<EObject, Element> graph = graphFactory.transform(ePackages, false, progressMonitor);
@@ -79,7 +80,7 @@ public class TestExcelModelDocGen {
 		context.register(DiagramGenerator.class, new PlantUMLDiagramGenerator());
 		Consumer<Diagnostic> diagnosticConsumer = d -> d.dump(System.out, 0);
 		List<Function<URI,Action>> actionProviders = new ArrayList<>();		
-		EcoreGenExcelProcessorsFactory ecoreGenExcelProcessorFactory = new EcoreGenExcelProcessorsFactory(context);		
+		EcoreGenFamilyProcessorsFactory ecoreGenFamilyProcessorFactory = new EcoreGenFamilyProcessorsFactory(context);		
 		EcoreNodeProcessorFactory ecoreNodeProcessorFactory = new EcoreNodeProcessorFactory(
 				context, 
 				(uri, pm) -> {
@@ -92,19 +93,20 @@ public class TestExcelModelDocGen {
 					return null;
 				},
 				diagnosticConsumer,
-				ecoreGenExcelProcessorFactory);
+				ecoreGenFamilyProcessorFactory);
 		
 		EObjectNodeProcessorReflectiveFactory<WidgetFactory, WidgetFactory> eObjectNodeProcessorReflectiveFactory = new EObjectNodeProcessorReflectiveFactory<>(ecoreNodeProcessorFactory);
 		EObjectReflectiveProcessorFactoryProvider eObjectReflectiveProcessorFactoryProvider = new EObjectReflectiveProcessorFactoryProvider(eObjectNodeProcessorReflectiveFactory);
 		Map<Element, ProcessorInfo<Object>> registry = eObjectReflectiveProcessorFactoryProvider.getFactory().createProcessors(configs.values(), false, progressMonitor);
 		
-		WidgetFactory excelProcessor = null;
+		WidgetFactory familyProcessor = null;
 		Collection<Throwable> resolveFailures = new ArrayList<>();		
-		URI baseActionURI = URI.createURI("local://excel.models.nasdanika.org/");
+		URI baseActionURI = URI.createURI("local://family.models.nasdanika.org/");
 		
 		Map<EPackage, URI> packageURIMap = Map.ofEntries(
 			Map.entry(EcorePackage.eINSTANCE, URI.createURI("https://ecore.models.nasdanika.org/")),			
-			Map.entry(ExcelPackage.eINSTANCE, baseActionURI)	
+			Map.entry(NcorePackage.eINSTANCE, URI.createURI("https://ncore.models.nasdanika.org/")),			
+			Map.entry(FamilyPackage.eINSTANCE, baseActionURI)	
 		);
 		
 		for (EPackage topLevelPackage: ePackages) {
@@ -120,8 +122,8 @@ public class TestExcelModelDocGen {
 							WidgetFactory widgetFactoryNodeProcessor = (WidgetFactory) processor;
 							widgetFactoryNodeProcessor.resolve(packageURIMap.get(topLevelPackage), progressMonitor);
 							
-							if (topLevelPackage == ExcelPackage.eINSTANCE) { 							
-								excelProcessor = widgetFactoryNodeProcessor;
+							if (topLevelPackage == FamilyPackage.eINSTANCE) { 							
+								familyProcessor = widgetFactoryNodeProcessor;
 							}
 						}
 					}
@@ -143,9 +145,9 @@ public class TestExcelModelDocGen {
 		File actionModelsDir = new File("target\\action-models\\");
 		actionModelsDir.mkdirs();
 		
-		File output = new File(actionModelsDir, "excel.xmi");
+		File output = new File(actionModelsDir, "family.xmi");
 		Resource actionModelResource = actionModelsResourceSet.createResource(URI.createFileURI(output.getAbsolutePath()));
-		Collection<Label> labels = excelProcessor.createLabelsSupplier().call(progressMonitor, diagnosticConsumer);
+		Collection<Label> labels = familyProcessor.createLabelsSupplier().call(progressMonitor, diagnosticConsumer);
 		for (Label label: labels) {
 			if (label instanceof Link) {
 				Link link = (Link) label;
@@ -168,7 +170,7 @@ public class TestExcelModelDocGen {
 		String pageTemplateResource = "page-template.yml";
 		URI pageTemplateURI = URI.createFileURI(new File(pageTemplateResource).getAbsolutePath());//.appendFragment("/");
 		
-		String siteMapDomain = "https://excel.models.nasdanika.org";		
+		String siteMapDomain = "https://family.models.nasdanika.org";		
 		ActionSiteGenerator actionSiteGenerator = new ActionSiteGenerator() {
 			
 			protected boolean isDeleteOutputPath(String path) {
