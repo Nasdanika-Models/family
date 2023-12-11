@@ -2,11 +2,8 @@ package org.nasdanika.models.family.processors;
 
 import java.util.function.BiConsumer;
 
-import org.eclipse.emf.ecore.EObject;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.ProgressMonitor;
-import org.nasdanika.common.Util;
-import org.nasdanika.emf.EmfUtil.EModelElementDocumentation;
 import org.nasdanika.graph.processor.NodeProcessorConfig;
 import org.nasdanika.html.model.app.Action;
 import org.nasdanika.html.model.app.Label;
@@ -33,13 +30,18 @@ public class WomanProcessorsFactory {
 	 */
 	@EClassifierNodeProcessorFactory(
 			// label = "Woman",
-			description = "Полифилетическая группа млекопитающих из семейства псовых отряда хищных",
+			description = "An adult female human",
 			documentation = """
-					В старославянском языке прилагательному «лисый» соответствовало определение желтоватого, рыжего и желтовато-оранжевого цвета, 
-					характерного для окраса широко распространенной в Евразии лисы обыкновенной. Общее название нескольких видов млекопитающих семейства псовые. 
-					Только 10 видов этой группы относят к роду собственно лисиц (лат. Vulpes). 
-					Наиболее известный и распространённый представитель — обыкновенная лисица (Vulpes vulpes). 
-					Лисицы встречаются в фольклоре многих народов по всему миру.
+					A woman is an adult female human. Prior to adulthood, one is referred to as a girl (a female child or adolescent).
+					
+					## Etymology
+					
+					The spelling of "woman" in English has progressed over the past millennium from wīfmann to wīmmann to wumman, and finally, 
+					the modern spelling woman. In Old English, wīfmann meant 'woman' (literally 'woman-person'), whereas wermann meant '[man](../Man/index.html)'. 
+					Mann had a gender-neutral meaning of 'human', corresponding to Modern English '[person](../Person/index.html)' or 'someone'; 
+					however, subsequent to the Norman Conquest, man began to be used more in reference to 'male human', and by the late 13th century it had begun 
+					to eclipse usage of the older term wer. The medial labial consonants f and m in wīfmann coalesced into the modern form "woman", 
+					while the initial element wīf, which had also meant 'woman', underwent semantic narrowing to the sense of a married woman ('wife').
 					""",
 			icon = "https://img.icons8.com/officexs/16/guest-female.png"
 	)
@@ -56,19 +58,6 @@ public class WomanProcessorsFactory {
 				if (labelConfigurator != null) {
 					labelConfigurator.accept(label, progressMonitor);
 				}
-			}
-			
-			@Override
-			protected EModelElementDocumentation getLoadDocumentation() {
-				return new EModelElementDocumentation("""
-						Some ``documentation``:
-						
-						```yaml
-						key: value
-						```
-						
-						""", 
-						Util.createClassURI(getClass()));
 			}
 						
 		};

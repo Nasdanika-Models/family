@@ -22,7 +22,7 @@ import org.nasdanika.ncore.NcorePackage;
  * </ul>
  * <!-- end-user-doc -->
  * <!-- begin-model-doc -->
- * A model of a family consisting of persons living in homes in cities in countries
+ * A model of a family consisting of persons 
  * <!-- end-model-doc -->
  * @see org.nasdanika.models.family.FamilyFactory
  * @model kind="package"

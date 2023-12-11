@@ -2,7 +2,6 @@ package org.nasdanika.models.family.processors;
 
 import java.util.function.BiConsumer;
 
-import org.eclipse.emf.ecore.EObject;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.common.Util;
@@ -33,13 +32,20 @@ public class ManProcessorsFactory {
 	 */
 	@EClassifierNodeProcessorFactory(
 			// label = "Man",
-			description = "Полифилетическая группа млекопитающих из семейства псовых отряда хищных",
+			description = "An adult male human",
 			documentation = """
-					В старославянском языке прилагательному «лисый» соответствовало определение желтоватого, рыжего и желтовато-оранжевого цвета, 
-					характерного для окраса широко распространенной в Евразии лисы обыкновенной. Общее название нескольких видов млекопитающих семейства псовые. 
-					Только 10 видов этой группы относят к роду собственно лисиц (лат. Vulpes). 
-					Наиболее известный и распространённый представитель — обыкновенная лисица (Vulpes vulpes). 
-					Лисицы встречаются в фольклоре многих народов по всему миру.
+					A man is an adult male human. Prior to adulthood, a male human is referred to as a boy (a male child or adolescent).
+					
+					
+					## Etymology
+					
+					The English term "man" is derived from the Proto-Indo-European root *man- (see Sanskrit/Avestan manu-, Slavic mǫž "man, male").
+					More directly, the word derives from Old English mann. 
+					The Old English form primarily meant "person" or "human being" and referred to men, women, and children alike. 
+					The Old English word for "man" as distinct from "woman" or "child" was wer. 
+					Mann only came to mean "man" in Middle English, replacing wer, which survives today only in the compounds "werewolf" (from Old English werwulf, literally "man-wolf"), 
+					and "wergild", literally "man-payment".
+					
 					""",
 			icon = "https://img.icons8.com/officexs/16/user.png"
 	)

@@ -25,3 +25,10 @@ Sirius links:
 * https://eclipse.dev/sirius/doc/user/diagrams/Diagrams.html
 * https://eclipse.dev/sirius/doc/specifier/Sirius%20Specifier%20Manual.html
 * https://eclipse.dev/sirius/doc/specifier/diagrams/Diagrams.html
+
+
+===
+
+# Parking lot
+
+Model development in Eclipse - remove Plug-in dependencies for compilation

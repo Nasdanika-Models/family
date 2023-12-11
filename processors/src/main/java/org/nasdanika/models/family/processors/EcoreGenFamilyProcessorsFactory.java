@@ -56,9 +56,23 @@ public class EcoreGenFamilyProcessorsFactory {
 					
 					""",
 			icon = "https://img.icons8.com/officel/30/family--v2.png",
-			description = "My description",
+			description = "A model of a family",
 			documentation =  """
-				# Look at this!
+				Family model is used to demonstrate different Nasdanika technologies such as:
+				
+				* Generating of metamodel (Ecore) documentation like this one
+				* Loading of models from MS Excel and Drawio diagrams
+				* Generation of HTML sites from loaded models		
+				
+				The model was created to mimic the model from [Eclipse Sirius Basic Family](https://wiki.eclipse.org/Sirius/Tutorials/BasicFamily) tutorial. 
+				This site uses fee icons from [Icons8](https://icons8.com/) and quotes [Wikipedia](https://www.wikipedia.org/) articles.
+				
+				The diagram below is interactive:
+				
+				 * Hover the mouse pointer over the shapes and connections to see tooltips
+				 * Click on the shapes and connections to navigate to the pages of the respective model elements.
+				   
+				Click on the diagram to make it fullscreen. Then you may click on the pencil icon to edit it in the browser. 				 				
 				
 				```drawio-resource
 				family.drawio

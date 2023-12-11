@@ -330,7 +330,7 @@ public class FamilyPackageImpl extends EPackageImpl implements FamilyPackage {
 		  (this,
 		   source,
 		   new String[] {
-			   "documentation", "A model of a family consisting of persons living in homes in cities in countries"
+			   "documentation", "A model of a family consisting of persons "
 		   });
 	}
 
