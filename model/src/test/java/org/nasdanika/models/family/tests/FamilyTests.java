@@ -47,6 +47,13 @@ public class FamilyTests {
 		assertEquals(
 				TimeUnit.DAYS.convert(expectedDOB.getTime(), TimeUnit.MILLISECONDS) , 
 				TimeUnit.DAYS.convert(albertDOB.getTime(), TimeUnit.MILLISECONDS));
+		
+		Person dave = members.stream().filter(m -> m.getName().equals("Dave")).findAny().get();
+		assertEquals("Elias", dave.getFather().getName());
+		assertEquals(2, dave.getFather().getParents().size());
+		assertEquals(4, dave.getFather().getChildren().size());
+		assertEquals(1, dave.getChildren().size());
+		assertEquals(1, dave.getParents().size());
 	}
 	
 }
