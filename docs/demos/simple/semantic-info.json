@@ -1,0 +1,230 @@
+[
+    {
+        "identifiers": ["uuid:19d415d4-0f40-42fb-95b5-b82810247713"],
+        "name": "Nasdanika Family Model",
+        "icon": "https://docs.nasdanika.org/images/nasdanika-logo.png",
+        "location": "https://famliy.models.nasdanika.org",
+        "type": {
+            "name": "Action",
+            "ns-uri": "ecore://nasdanika.org/html/app"
+        }
+    },
+    {
+        "container": {
+            "reference": "children",
+            "identifiers": ["uuid:19d415d4-0f40-42fb-95b5-b82810247713"]
+        },
+        "identifiers": ["uuid:76711bf2-2fc5-4e48-8b52-98e185a4f556"],
+        "name": "Search",
+        "icon": "fas fa-search",
+        "location": "search.html",
+        "type": {
+            "name": "Action",
+            "ns-uri": "ecore://nasdanika.org/html/app"
+        }
+    },
+    {
+        "container": {
+            "reference": "children",
+            "identifiers": ["uuid:19d415d4-0f40-42fb-95b5-b82810247713"]
+        },
+        "identifiers": ["uuid:fe0e5a33-0a59-4aab-a62d-e03335bd6f79"],
+        "name": "Glossary",
+        "icon": "fas fa-book",
+        "location": "glossary.html",
+        "type": {
+            "name": "Action",
+            "ns-uri": "ecore://nasdanika.org/html/app"
+        }
+    },
+    {
+        "container": {
+            "reference": "navigation",
+            "identifiers": ["uuid:19d415d4-0f40-42fb-95b5-b82810247713"]
+        },
+        "identifiers": ["uuid:98b69c57-e0b2-4a65-8b8d-186cfba17337"],
+        "name": "Sources",
+        "icon": "fab fa-github",
+        "location": "https://github.com/Nasdanika-Models/family",
+        "type": {
+            "name": "Action",
+            "ns-uri": "ecore://nasdanika.org/html/app"
+        }
+    },
+    {
+        "identifiers": ["uuid:63df182b-c50a-4892-82b0-7eac694774d0"],
+        "name": "Sample family",
+        "icon": "https://img.icons8.com/officexs/16/family--v1.png",
+        "description": "Family model to demonstrate loading from Excel, loading and mapping from Drawio, and generation of HTML documentation",
+        "location": "index.html",
+        "type": {
+            "name": "Family",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:63df182b-c50a-4892-82b0-7eac694774d0"],
+            "name": "Sample family"
+        },
+        "identifiers": ["uuid:773f553b-291d-4d6d-b317-825dab197281"],
+        "name": "Alain",
+        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "location": "references/members/10/index.html",
+        "type": {
+            "name": "Man",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:63df182b-c50a-4892-82b0-7eac694774d0"],
+            "name": "Sample family"
+        },
+        "identifiers": ["uuid:4fbfbd9e-0024-4ef2-a42c-d14351cfa8a6"],
+        "name": "Albert",
+        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "location": "references/members/0/index.html",
+        "type": {
+            "name": "Man",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:63df182b-c50a-4892-82b0-7eac694774d0"],
+            "name": "Sample family"
+        },
+        "identifiers": ["uuid:da068382-2f7f-44fb-b970-5113b323df98"],
+        "name": "Bryan",
+        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "location": "references/members/8/index.html",
+        "type": {
+            "name": "Man",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:63df182b-c50a-4892-82b0-7eac694774d0"],
+            "name": "Sample family"
+        },
+        "identifiers": ["uuid:631dba0b-a33e-4063-a324-26797104f617"],
+        "name": "Clara",
+        "icon": "https://img.icons8.com/officexs/16/guest-female.png",
+        "location": "references/members/7/index.html",
+        "type": {
+            "name": "Woman",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:63df182b-c50a-4892-82b0-7eac694774d0"],
+            "name": "Sample family"
+        },
+        "identifiers": ["uuid:cd241868-248f-4f41-98df-63be2ab7eaf0"],
+        "name": "Dave",
+        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "location": "references/members/6/index.html",
+        "type": {
+            "name": "Man",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:63df182b-c50a-4892-82b0-7eac694774d0"],
+            "name": "Sample family"
+        },
+        "identifiers": ["uuid:be7f8727-d2f7-4775-a6ba-c78cdb44e8e0"],
+        "name": "Elias",
+        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "location": "references/members/4/index.html",
+        "type": {
+            "name": "Man",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:63df182b-c50a-4892-82b0-7eac694774d0"],
+            "name": "Sample family"
+        },
+        "identifiers": ["uuid:b9531cf1-6308-4304-93f9-84613cc96040"],
+        "name": "Fiona",
+        "icon": "https://img.icons8.com/officexs/16/guest-female.png",
+        "location": "references/members/9/index.html",
+        "type": {
+            "name": "Woman",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:63df182b-c50a-4892-82b0-7eac694774d0"],
+            "name": "Sample family"
+        },
+        "identifiers": ["uuid:ecf25dfc-25cc-4930-815e-4da258118729"],
+        "name": "Isa",
+        "icon": "https://img.icons8.com/officexs/16/guest-female.png",
+        "location": "references/members/2/index.html",
+        "type": {
+            "name": "Woman",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:63df182b-c50a-4892-82b0-7eac694774d0"],
+            "name": "Sample family"
+        },
+        "identifiers": ["uuid:ad6b2822-db8d-4f11-b9b0-d5fe9471834e"],
+        "name": "Katell",
+        "icon": "https://img.icons8.com/officexs/16/guest-female.png",
+        "location": "references/members/5/index.html",
+        "type": {
+            "name": "Woman",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:63df182b-c50a-4892-82b0-7eac694774d0"],
+            "name": "Sample family"
+        },
+        "identifiers": ["uuid:14ab5da0-1baf-4a3f-9447-6005609904bf"],
+        "name": "Lea",
+        "icon": "https://img.icons8.com/officexs/16/guest-female.png",
+        "location": "references/members/3/index.html",
+        "type": {
+            "name": "Woman",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:63df182b-c50a-4892-82b0-7eac694774d0"],
+            "name": "Sample family"
+        },
+        "identifiers": ["uuid:73e01412-f167-4e95-908f-34911517774d"],
+        "name": "Paul",
+        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "location": "references/members/1/index.html",
+        "type": {
+            "name": "Man",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    }
+]
