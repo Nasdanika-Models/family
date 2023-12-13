@@ -1,4 +1,4 @@
-package org.nasdanika.models.family.processors;
+package org.nasdanika.models.family.processors.ecore;
 
 import java.util.function.BiConsumer;
 
