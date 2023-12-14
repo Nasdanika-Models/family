@@ -20,6 +20,8 @@ import org.nasdanika.models.family.FamilyPackage;
 import org.nasdanika.models.family.Man;
 import org.nasdanika.models.family.Person;
 import org.nasdanika.models.family.Woman;
+import org.nasdanika.ncore.Documented;
+import org.nasdanika.ncore.NcorePackage;
 
 public class FamilyResourceFactory extends MappingWorkbookResourceFactory {
 	
@@ -65,6 +67,8 @@ public class FamilyResourceFactory extends MappingWorkbookResourceFactory {
 			elementProvider.accept(
 					(row, semanticElement) -> semanticElement instanceof Woman && ((Woman) semanticElement).getName().equals(value), 
 					semanticElement -> ((Person) eObj).setMother((Woman) semanticElement));			
+		} else if (eObj instanceof Person && feature == NcorePackage.Literals.DOCUMENTED__DOCUMENTATION) {
+			((Documented) eObj).getDocumentation().add(createTextDoc(value)) ;
 		} else {
 			super.loadFeatureValue(eObj, feature, value, resource, elementProvider);
 		}
