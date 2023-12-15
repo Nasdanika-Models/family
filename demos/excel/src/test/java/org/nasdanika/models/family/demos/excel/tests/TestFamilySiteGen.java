@@ -1,4 +1,4 @@
-package org.nasdanika.models.family.generator.tests;
+package org.nasdanika.models.family.demos.excel.tests;
 
 import java.io.File;
 import java.util.Collection;
@@ -26,12 +26,15 @@ import org.nasdanika.models.family.util.FamilyResourceFactory;
 public class TestFamilySiteGen {
 	
 	@Test
-	public void testGenerateFamilySite() throws Exception {		
+	public void testGenerateFamilySite() throws Exception {
+		
+		// Loading of a family model from an MS Excel file using a resource factory
 		ResourceSet resourceSet = new ResourceSetImpl();
 		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xlsx", new FamilyResourceFactory());
-		File familyWorkbook = new File("../model/family.xlsx").getCanonicalFile();
+		File familyWorkbook = new File("family.xlsx").getCanonicalFile();
 		Resource familyResource = resourceSet.getResource(URI.createFileURI(familyWorkbook.getAbsolutePath()), true);		
 		
+		// Generating an action model
 		ProgressMonitor progressMonitor = new PrintStreamProgressMonitor();
 		MutableContext context = Context.EMPTY_CONTEXT.fork();
 		context.register(DiagramGenerator.class, new PlantUMLDiagramGenerator());
@@ -51,6 +54,7 @@ public class TestFamilySiteGen {
 				output,
 				progressMonitor);
 				
+		// Generating a web site
 		String rootActionResource = "family-actions.yml";
 		URI rootActionURI = URI.createFileURI(new File(rootActionResource).getAbsolutePath());//.appendFragment("/");
 		
@@ -70,7 +74,7 @@ public class TestFamilySiteGen {
 				rootActionURI, 
 				pageTemplateURI, 
 				siteMapDomain, 
-				new File("../docs/demos/simple"), 
+				new File("../../docs/demos/excel"), // Publishing to the repository's docs directory for GitHub pages 
 				new File("target/family-doc-site-work-dir"), 
 				true);
 				
