@@ -156,11 +156,19 @@ A comparator instance is created by ``createComparator()`` method which can be o
 
 The following comparators are provided "out of the box":
 
-###### angular
+###### clockwise
 
 TODO
 
-###### cartesian
+###### counterclockwise
+
+TODO
+
+###### down-left
+
+TODO 
+
+###### down-right
 
 TODO
 
@@ -174,13 +182,48 @@ A [Spring Expression Language (SpEL)](https://docs.spring.io/spring-framework/re
 
 ###### label
 
-TODO
+Uses diagram element label converted to plain text as a sorting key. String.
+
+###### label-descending
+
+Uses diagram element label converted to plain text as a sorting key to compare in reverse alphabetical order. String.
+
+###### left-down
+
+TODO 
+
+###### left-up
+
+TODO 
 
 ###### natural
 
 Uses feature element's ``compareTo()`` method for comparable elements. Otherwise compares using hash code. Null are greater than non-nulls.
 
 ###### property
+
+Uses diagram element property as a sorting key. Singleton map. For example:
+
+```
+property: label
+```
+###### property-descending
+
+The same as property, but compares in reverse alphabetical order.
+
+###### right-down
+
+TODO
+
+###### right-up
+
+TODO 
+
+###### up-left
+
+TODO 
+
+###### up-right
 
 TODO
 

@@ -18,14 +18,15 @@ import org.junit.jupiter.api.Test;
 import org.nasdanika.models.family.Family;
 import org.nasdanika.models.family.Man;
 import org.nasdanika.models.family.Person;
-import org.nasdanika.models.family.util.FamilyResourceFactory;
+import org.nasdanika.models.family.util.FamilyDrawioResourceFactory;
+import org.nasdanika.models.family.util.FamilyWorkbookResourceFactory;
 
 public class FamilyTests {
 	
 	@Test
-	public void testLoadFamilyFromExcel() throws Exception {
+	public void testLoadFamilyFromWorkbook() throws Exception {
 		ResourceSet resourceSet = new ResourceSetImpl();
-		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xlsx", new FamilyResourceFactory());
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xlsx", new FamilyWorkbookResourceFactory());
 		File test = new File("family.xlsx").getCanonicalFile();
 		Resource familyResource = resourceSet.getResource(URI.createFileURI(test.getAbsolutePath()), true);
 		assertEquals(1, familyResource.getContents().size());
@@ -55,5 +56,42 @@ public class FamilyTests {
 		assertEquals(1, dave.getChildren().size());
 		assertEquals(1, dave.getParents().size());
 	}
+	
+	@Test
+	public void testLoadFamilyFromDrawioDiagram() throws Exception {
+		ResourceSet resourceSet = new ResourceSetImpl();
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("drawio", new FamilyDrawioResourceFactory(uri -> (Person) resourceSet.getEObject(uri, true)));
+		File familyDiagramFile = new File("family.drawio").getCanonicalFile();
+		Resource familyResource = resourceSet.getResource(URI.createFileURI(familyDiagramFile.getAbsolutePath()), true);
+		assertEquals(1, familyResource.getContents().size());
+		Family family = (Family) familyResource.getContents().get(0);
+		assertEquals("Sample Family", family.getName());
+
+		EList<Person> members = family.getMembers();
+		assertEquals(11, members.size());
+		
+		// Comparator
+		assertEquals("alain", members.get(0).getId()); 
+		assertEquals("albert", members.get(1).getId()); 
+		assertEquals("bryan", members.get(2).getId()); 
+
+		Person albert = members
+				.stream()
+				.filter(m -> "albert".equals(m.getId()))
+				.findFirst().get();
+		assertTrue(albert instanceof Man);
+		assertEquals("Albert", albert.getName());
+		
+		Person dave = members
+				.stream()
+				.filter(m -> m.getName().equals("Dave"))
+				.findAny()
+				.get();
+		assertEquals("Elias", dave.getFather().getName());
+		assertEquals(2, dave.getFather().getParents().size());
+		assertEquals(4, dave.getFather().getChildren().size());
+		assertEquals(1, dave.getChildren().size());
+		assertEquals(1, dave.getParents().size());
+	}	
 	
 }

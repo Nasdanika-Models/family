@@ -1,4 +1,4 @@
-package org.nasdanika.models.family.demos.excel.tests;
+package org.nasdanika.models.family.demos.mapping.tests;
 
 import java.io.File;
 import java.util.Collection;
@@ -20,19 +20,18 @@ import org.nasdanika.common.PrintStreamProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.diagramgenerator.plantuml.PlantUMLDiagramGenerator;
 import org.nasdanika.html.model.app.gen.ActionSiteGenerator;
+import org.nasdanika.models.family.Person;
 import org.nasdanika.models.family.processors.doc.FamilyUtil;
-import org.nasdanika.models.family.util.FamilyWorkbookResourceFactory;
+import org.nasdanika.models.family.util.FamilyDrawioResourceFactory;
 
 public class TestFamilySiteGen {
 	
 	@Test
 	public void testGenerateFamilySite() throws Exception {
-		
-		// Loading of a family model from an MS Excel file using a resource factory
 		ResourceSet resourceSet = new ResourceSetImpl();
-		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xlsx", new FamilyWorkbookResourceFactory());
-		File familyWorkbook = new File("family.xlsx").getCanonicalFile();
-		Resource familyResource = resourceSet.getResource(URI.createFileURI(familyWorkbook.getAbsolutePath()), true);		
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("drawio", new FamilyDrawioResourceFactory(uri -> (Person) resourceSet.getEObject(uri, true)));
+		File familyDiagramFile = new File("family.drawio").getCanonicalFile();
+		Resource familyResource = resourceSet.getResource(URI.createFileURI(familyDiagramFile.getAbsolutePath()), true);
 		
 		// Generating an action model
 		ProgressMonitor progressMonitor = new PrintStreamProgressMonitor();
@@ -61,7 +60,7 @@ public class TestFamilySiteGen {
 		String pageTemplateResource = "page-template.yml";
 		URI pageTemplateURI = URI.createFileURI(new File(pageTemplateResource).getAbsolutePath());//.appendFragment("/");
 		
-		String siteMapDomain = "https://family.models.nasdanika.org/demos/excel";		
+		String siteMapDomain = "https://family.models.nasdanika.org/demos/mapping";		
 		ActionSiteGenerator actionSiteGenerator = new ActionSiteGenerator() {
 			
 			protected boolean isDeleteOutputPath(String path) {
@@ -74,7 +73,7 @@ public class TestFamilySiteGen {
 				rootActionURI, 
 				pageTemplateURI, 
 				siteMapDomain, 
-				new File("../../docs/demos/excel"), // Publishing to the repository's docs directory for GitHub pages 
+				new File("../../docs/demos/mapping"), // Publishing to the repository's docs directory for GitHub pages 
 				new File("target/family-doc-site-work-dir"), 
 				true);
 				

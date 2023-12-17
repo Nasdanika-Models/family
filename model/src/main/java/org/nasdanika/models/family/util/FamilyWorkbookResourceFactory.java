@@ -23,7 +23,10 @@ import org.nasdanika.models.family.Woman;
 import org.nasdanika.ncore.Documented;
 import org.nasdanika.ncore.NcorePackage;
 
-public class FamilyResourceFactory extends MappingWorkbookResourceFactory {
+/**
+ * Loads family model from an Excel workbook
+ */
+public class FamilyWorkbookResourceFactory extends MappingWorkbookResourceFactory {
 	
 	@Override
 	protected EObject createRoot() {

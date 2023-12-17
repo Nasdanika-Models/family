@@ -21,14 +21,14 @@ import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.diagramgenerator.plantuml.PlantUMLDiagramGenerator;
 import org.nasdanika.html.model.app.gen.ActionSiteGenerator;
 import org.nasdanika.models.family.processors.doc.FamilyUtil;
-import org.nasdanika.models.family.util.FamilyResourceFactory;
+import org.nasdanika.models.family.util.FamilyWorkbookResourceFactory;
 
 public class TestFamilySiteGen {
 	
 	@Test
 	public void testGenerateFamilySite() throws Exception {		
 		ResourceSet resourceSet = new ResourceSetImpl();
-		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xlsx", new FamilyResourceFactory());
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xlsx", new FamilyWorkbookResourceFactory());
 		File familyWorkbook = new File("../model/family.xlsx").getCanonicalFile();
 		Resource familyResource = resourceSet.getResource(URI.createFileURI(familyWorkbook.getAbsolutePath()), true);		
 		

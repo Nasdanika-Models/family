@@ -1,0 +1,229 @@
+[
+    {
+        "identifiers": ["uuid:bd574a5a-79b7-4432-b5cc-17ca250b1984"],
+        "name": "Nasdanika Family Model",
+        "icon": "https://docs.nasdanika.org/images/nasdanika-logo.png",
+        "location": "https://family.models.nasdanika.org",
+        "type": {
+            "name": "Action",
+            "ns-uri": "ecore://nasdanika.org/html/app"
+        }
+    },
+    {
+        "container": {
+            "reference": "children",
+            "identifiers": ["uuid:bd574a5a-79b7-4432-b5cc-17ca250b1984"]
+        },
+        "identifiers": ["uuid:d969b05d-67cf-40a4-9181-84e69af5d3a2"],
+        "name": "Search",
+        "icon": "fas fa-search",
+        "location": "search.html",
+        "type": {
+            "name": "Action",
+            "ns-uri": "ecore://nasdanika.org/html/app"
+        }
+    },
+    {
+        "container": {
+            "reference": "children",
+            "identifiers": ["uuid:bd574a5a-79b7-4432-b5cc-17ca250b1984"]
+        },
+        "identifiers": ["uuid:7bddbd8d-3f57-4f16-bbad-f49325783a09"],
+        "name": "Glossary",
+        "icon": "fas fa-book",
+        "location": "glossary.html",
+        "type": {
+            "name": "Action",
+            "ns-uri": "ecore://nasdanika.org/html/app"
+        }
+    },
+    {
+        "container": {
+            "reference": "navigation",
+            "identifiers": ["uuid:bd574a5a-79b7-4432-b5cc-17ca250b1984"]
+        },
+        "identifiers": ["uuid:bd7ddd8d-bd16-4a4b-a157-c47048218ea8"],
+        "name": "Sources",
+        "icon": "fab fa-github",
+        "location": "https://github.com/Nasdanika-Models/family",
+        "type": {
+            "name": "Action",
+            "ns-uri": "ecore://nasdanika.org/html/app"
+        }
+    },
+    {
+        "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+        "name": "Sample Family",
+        "icon": "https://img.icons8.com/officexs/16/family--v1.png",
+        "location": "index.html",
+        "type": {
+            "name": "Family",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "name": "Sample Family"
+        },
+        "identifiers": ["uuid:4751c4a5-bbb1-42af-a2b6-05335691f7f0"],
+        "name": "Alain",
+        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "location": "references/members/alain/index.html",
+        "type": {
+            "name": "Man",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "name": "Sample Family"
+        },
+        "identifiers": ["uuid:02348bc1-c19f-4289-bf50-8627fa9fc80b"],
+        "name": "Albert",
+        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "location": "references/members/albert/index.html",
+        "type": {
+            "name": "Man",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "name": "Sample Family"
+        },
+        "identifiers": ["uuid:35a2e046-fd6e-4ab5-953b-22000ed69d22"],
+        "name": "Bryan",
+        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "location": "references/members/bryan/index.html",
+        "type": {
+            "name": "Man",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "name": "Sample Family"
+        },
+        "identifiers": ["uuid:2abba7ce-a1f6-4cf0-86a0-5bb9b6fdef1a"],
+        "name": "Clara",
+        "icon": "https://img.icons8.com/officexs/16/guest-female.png",
+        "location": "references/members/clara/index.html",
+        "type": {
+            "name": "Woman",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "name": "Sample Family"
+        },
+        "identifiers": ["uuid:f7d70d85-96c6-464f-bce6-d0873f1e675a"],
+        "name": "Dave",
+        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "location": "references/members/dave/index.html",
+        "type": {
+            "name": "Man",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "name": "Sample Family"
+        },
+        "identifiers": ["uuid:fc7ae9fc-c7dc-4154-a992-dc8166e84e71"],
+        "name": "Elias",
+        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "location": "references/members/elias/index.html",
+        "type": {
+            "name": "Man",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "name": "Sample Family"
+        },
+        "identifiers": ["uuid:df98a76e-dd87-480a-9066-aa4a9cff970f"],
+        "name": "Fiona",
+        "icon": "https://img.icons8.com/officexs/16/guest-female.png",
+        "location": "references/members/fiona/index.html",
+        "type": {
+            "name": "Woman",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "name": "Sample Family"
+        },
+        "identifiers": ["uuid:c230f243-3f84-45ac-bc3b-883512939580"],
+        "name": "Isa",
+        "icon": "https://img.icons8.com/officexs/16/guest-female.png",
+        "location": "references/members/isa/index.html",
+        "type": {
+            "name": "Woman",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "name": "Sample Family"
+        },
+        "identifiers": ["uuid:5ecbe771-d044-4666-ba6d-8b388d009a9d"],
+        "name": "Katell",
+        "icon": "https://img.icons8.com/officexs/16/guest-female.png",
+        "location": "references/members/katell/index.html",
+        "type": {
+            "name": "Woman",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "name": "Sample Family"
+        },
+        "identifiers": ["uuid:16c7ad78-ca16-427e-bf49-044e66d743eb"],
+        "name": "Lea",
+        "icon": "https://img.icons8.com/officexs/16/guest-female.png",
+        "location": "references/members/lea/index.html",
+        "type": {
+            "name": "Woman",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "name": "Sample Family"
+        },
+        "identifiers": ["uuid:2d40fcd6-7c35-40a9-a3ef-b64eb8f56b7c"],
+        "name": "Paul",
+        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "location": "references/members/paul/index.html",
+        "type": {
+            "name": "Man",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    }
+]
