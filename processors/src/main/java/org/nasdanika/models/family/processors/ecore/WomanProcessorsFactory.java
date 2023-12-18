@@ -43,7 +43,7 @@ public class WomanProcessorsFactory {
 					to eclipse usage of the older term wer. The medial labial consonants f and m in wīfmann coalesced into the modern form "woman", 
 					while the initial element wīf, which had also meant 'woman', underwent semantic narrowing to the sense of a married woman ('wife').
 					""",
-			icon = "https://img.icons8.com/officexs/16/guest-female.png"
+			icon = "https://img.icons8.com/officexs/24/guest-female.png"
 	)
 	public EClassNodeProcessor createFoxProcessor(
 			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 

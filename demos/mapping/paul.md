@@ -1,3 +1,6 @@
+
+![image](${representations/image})
+
 Paul is a common Latin masculine given name in countries and ethnicities with a Christian heritage (Eastern Orthodoxy, Catholicism, Protestantism) and, beyond Europe, 
 in Christian religious communities throughout the world. Paul - or its variations - can be a given name or surname.
 

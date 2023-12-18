@@ -23,10 +23,10 @@ import org.nasdanika.html.model.app.gen.ActionSiteGenerator;
 import org.nasdanika.models.family.processors.doc.FamilyUtil;
 import org.nasdanika.models.family.util.FamilyWorkbookResourceFactory;
 
-public class TestFamilySiteGen {
+public class TestFamilySiteGenFromWorkbook {
 	
 	@Test
-	public void testGenerateFamilySite() throws Exception {
+	public void testGenerateFamilySiteFromWorkbook() throws Exception {
 		
 		// Loading of a family model from an MS Excel file using a resource factory
 		ResourceSet resourceSet = new ResourceSetImpl();

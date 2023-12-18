@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="EN">
   <head>
-    <title>Albert</title>
+    <title>Web Server</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -92,9 +92,9 @@ window.nsdJsTreeSearchCallback = function(str, node) {
           <ul class="navbar navbar-light navbar-expand-lg">
             <a href="../../../index.html" data-nsd-label-uuid="e74d1bff-3ffd-4ddf-8184-1c3f47b24f85" class="navbar-brand">
               <img src="https://img.icons8.com/officexs/24/family--v1.png" class="nsd-app-label-icon">Sample Family</a>
-            <button type="button" data-toggle="collapse" data-target="#nsd_1l" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            <button type="button" data-toggle="collapse" data-target="#nsd_18" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
             </button>
-            <div id="nsd_1l" class="collapse navbar-collapse"></div>
+            <div id="nsd_18" class="collapse navbar-collapse"></div>
           </ul>
         </div>
       </div>
@@ -102,7 +102,9 @@ window.nsdJsTreeSearchCallback = function(str, node) {
         <div class="col nsd-app-navigation-panel">
           <div class="list-group list-group-flush">
             <a href="../alain/index.html" data-nsd-label-uuid="1e7d713b-c665-4a4e-995c-29ba9eeb1a4e" class="list-group-item list-group-action">
-              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Alain</a><span data-nsd-label-uuid="aca475c4-213d-406d-a3a4-9cc70d653ba5" class="list-group-item list-group-action active"><img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Albert</span>
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Alain</a>
+            <a href="../albert/index.html" data-nsd-label-uuid="aca475c4-213d-406d-a3a4-9cc70d653ba5" class="list-group-item list-group-action">
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Albert</a>
             <a href="../bryan/index.html" data-nsd-label-uuid="cf06971d-7543-4a5b-a57e-b51c783200d9" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Bryan</a>
             <a href="../clara/index.html" data-nsd-label-uuid="87e3cd06-b1e7-4086-a233-9b4df168c81f" class="list-group-item list-group-action">
@@ -120,16 +122,14 @@ window.nsdJsTreeSearchCallback = function(str, node) {
             <a href="../lea/index.html" data-nsd-label-uuid="7fa305ae-6814-4dba-bdea-2323e7f435f9" class="list-group-item list-group-action">
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAEGUlEQVR4Xq2U/U9bZRTHq/5q3IyJ7l9Yosvc7i2waWh7Lwi0vW2BCxtzrMO9yMBNHIze9gJlvIyXFoSwAZsUF8amBmLcdJjth706UAeJZFs20RD9ATQhJgqDRSPHcx7oDX1KNOpO8k3vfXrO5znn3PM8JtPf2xM+pyj6FfGE3yXcQy2gHqG+0dzCTt75X5nmMT+nKcJZhP1Z4THDse2vQMsuC7SianK2AK7/jurQPZvW87H/aFWeDc9rLmE84BYRaIW+gw44W6IY6i3OgPptW0H3iLTRw4AiFANWy3NWNVVVnwq4hCEd4Sf3vxYD5nX6LTs0YGVUJaqIZ61qmiJmovNixxtSHHCl3scq6Lf/bSc05LFN5v0e4UWeF2fYmsvBrAQMjIeS+g45ILQzmbWn50D60hq2kL4Txn7A82LMZ3/pWcxklj7kSmjPgTR412tlmVLrdIRV5ybBUTWJVUA+4fxkquLXoHvjWp5rmE8RXqb2dO1LXS5fYdniGgTVRGjZY4WBGhW+/6wMxvqL2Hrn3hTm270/lb0H3IKZ5xqmu0SZnN4rTGNBx/fIFADnG7fDzBdV8HCsztBvX9dAkzcZGvNeNaqkWL9bSOe5hmmeTQ5yiva2Dkex/U0ZZm/XxsCjipQ68EwkMd9IUfpSBU7BxXMNW54g5kxBFBwptceBozpVkgG1eOjIl6aKbaCIO3iuYX636CUnmm8KotPbtk+KA5PmRmshtNtitIimi7XIJZTwXMPwztHwkMGZQ0uTQZNTiSM7fUWP2+DHSz42qu0FtuWBcEJlppk26OC5hiE8UrXiDNCVQNfFwFGVZRyFz+LzuQoPG9lotaTaXHZHfWla7dqgK8Lv2nyXNqApOoMZRfBj0wGqzkuEwZZsuPPJQSZ6pjWq4BT6UnvadttYMn5FuEgsns8Mv0EOZjBFvazAcikAx/SntsPWR916KnQGZCZ6bi+1LeD/k+RDSWDMIt2+wfSEZ3hujJWrm9fgRq/jfR8O2RN6L2RY67t88vxQZx5cP13A9HnXDuj0yQuf2q2VzQ7zCbxNG3W3YAkGTU/yvFXtliSlDUvSDdQfN1Ml6C6X4aNQJkxcfAe+GzoMA+Estkb/kc+wzXaVYnhOnF2xWNai84cYtDimKDCuqnBLluDjXdgafwr01Tmh/5jCnge9MvtvPDsbyJdiUOduy/IanssM4U9T1iMpKfBDcTHMh8MwWVgIow4HTJWVwUSjBr26HXr0DLjfUA7TR47AqNPJfMiXYih2RJKuEYvnmxAeHpFlFrjQ2sr0S3U1zDU1Ge8z4Xr4OVRnvM81NzOf6Ps0JkIMZIVi4F9ZLOtwce5br9dw/q96gAxkzWIlLxgb4EIuCu7n57OS/4+IQaxhWc4xNsAJ0NjiYxQxif0XdeG6HdVrbscAAAAASUVORK5CYII=" class="nsd-app-label-icon">Lea</a>
             <a href="../paul/index.html" data-nsd-label-uuid="9f6bb9eb-31b0-4368-a5ab-1fe028912235" class="list-group-item list-group-action">
-              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Paul</a>
-            <a href="../web-server/index.html" data-nsd-label-uuid="b44e25ea-8b0b-4425-a1f5-109500988a9d" class="list-group-item list-group-action">
-              <img src="https://app.diagrams.net/img/lib/active_directory/web_server.svg" class="nsd-app-label-icon">Web Server</a>
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Paul</a><span data-nsd-label-uuid="b44e25ea-8b0b-4425-a1f5-109500988a9d" class="list-group-item list-group-action active"><img src="https://app.diagrams.net/img/lib/active_directory/web_server.svg" class="nsd-app-label-icon">Web Server</span>
           </div>
         </div>
-        <div data-nsd-label-uuid="aca475c4-213d-406d-a3a4-9cc70d653ba5" data-nsd-action-uris="uuid:aca475c4-213d-406d-a3a4-9cc70d653ba5" class="col nsd-app-content-panel">
+        <div data-nsd-label-uuid="b44e25ea-8b0b-4425-a1f5-109500988a9d" data-nsd-action-uris="uuid:b44e25ea-8b0b-4425-a1f5-109500988a9d" class="col nsd-app-content-panel">
           <div class="container-fluid">
             <div class="row nsd-app-content-panel-title-and-items-row">
               <div class="col-auto">
-                <h1><span data-nsd-label-uuid="aca475c4-213d-406d-a3a4-9cc70d653ba5" class="nsd-app-content-panel-title"><img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Albert</span>
+                <h1><span data-nsd-label-uuid="b44e25ea-8b0b-4425-a1f5-109500988a9d" class="nsd-app-content-panel-title"><img src="https://app.diagrams.net/img/lib/active_directory/web_server.svg" class="nsd-app-label-icon">Web Server</span>
                 </h1>
               </div>
             </div>

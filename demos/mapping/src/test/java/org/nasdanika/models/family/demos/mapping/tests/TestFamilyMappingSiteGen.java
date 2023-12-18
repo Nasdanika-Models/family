@@ -24,10 +24,10 @@ import org.nasdanika.models.family.Person;
 import org.nasdanika.models.family.processors.doc.FamilyUtil;
 import org.nasdanika.models.family.util.FamilyDrawioResourceFactory;
 
-public class TestFamilySiteGen {
+public class TestFamilyMappingSiteGen {
 	
 	@Test
-	public void testGenerateFamilySite() throws Exception {
+	public void testGenerateFamilySiteWithMapping() throws Exception {
 		ResourceSet resourceSet = new ResourceSetImpl();
 		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("drawio", new FamilyDrawioResourceFactory(uri -> (Person) resourceSet.getEObject(uri, true)));
 		File familyDiagramFile = new File("family.drawio").getCanonicalFile();

@@ -47,7 +47,7 @@ public class ManProcessorsFactory {
 					and "wergild", literally "man-payment".
 					
 					""",
-			icon = "https://img.icons8.com/officexs/16/user.png"
+			icon = "https://img.icons8.com/officexs/24/user.png"
 	)
 	public EClassNodeProcessor createFoxProcessor(
 			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 

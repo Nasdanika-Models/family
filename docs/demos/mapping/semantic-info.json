@@ -1,6 +1,6 @@
 [
     {
-        "identifiers": ["uuid:bd574a5a-79b7-4432-b5cc-17ca250b1984"],
+        "identifiers": ["uuid:51209643-18ac-43af-93c4-9cdba6896b9a"],
         "name": "Nasdanika Family Model",
         "icon": "https://docs.nasdanika.org/images/nasdanika-logo.png",
         "location": "https://family.models.nasdanika.org",
@@ -12,9 +12,9 @@
     {
         "container": {
             "reference": "children",
-            "identifiers": ["uuid:bd574a5a-79b7-4432-b5cc-17ca250b1984"]
+            "identifiers": ["uuid:51209643-18ac-43af-93c4-9cdba6896b9a"]
         },
-        "identifiers": ["uuid:d969b05d-67cf-40a4-9181-84e69af5d3a2"],
+        "identifiers": ["uuid:b1588ae7-1b2c-4804-ba99-fecb3336c420"],
         "name": "Search",
         "icon": "fas fa-search",
         "location": "search.html",
@@ -26,9 +26,9 @@
     {
         "container": {
             "reference": "children",
-            "identifiers": ["uuid:bd574a5a-79b7-4432-b5cc-17ca250b1984"]
+            "identifiers": ["uuid:51209643-18ac-43af-93c4-9cdba6896b9a"]
         },
-        "identifiers": ["uuid:7bddbd8d-3f57-4f16-bbad-f49325783a09"],
+        "identifiers": ["uuid:0dbaf293-0a20-445d-bf46-4bf64ac71285"],
         "name": "Glossary",
         "icon": "fas fa-book",
         "location": "glossary.html",
@@ -40,9 +40,9 @@
     {
         "container": {
             "reference": "navigation",
-            "identifiers": ["uuid:bd574a5a-79b7-4432-b5cc-17ca250b1984"]
+            "identifiers": ["uuid:51209643-18ac-43af-93c4-9cdba6896b9a"]
         },
-        "identifiers": ["uuid:bd7ddd8d-bd16-4a4b-a157-c47048218ea8"],
+        "identifiers": ["uuid:a5d26423-c7e6-4c02-9531-8488a2e3eb02"],
         "name": "Sources",
         "icon": "fab fa-github",
         "location": "https://github.com/Nasdanika-Models/family",
@@ -52,9 +52,9 @@
         }
     },
     {
-        "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+        "identifiers": ["uuid:0fb35a23-c2f3-4eb5-8b69-ef9c8c216b85"],
         "name": "Sample Family",
-        "icon": "https://img.icons8.com/officexs/16/family--v1.png",
+        "icon": "https://img.icons8.com/officexs/24/family--v1.png",
         "location": "index.html",
         "type": {
             "name": "Family",
@@ -64,12 +64,12 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "identifiers": ["uuid:0fb35a23-c2f3-4eb5-8b69-ef9c8c216b85"],
             "name": "Sample Family"
         },
-        "identifiers": ["uuid:4751c4a5-bbb1-42af-a2b6-05335691f7f0"],
+        "identifiers": ["uuid:613d7536-627f-4e25-81bd-e64d029dd423"],
         "name": "Alain",
-        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "icon": "https://img.icons8.com/officexs/24/user.png",
         "location": "references/members/alain/index.html",
         "type": {
             "name": "Man",
@@ -79,12 +79,12 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "identifiers": ["uuid:0fb35a23-c2f3-4eb5-8b69-ef9c8c216b85"],
             "name": "Sample Family"
         },
-        "identifiers": ["uuid:02348bc1-c19f-4289-bf50-8627fa9fc80b"],
+        "identifiers": ["uuid:f2eeb568-ecdb-4aea-b4dc-3e7f28b63c4f"],
         "name": "Albert",
-        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "icon": "https://img.icons8.com/officexs/24/user.png",
         "location": "references/members/albert/index.html",
         "type": {
             "name": "Man",
@@ -94,12 +94,12 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "identifiers": ["uuid:0fb35a23-c2f3-4eb5-8b69-ef9c8c216b85"],
             "name": "Sample Family"
         },
-        "identifiers": ["uuid:35a2e046-fd6e-4ab5-953b-22000ed69d22"],
+        "identifiers": ["uuid:d177b064-507f-4046-820f-036f7570dab1"],
         "name": "Bryan",
-        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "icon": "https://img.icons8.com/officexs/24/user.png",
         "location": "references/members/bryan/index.html",
         "type": {
             "name": "Man",
@@ -109,12 +109,12 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "identifiers": ["uuid:0fb35a23-c2f3-4eb5-8b69-ef9c8c216b85"],
             "name": "Sample Family"
         },
-        "identifiers": ["uuid:2abba7ce-a1f6-4cf0-86a0-5bb9b6fdef1a"],
+        "identifiers": ["uuid:c9e05749-411f-4b04-bedc-a4fc729fa206"],
         "name": "Clara",
-        "icon": "https://img.icons8.com/officexs/16/guest-female.png",
+        "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAEGUlEQVR4Xq2U/U9bZRTHq/5q3IyJ7l9Yosvc7i2waWh7Lwi0vW2BCxtzrMO9yMBNHIze9gJlvIyXFoSwAZsUF8amBmLcdJjth706UAeJZFs20RD9ATQhJgqDRSPHcx7oDX1KNOpO8k3vfXrO5znn3PM8JtPf2xM+pyj6FfGE3yXcQy2gHqG+0dzCTt75X5nmMT+nKcJZhP1Z4THDse2vQMsuC7SianK2AK7/jurQPZvW87H/aFWeDc9rLmE84BYRaIW+gw44W6IY6i3OgPptW0H3iLTRw4AiFANWy3NWNVVVnwq4hCEd4Sf3vxYD5nX6LTs0YGVUJaqIZ61qmiJmovNixxtSHHCl3scq6Lf/bSc05LFN5v0e4UWeF2fYmsvBrAQMjIeS+g45ILQzmbWn50D60hq2kL4Txn7A82LMZ3/pWcxklj7kSmjPgTR412tlmVLrdIRV5ybBUTWJVUA+4fxkquLXoHvjWp5rmE8RXqb2dO1LXS5fYdniGgTVRGjZY4WBGhW+/6wMxvqL2Hrn3hTm270/lb0H3IKZ5xqmu0SZnN4rTGNBx/fIFADnG7fDzBdV8HCsztBvX9dAkzcZGvNeNaqkWL9bSOe5hmmeTQ5yiva2Dkex/U0ZZm/XxsCjipQ68EwkMd9IUfpSBU7BxXMNW54g5kxBFBwptceBozpVkgG1eOjIl6aKbaCIO3iuYX636CUnmm8KotPbtk+KA5PmRmshtNtitIimi7XIJZTwXMPwztHwkMGZQ0uTQZNTiSM7fUWP2+DHSz42qu0FtuWBcEJlppk26OC5hiE8UrXiDNCVQNfFwFGVZRyFz+LzuQoPG9lotaTaXHZHfWla7dqgK8Lv2nyXNqApOoMZRfBj0wGqzkuEwZZsuPPJQSZ6pjWq4BT6UnvadttYMn5FuEgsns8Mv0EOZjBFvazAcikAx/SntsPWR916KnQGZCZ6bi+1LeD/k+RDSWDMIt2+wfSEZ3hujJWrm9fgRq/jfR8O2RN6L2RY67t88vxQZx5cP13A9HnXDuj0yQuf2q2VzQ7zCbxNG3W3YAkGTU/yvFXtliSlDUvSDdQfN1Ml6C6X4aNQJkxcfAe+GzoMA+Estkb/kc+wzXaVYnhOnF2xWNai84cYtDimKDCuqnBLluDjXdgafwr01Tmh/5jCnge9MvtvPDsbyJdiUOduy/IanssM4U9T1iMpKfBDcTHMh8MwWVgIow4HTJWVwUSjBr26HXr0DLjfUA7TR47AqNPJfMiXYih2RJKuEYvnmxAeHpFlFrjQ2sr0S3U1zDU1Ge8z4Xr4OVRnvM81NzOf6Ps0JkIMZIVi4F9ZLOtwce5br9dw/q96gAxkzWIlLxgb4EIuCu7n57OS/4+IQaxhWc4xNsAJ0NjiYxQxif0XdeG6HdVrbscAAAAASUVORK5CYII=",
         "location": "references/members/clara/index.html",
         "type": {
             "name": "Woman",
@@ -124,12 +124,12 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "identifiers": ["uuid:0fb35a23-c2f3-4eb5-8b69-ef9c8c216b85"],
             "name": "Sample Family"
         },
-        "identifiers": ["uuid:f7d70d85-96c6-464f-bce6-d0873f1e675a"],
+        "identifiers": ["uuid:a7a1ccc2-c95c-4a55-8ec4-6c84ed8a7344"],
         "name": "Dave",
-        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "icon": "https://img.icons8.com/officexs/24/user.png",
         "location": "references/members/dave/index.html",
         "type": {
             "name": "Man",
@@ -139,12 +139,12 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "identifiers": ["uuid:0fb35a23-c2f3-4eb5-8b69-ef9c8c216b85"],
             "name": "Sample Family"
         },
-        "identifiers": ["uuid:fc7ae9fc-c7dc-4154-a992-dc8166e84e71"],
+        "identifiers": ["uuid:bb844d47-d820-4561-aead-6b4e117738c6"],
         "name": "Elias",
-        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "icon": "https://img.icons8.com/officexs/24/user.png",
         "location": "references/members/elias/index.html",
         "type": {
             "name": "Man",
@@ -154,12 +154,12 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "identifiers": ["uuid:0fb35a23-c2f3-4eb5-8b69-ef9c8c216b85"],
             "name": "Sample Family"
         },
-        "identifiers": ["uuid:df98a76e-dd87-480a-9066-aa4a9cff970f"],
+        "identifiers": ["uuid:7972bc51-c012-4093-9344-85d33c474887"],
         "name": "Fiona",
-        "icon": "https://img.icons8.com/officexs/16/guest-female.png",
+        "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAEGUlEQVR4Xq2U/U9bZRTHq/5q3IyJ7l9Yosvc7i2waWh7Lwi0vW2BCxtzrMO9yMBNHIze9gJlvIyXFoSwAZsUF8amBmLcdJjth706UAeJZFs20RD9ATQhJgqDRSPHcx7oDX1KNOpO8k3vfXrO5znn3PM8JtPf2xM+pyj6FfGE3yXcQy2gHqG+0dzCTt75X5nmMT+nKcJZhP1Z4THDse2vQMsuC7SianK2AK7/jurQPZvW87H/aFWeDc9rLmE84BYRaIW+gw44W6IY6i3OgPptW0H3iLTRw4AiFANWy3NWNVVVnwq4hCEd4Sf3vxYD5nX6LTs0YGVUJaqIZ61qmiJmovNixxtSHHCl3scq6Lf/bSc05LFN5v0e4UWeF2fYmsvBrAQMjIeS+g45ILQzmbWn50D60hq2kL4Txn7A82LMZ3/pWcxklj7kSmjPgTR412tlmVLrdIRV5ybBUTWJVUA+4fxkquLXoHvjWp5rmE8RXqb2dO1LXS5fYdniGgTVRGjZY4WBGhW+/6wMxvqL2Hrn3hTm270/lb0H3IKZ5xqmu0SZnN4rTGNBx/fIFADnG7fDzBdV8HCsztBvX9dAkzcZGvNeNaqkWL9bSOe5hmmeTQ5yiva2Dkex/U0ZZm/XxsCjipQ68EwkMd9IUfpSBU7BxXMNW54g5kxBFBwptceBozpVkgG1eOjIl6aKbaCIO3iuYX636CUnmm8KotPbtk+KA5PmRmshtNtitIimi7XIJZTwXMPwztHwkMGZQ0uTQZNTiSM7fUWP2+DHSz42qu0FtuWBcEJlppk26OC5hiE8UrXiDNCVQNfFwFGVZRyFz+LzuQoPG9lotaTaXHZHfWla7dqgK8Lv2nyXNqApOoMZRfBj0wGqzkuEwZZsuPPJQSZ6pjWq4BT6UnvadttYMn5FuEgsns8Mv0EOZjBFvazAcikAx/SntsPWR916KnQGZCZ6bi+1LeD/k+RDSWDMIt2+wfSEZ3hujJWrm9fgRq/jfR8O2RN6L2RY67t88vxQZx5cP13A9HnXDuj0yQuf2q2VzQ7zCbxNG3W3YAkGTU/yvFXtliSlDUvSDdQfN1Ml6C6X4aNQJkxcfAe+GzoMA+Estkb/kc+wzXaVYnhOnF2xWNai84cYtDimKDCuqnBLluDjXdgafwr01Tmh/5jCnge9MvtvPDsbyJdiUOduy/IanssM4U9T1iMpKfBDcTHMh8MwWVgIow4HTJWVwUSjBr26HXr0DLjfUA7TR47AqNPJfMiXYih2RJKuEYvnmxAeHpFlFrjQ2sr0S3U1zDU1Ge8z4Xr4OVRnvM81NzOf6Ps0JkIMZIVi4F9ZLOtwce5br9dw/q96gAxkzWIlLxgb4EIuCu7n57OS/4+IQaxhWc4xNsAJ0NjiYxQxif0XdeG6HdVrbscAAAAASUVORK5CYII=",
         "location": "references/members/fiona/index.html",
         "type": {
             "name": "Woman",
@@ -169,12 +169,12 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "identifiers": ["uuid:0fb35a23-c2f3-4eb5-8b69-ef9c8c216b85"],
             "name": "Sample Family"
         },
-        "identifiers": ["uuid:c230f243-3f84-45ac-bc3b-883512939580"],
+        "identifiers": ["uuid:cc9e6345-8297-49e6-9eb7-cbe0bf85ade2"],
         "name": "Isa",
-        "icon": "https://img.icons8.com/officexs/16/guest-female.png",
+        "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAEGUlEQVR4Xq2U/U9bZRTHq/5q3IyJ7l9Yosvc7i2waWh7Lwi0vW2BCxtzrMO9yMBNHIze9gJlvIyXFoSwAZsUF8amBmLcdJjth706UAeJZFs20RD9ATQhJgqDRSPHcx7oDX1KNOpO8k3vfXrO5znn3PM8JtPf2xM+pyj6FfGE3yXcQy2gHqG+0dzCTt75X5nmMT+nKcJZhP1Z4THDse2vQMsuC7SianK2AK7/jurQPZvW87H/aFWeDc9rLmE84BYRaIW+gw44W6IY6i3OgPptW0H3iLTRw4AiFANWy3NWNVVVnwq4hCEd4Sf3vxYD5nX6LTs0YGVUJaqIZ61qmiJmovNixxtSHHCl3scq6Lf/bSc05LFN5v0e4UWeF2fYmsvBrAQMjIeS+g45ILQzmbWn50D60hq2kL4Txn7A82LMZ3/pWcxklj7kSmjPgTR412tlmVLrdIRV5ybBUTWJVUA+4fxkquLXoHvjWp5rmE8RXqb2dO1LXS5fYdniGgTVRGjZY4WBGhW+/6wMxvqL2Hrn3hTm270/lb0H3IKZ5xqmu0SZnN4rTGNBx/fIFADnG7fDzBdV8HCsztBvX9dAkzcZGvNeNaqkWL9bSOe5hmmeTQ5yiva2Dkex/U0ZZm/XxsCjipQ68EwkMd9IUfpSBU7BxXMNW54g5kxBFBwptceBozpVkgG1eOjIl6aKbaCIO3iuYX636CUnmm8KotPbtk+KA5PmRmshtNtitIimi7XIJZTwXMPwztHwkMGZQ0uTQZNTiSM7fUWP2+DHSz42qu0FtuWBcEJlppk26OC5hiE8UrXiDNCVQNfFwFGVZRyFz+LzuQoPG9lotaTaXHZHfWla7dqgK8Lv2nyXNqApOoMZRfBj0wGqzkuEwZZsuPPJQSZ6pjWq4BT6UnvadttYMn5FuEgsns8Mv0EOZjBFvazAcikAx/SntsPWR916KnQGZCZ6bi+1LeD/k+RDSWDMIt2+wfSEZ3hujJWrm9fgRq/jfR8O2RN6L2RY67t88vxQZx5cP13A9HnXDuj0yQuf2q2VzQ7zCbxNG3W3YAkGTU/yvFXtliSlDUvSDdQfN1Ml6C6X4aNQJkxcfAe+GzoMA+Estkb/kc+wzXaVYnhOnF2xWNai84cYtDimKDCuqnBLluDjXdgafwr01Tmh/5jCnge9MvtvPDsbyJdiUOduy/IanssM4U9T1iMpKfBDcTHMh8MwWVgIow4HTJWVwUSjBr26HXr0DLjfUA7TR47AqNPJfMiXYih2RJKuEYvnmxAeHpFlFrjQ2sr0S3U1zDU1Ge8z4Xr4OVRnvM81NzOf6Ps0JkIMZIVi4F9ZLOtwce5br9dw/q96gAxkzWIlLxgb4EIuCu7n57OS/4+IQaxhWc4xNsAJ0NjiYxQxif0XdeG6HdVrbscAAAAASUVORK5CYII=",
         "location": "references/members/isa/index.html",
         "type": {
             "name": "Woman",
@@ -184,12 +184,12 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "identifiers": ["uuid:0fb35a23-c2f3-4eb5-8b69-ef9c8c216b85"],
             "name": "Sample Family"
         },
-        "identifiers": ["uuid:5ecbe771-d044-4666-ba6d-8b388d009a9d"],
+        "identifiers": ["uuid:2f226274-81a5-4772-a500-5e6b385cb574"],
         "name": "Katell",
-        "icon": "https://img.icons8.com/officexs/16/guest-female.png",
+        "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAEGUlEQVR4Xq2U/U9bZRTHq/5q3IyJ7l9Yosvc7i2waWh7Lwi0vW2BCxtzrMO9yMBNHIze9gJlvIyXFoSwAZsUF8amBmLcdJjth706UAeJZFs20RD9ATQhJgqDRSPHcx7oDX1KNOpO8k3vfXrO5znn3PM8JtPf2xM+pyj6FfGE3yXcQy2gHqG+0dzCTt75X5nmMT+nKcJZhP1Z4THDse2vQMsuC7SianK2AK7/jurQPZvW87H/aFWeDc9rLmE84BYRaIW+gw44W6IY6i3OgPptW0H3iLTRw4AiFANWy3NWNVVVnwq4hCEd4Sf3vxYD5nX6LTs0YGVUJaqIZ61qmiJmovNixxtSHHCl3scq6Lf/bSc05LFN5v0e4UWeF2fYmsvBrAQMjIeS+g45ILQzmbWn50D60hq2kL4Txn7A82LMZ3/pWcxklj7kSmjPgTR412tlmVLrdIRV5ybBUTWJVUA+4fxkquLXoHvjWp5rmE8RXqb2dO1LXS5fYdniGgTVRGjZY4WBGhW+/6wMxvqL2Hrn3hTm270/lb0H3IKZ5xqmu0SZnN4rTGNBx/fIFADnG7fDzBdV8HCsztBvX9dAkzcZGvNeNaqkWL9bSOe5hmmeTQ5yiva2Dkex/U0ZZm/XxsCjipQ68EwkMd9IUfpSBU7BxXMNW54g5kxBFBwptceBozpVkgG1eOjIl6aKbaCIO3iuYX636CUnmm8KotPbtk+KA5PmRmshtNtitIimi7XIJZTwXMPwztHwkMGZQ0uTQZNTiSM7fUWP2+DHSz42qu0FtuWBcEJlppk26OC5hiE8UrXiDNCVQNfFwFGVZRyFz+LzuQoPG9lotaTaXHZHfWla7dqgK8Lv2nyXNqApOoMZRfBj0wGqzkuEwZZsuPPJQSZ6pjWq4BT6UnvadttYMn5FuEgsns8Mv0EOZjBFvazAcikAx/SntsPWR916KnQGZCZ6bi+1LeD/k+RDSWDMIt2+wfSEZ3hujJWrm9fgRq/jfR8O2RN6L2RY67t88vxQZx5cP13A9HnXDuj0yQuf2q2VzQ7zCbxNG3W3YAkGTU/yvFXtliSlDUvSDdQfN1Ml6C6X4aNQJkxcfAe+GzoMA+Estkb/kc+wzXaVYnhOnF2xWNai84cYtDimKDCuqnBLluDjXdgafwr01Tmh/5jCnge9MvtvPDsbyJdiUOduy/IanssM4U9T1iMpKfBDcTHMh8MwWVgIow4HTJWVwUSjBr26HXr0DLjfUA7TR47AqNPJfMiXYih2RJKuEYvnmxAeHpFlFrjQ2sr0S3U1zDU1Ge8z4Xr4OVRnvM81NzOf6Ps0JkIMZIVi4F9ZLOtwce5br9dw/q96gAxkzWIlLxgb4EIuCu7n57OS/4+IQaxhWc4xNsAJ0NjiYxQxif0XdeG6HdVrbscAAAAASUVORK5CYII=",
         "location": "references/members/katell/index.html",
         "type": {
             "name": "Woman",
@@ -199,12 +199,12 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "identifiers": ["uuid:0fb35a23-c2f3-4eb5-8b69-ef9c8c216b85"],
             "name": "Sample Family"
         },
-        "identifiers": ["uuid:16c7ad78-ca16-427e-bf49-044e66d743eb"],
+        "identifiers": ["uuid:c7b8a4d1-007c-4cd3-ba4e-514df9150ef6"],
         "name": "Lea",
-        "icon": "https://img.icons8.com/officexs/16/guest-female.png",
+        "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAEGUlEQVR4Xq2U/U9bZRTHq/5q3IyJ7l9Yosvc7i2waWh7Lwi0vW2BCxtzrMO9yMBNHIze9gJlvIyXFoSwAZsUF8amBmLcdJjth706UAeJZFs20RD9ATQhJgqDRSPHcx7oDX1KNOpO8k3vfXrO5znn3PM8JtPf2xM+pyj6FfGE3yXcQy2gHqG+0dzCTt75X5nmMT+nKcJZhP1Z4THDse2vQMsuC7SianK2AK7/jurQPZvW87H/aFWeDc9rLmE84BYRaIW+gw44W6IY6i3OgPptW0H3iLTRw4AiFANWy3NWNVVVnwq4hCEd4Sf3vxYD5nX6LTs0YGVUJaqIZ61qmiJmovNixxtSHHCl3scq6Lf/bSc05LFN5v0e4UWeF2fYmsvBrAQMjIeS+g45ILQzmbWn50D60hq2kL4Txn7A82LMZ3/pWcxklj7kSmjPgTR412tlmVLrdIRV5ybBUTWJVUA+4fxkquLXoHvjWp5rmE8RXqb2dO1LXS5fYdniGgTVRGjZY4WBGhW+/6wMxvqL2Hrn3hTm270/lb0H3IKZ5xqmu0SZnN4rTGNBx/fIFADnG7fDzBdV8HCsztBvX9dAkzcZGvNeNaqkWL9bSOe5hmmeTQ5yiva2Dkex/U0ZZm/XxsCjipQ68EwkMd9IUfpSBU7BxXMNW54g5kxBFBwptceBozpVkgG1eOjIl6aKbaCIO3iuYX636CUnmm8KotPbtk+KA5PmRmshtNtitIimi7XIJZTwXMPwztHwkMGZQ0uTQZNTiSM7fUWP2+DHSz42qu0FtuWBcEJlppk26OC5hiE8UrXiDNCVQNfFwFGVZRyFz+LzuQoPG9lotaTaXHZHfWla7dqgK8Lv2nyXNqApOoMZRfBj0wGqzkuEwZZsuPPJQSZ6pjWq4BT6UnvadttYMn5FuEgsns8Mv0EOZjBFvazAcikAx/SntsPWR916KnQGZCZ6bi+1LeD/k+RDSWDMIt2+wfSEZ3hujJWrm9fgRq/jfR8O2RN6L2RY67t88vxQZx5cP13A9HnXDuj0yQuf2q2VzQ7zCbxNG3W3YAkGTU/yvFXtliSlDUvSDdQfN1Ml6C6X4aNQJkxcfAe+GzoMA+Estkb/kc+wzXaVYnhOnF2xWNai84cYtDimKDCuqnBLluDjXdgafwr01Tmh/5jCnge9MvtvPDsbyJdiUOduy/IanssM4U9T1iMpKfBDcTHMh8MwWVgIow4HTJWVwUSjBr26HXr0DLjfUA7TR47AqNPJfMiXYih2RJKuEYvnmxAeHpFlFrjQ2sr0S3U1zDU1Ge8z4Xr4OVRnvM81NzOf6Ps0JkIMZIVi4F9ZLOtwce5br9dw/q96gAxkzWIlLxgb4EIuCu7n57OS/4+IQaxhWc4xNsAJ0NjiYxQxif0XdeG6HdVrbscAAAAASUVORK5CYII=",
         "location": "references/members/lea/index.html",
         "type": {
             "name": "Woman",
@@ -214,15 +214,30 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:bb7e7ba2-d644-4018-ad5d-81655f04e0fd"],
+            "identifiers": ["uuid:0fb35a23-c2f3-4eb5-8b69-ef9c8c216b85"],
             "name": "Sample Family"
         },
-        "identifiers": ["uuid:2d40fcd6-7c35-40a9-a3ef-b64eb8f56b7c"],
+        "identifiers": ["uuid:48092059-f579-44c9-b235-7288cc2234e1"],
         "name": "Paul",
-        "icon": "https://img.icons8.com/officexs/16/user.png",
+        "icon": "https://img.icons8.com/officexs/24/user.png",
         "location": "references/members/paul/index.html",
         "type": {
             "name": "Man",
+            "ns-uri": "ecore://nasdanika.org/models/family"
+        }
+    },
+    {
+        "container": {
+            "reference": "members",
+            "identifiers": ["uuid:0fb35a23-c2f3-4eb5-8b69-ef9c8c216b85"],
+            "name": "Sample Family"
+        },
+        "identifiers": ["uuid:58fe120d-1bf4-49e6-945d-302dc5bdf22b"],
+        "name": "Web Server",
+        "icon": "https://app.diagrams.net/img/lib/active_directory/web_server.svg",
+        "location": "references/members/web-server/index.html",
+        "type": {
+            "name": "Woman",
             "ns-uri": "ecore://nasdanika.org/models/family"
         }
     }

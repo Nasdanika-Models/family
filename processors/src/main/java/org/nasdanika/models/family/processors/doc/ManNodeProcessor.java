@@ -25,7 +25,7 @@ public class ManNodeProcessor extends PersonNodeProcessor<Man> {
 			String location = ((Action) label).getLocation();
 			URI uri = getUri();
 			if (uri != null && location != null && uri.toString().equals(location)) {
-				label.setIcon("https://img.icons8.com/officexs/16/user.png");
+				label.setIcon("https://img.icons8.com/officexs/24/user.png");
 			}
 		}		
 	}

@@ -32,7 +32,7 @@ public class FamilyProcessorsFactory {
 	 * @return
 	 */
 	@EClassifierNodeProcessorFactory(
-			icon = "https://img.icons8.com/officexs/16/family--v1.png", 
+			icon = "https://img.icons8.com/officexs/24/family--v1.png", 
 			description = "Family is a group of related people",
 			documentation = 
                     """
