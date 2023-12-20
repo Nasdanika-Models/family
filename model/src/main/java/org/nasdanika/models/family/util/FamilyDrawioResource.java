@@ -16,6 +16,7 @@ import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.common.Transformer;
 import org.nasdanika.drawio.emf.DrawioResource;
 import org.nasdanika.drawio.model.ModelFactory;
+import org.nasdanika.drawio.model.util.AbstractDrawioFactory;
 import org.nasdanika.models.family.Person;
 import org.nasdanika.persistence.Marker;
 
@@ -61,6 +62,11 @@ public class FamilyDrawioResource extends ResourceImpl {
 				return FamilyDrawioResource.this.getByRefId(refId, pass, registry);
 			}
 			
+			@Override
+			protected URI getAppBase() {
+				return FamilyDrawioResource.this.getAppBase();
+			}
+			
 		};
 		
 		Transformer<EObject,EObject> familyFactory = new Transformer<>(familyDrawioFactory);
@@ -102,4 +108,8 @@ public class FamilyDrawioResource extends ResourceImpl {
 		return uriResolver.apply(refURI);
 	}	
 
+	protected URI getAppBase() {
+		return AbstractDrawioFactory.DEFAULT_APP_BASE;
+	}
+	
 }
