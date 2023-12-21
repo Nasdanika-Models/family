@@ -174,7 +174,7 @@ public class TestFamilyModelDocGen {
 		ActionSiteGenerator actionSiteGenerator = new ActionSiteGenerator() {
 			
 			protected boolean isDeleteOutputPath(String path) {
-				return !"CNAME".equals(path);				
+				return !"CNAME".equals(path) && !path.startsWith("demos/");			
 			};
 			
 		};		
