@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="EN">
+  <head>
+    <title>Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/css/app.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/themes/default/style.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.1.0/github-markdown.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/dark-head.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/jstree.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/components/table.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/components/table.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9BRJVLK8CC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9BRJVLK8CC');
+</script>    
+</head>
+  <body>
+    <div class="container-fluid nsd-app-container">
+      <div class="row">
+        <div class="col nsd-app-header">
+          <a href="https://family.models.nasdanika.org" data-nsd-label-uuid="65668e80-beb8-4287-8778-67d5c7105a7b" class="nsd-app-header-title">
+            <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon"/>Nasdanika Family Model</a>
+          <ul class="nav nsd-app-header-navs">
+            <li class="nav-item"><span data-nsd-label-uuid="f6164105-bbfb-45f1-b0a5-8bef36def407" class="navbar-text"><span class="fas fa-search nsd-app-label-icon"></span>Search</span>
+            </li>
+            <li class="nav-item">
+              <a href="glossary.html" data-nsd-label-uuid="50b2c8b5-2931-4083-a9e8-91ef0961af3c" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nsd-app-navbar">
+          <ul class="navbar navbar-light navbar-expand-lg">
+            <a href="index.html" data-nsd-label-uuid="a3fd747e-6391-4f81-be4b-2c690de2d976" class="navbar-brand">
+              <img src="https://img.icons8.com/officexs/24/family--v1.png" class="nsd-app-label-icon"/>Sample Family</a>
+            <button type="button" data-toggle="collapse" data-target="#nsd_45" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="nsd_45" class="collapse navbar-collapse"></div>
+          </ul>
+        </div>
+      </div>
+      <div class="row nsd-app-content-row">
+        <div class="col nsd-app-navigation-panel">
+          <div class="list-group list-group-flush">
+            <a href="references/members/alain/index.html" data-nsd-label-uuid="22dfc875-9d65-4708-96a4-9b53b693adc9" class="list-group-item list-group-action">
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon"/>Alain</a>
+            <a href="references/members/albert/index.html" data-nsd-label-uuid="b772d65c-d098-4c58-a95b-c7b07ad24423" class="list-group-item list-group-action">
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon"/>Albert</a>
+            <a href="references/members/bryan/index.html" data-nsd-label-uuid="c48fb040-9ac3-4dad-9fbc-3cd5ea0e8abe" class="list-group-item list-group-action">
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon"/>Bryan</a>
+            <a href="references/members/clara/index.html" data-nsd-label-uuid="81cf5993-8172-4d19-bf46-82a593e9da8b" class="list-group-item list-group-action">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADEklEQVR4Xp2T20tUURTGTz5FEEQPvfQfFEjpjOaFUs/ojDpzZsa8k6ZdNO+KFs2Z0TlOaoo6aiSmRmrmBUxFIQp6qJccMTEhrAx6rNAoQkmL0tVa2zw62yJwwcdsZn3rt9deex9B+Ec4rb6HZEnrskv+s7JZs/pHz8pN2qO8979ht2hOY/FXJf4EtGSEQ3t2FHRk66EqKRhks/aLbPFvVizHDvB1fw27WWtC2K9mBPUVS9BfsqWeglhovaAD2gg983Zj0GG+3iuuSCH7bWbtQtPZMC/QdvWh7hWZNrv1KIrgw3PUwO5yK+ICsDPTDtDdQiPUpoZCY/optVuHVQuypEnmOWrgMcYb0jYKSF35MUDd1iSHgN2ihcZzYey3M0fP8vVnTtLRx3iOGjSXm+dFZu64pGfFrXlRMF6XArODBbA8XQX95Va4nhLCPDRP7PAdz1HDbtZ8bLsYycyVOPiR6kT4NlPtpRcD+eDAjcjTlhVJwEWeowZ2+PlWVhQz4xrmhot3AOk/ypGHnhOul3iOGpj8QUclc7k1AKZ7c3cAPV3ZUBEXyDy3cwwEXFfCwvbyLEFJCDpIO9/Ji2bmGpzTkCt+B7DPYWG3vXHzsaxbmznwCM8T7Fb/UErSG2PzwVmW4xOaG9069svhQvZUNsfSW2RkF4dvN5PnCbJFE43An/REWjIjoCoxGCoSA9Zbr4owUGdharXpwJkUuOZKCAL6kpynA4G+dfrueR4LWfLzxdffieDnTkk71p4XPtZbbYTxG0lMvTUm6CgU72NuAD2TeMNOxeS/j+d4hSciwm9CFIc8ovh9NF2E7muxMP+gBN6ienA9gv9hbgU1SF6+Xg1QFB+PTleLxrVXqakwI0nwNFaEnjIDdLliGLj7sgGeGEWWm0MPeSdFsQYEYQ/PEzDZOGUwwKIsw2pTE7xOS4P3paWw7G6Ax64MeFiZDkvuevhQVgZvMEeeBZsNpvR6mNDp6r1h2Drttgkjrbjd6prX9hzVUC1Cj6vASZ2uiY7xyeHYlagWm3JvAUXxEe5CO+1axCDWb4snlzfpfIuPAAAAAElFTkSuQmCC" class="nsd-app-label-icon"/>Clara</a>
+            <a href="references/members/dave/index.html" data-nsd-label-uuid="c907b0cc-36d2-462a-97ee-169ba88b641b" class="list-group-item list-group-action">
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon"/>Dave</a>
+            <a href="references/members/elias/index.html" data-nsd-label-uuid="b7d63c39-0681-4b8b-9e6b-66f5825f589f" class="list-group-item list-group-action">
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon"/>Elias</a>
+            <a href="references/members/fiona/index.html" data-nsd-label-uuid="ff7dd6f9-7654-4e0a-ba63-e0341392574a" class="list-group-item list-group-action">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAC0ElEQVR4XtWTXUiTURjHrSauiBVtc7rl/Nicm/tim0734dx0m9OpYGGlBVqGiWQpSR9XSpC76MaLkFIMJRFbipohEaKUSSaEJIQEIUINP7CsBIPC/p33jYG+xrDu+sGfA4fn+fGc95w3LOy/xm63s206pc+mV73IMeuulJfb2cyav2FXhk7dbVLL4TEbcMyVgSK7aYDaZxbuiFRV4hFaZknFm9E+LEw9QkNVKcoLs08wa3dEYoyoz5GqwVjvXawvzePL3DSGW30ocWe8u1NZGc6sD4nBYAgX8rmBptrTWH37Et/XPmLt/Sw+jPtx3GX92Vhz8jCzJyQaiSQyRsD/0XuzHsvTT/B1fgafZicw2dMMjTRuo/niWQGzJyS6pCShRBT9LdugxNxQCxYmBxAY70HdqUKYNIph4B8uJk0lv6SVSZZGfOcx9/AWAiMdsBu1a0pZvJZZuyOkUqlEq9GsdzXUYP5xJxaf9uDCmdLr1Ntk1oYkISFBnJyc7FOr1ctKpRKZVjNe+Vuw+Ow+btRXwWw2rzqdzq6srCwbs/ePiIWCUblMBoVCASIFuXFUlBxFYKwbr/tvw2g0wu12IzMzc6W4uHgvs38b4mjBc2lcLDRERiaFXq+npkJb01WsTPhR5M1BXl4eyITUWsXs34ZYGDVECdVqFS2kJkxPT4fb5cTMYBt8l6uRn58Pj8dDCadyc3MjmI4tkAnv0UKVij6yVqtFWloabDYbqivK0NreSQuDUq/XW8Z0bCFGGNVOCVXkQqjpqG9pMplgsVjgcrnga++nj1xQUACHw0GtfqZjM/sEvEOVkrjYz5uEG9SRrVYrLThXd40WEvl6SkrKIHleJtLHYoqCUD+9mMViOQ5yOLVcLrc5IiKihcPh+EUi0TCfz38gFsd18Hi8RjabXUpqU0kiSXZv1WyHEh8giSaRkChIlCRykviw35L9JHuCDUF+ATGBJDaBDsw0AAAAAElFTkSuQmCC" class="nsd-app-label-icon"/>Fiona</a>
+            <a href="references/members/isa/index.html" data-nsd-label-uuid="0e35ea25-2962-472c-9ad6-65de86271d09" class="list-group-item list-group-action">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADEklEQVR4Xp2T20tUURTGTz5FEEQPvfQfFEjpjOaFUs/ojDpzZsa8k6ZdNO+KFs2Z0TlOaoo6aiSmRmrmBUxFIQp6qJccMTEhrAx6rNAoQkmL0tVa2zw62yJwwcdsZn3rt9deex9B+Ec4rb6HZEnrskv+s7JZs/pHz8pN2qO8979ht2hOY/FXJf4EtGSEQ3t2FHRk66EqKRhks/aLbPFvVizHDvB1fw27WWtC2K9mBPUVS9BfsqWeglhovaAD2gg983Zj0GG+3iuuSCH7bWbtQtPZMC/QdvWh7hWZNrv1KIrgw3PUwO5yK+ICsDPTDtDdQiPUpoZCY/optVuHVQuypEnmOWrgMcYb0jYKSF35MUDd1iSHgN2ihcZzYey3M0fP8vVnTtLRx3iOGjSXm+dFZu64pGfFrXlRMF6XArODBbA8XQX95Va4nhLCPDRP7PAdz1HDbtZ8bLsYycyVOPiR6kT4NlPtpRcD+eDAjcjTlhVJwEWeowZ2+PlWVhQz4xrmhot3AOk/ypGHnhOul3iOGpj8QUclc7k1AKZ7c3cAPV3ZUBEXyDy3cwwEXFfCwvbyLEFJCDpIO9/Ji2bmGpzTkCt+B7DPYWG3vXHzsaxbmznwCM8T7Fb/UErSG2PzwVmW4xOaG9069svhQvZUNsfSW2RkF4dvN5PnCbJFE43An/REWjIjoCoxGCoSA9Zbr4owUGdharXpwJkUuOZKCAL6kpynA4G+dfrueR4LWfLzxdffieDnTkk71p4XPtZbbYTxG0lMvTUm6CgU72NuAD2TeMNOxeS/j+d4hSciwm9CFIc8ovh9NF2E7muxMP+gBN6ienA9gv9hbgU1SF6+Xg1QFB+PTleLxrVXqakwI0nwNFaEnjIDdLliGLj7sgGeGEWWm0MPeSdFsQYEYQ/PEzDZOGUwwKIsw2pTE7xOS4P3paWw7G6Ax64MeFiZDkvuevhQVgZvMEeeBZsNpvR6mNDp6r1h2Drttgkjrbjd6prX9hzVUC1Cj6vASZ2uiY7xyeHYlagWm3JvAUXxEe5CO+1axCDWb4snlzfpfIuPAAAAAElFTkSuQmCC" class="nsd-app-label-icon"/>Isa</a>
+            <a href="references/members/katell/index.html" data-nsd-label-uuid="b9566bd7-c617-4e61-94f9-af0b4e82e5e1" class="list-group-item list-group-action">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADEklEQVR4Xp2T20tUURTGTz5FEEQPvfQfFEjpjOaFUs/ojDpzZsa8k6ZdNO+KFs2Z0TlOaoo6aiSmRmrmBUxFIQp6qJccMTEhrAx6rNAoQkmL0tVa2zw62yJwwcdsZn3rt9deex9B+Ec4rb6HZEnrskv+s7JZs/pHz8pN2qO8979ht2hOY/FXJf4EtGSEQ3t2FHRk66EqKRhks/aLbPFvVizHDvB1fw27WWtC2K9mBPUVS9BfsqWeglhovaAD2gg983Zj0GG+3iuuSCH7bWbtQtPZMC/QdvWh7hWZNrv1KIrgw3PUwO5yK+ICsDPTDtDdQiPUpoZCY/optVuHVQuypEnmOWrgMcYb0jYKSF35MUDd1iSHgN2ihcZzYey3M0fP8vVnTtLRx3iOGjSXm+dFZu64pGfFrXlRMF6XArODBbA8XQX95Va4nhLCPDRP7PAdz1HDbtZ8bLsYycyVOPiR6kT4NlPtpRcD+eDAjcjTlhVJwEWeowZ2+PlWVhQz4xrmhot3AOk/ypGHnhOul3iOGpj8QUclc7k1AKZ7c3cAPV3ZUBEXyDy3cwwEXFfCwvbyLEFJCDpIO9/Ji2bmGpzTkCt+B7DPYWG3vXHzsaxbmznwCM8T7Fb/UErSG2PzwVmW4xOaG9069svhQvZUNsfSW2RkF4dvN5PnCbJFE43An/REWjIjoCoxGCoSA9Zbr4owUGdharXpwJkUuOZKCAL6kpynA4G+dfrueR4LWfLzxdffieDnTkk71p4XPtZbbYTxG0lMvTUm6CgU72NuAD2TeMNOxeS/j+d4hSciwm9CFIc8ovh9NF2E7muxMP+gBN6ienA9gv9hbgU1SF6+Xg1QFB+PTleLxrVXqakwI0nwNFaEnjIDdLliGLj7sgGeGEWWm0MPeSdFsQYEYQ/PEzDZOGUwwKIsw2pTE7xOS4P3paWw7G6Ax64MeFiZDkvuevhQVgZvMEeeBZsNpvR6mNDp6r1h2Drttgkjrbjd6prX9hzVUC1Cj6vASZ2uiY7xyeHYlagWm3JvAUXxEe5CO+1axCDWb4snlzfpfIuPAAAAAElFTkSuQmCC" class="nsd-app-label-icon"/>Katell</a>
+            <a href="references/members/lea/index.html" data-nsd-label-uuid="bced7e3d-3692-43ea-b31b-69638b077b68" class="list-group-item list-group-action">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADEklEQVR4Xp2T20tUURTGTz5FEEQPvfQfFEjpjOaFUs/ojDpzZsa8k6ZdNO+KFs2Z0TlOaoo6aiSmRmrmBUxFIQp6qJccMTEhrAx6rNAoQkmL0tVa2zw62yJwwcdsZn3rt9deex9B+Ec4rb6HZEnrskv+s7JZs/pHz8pN2qO8979ht2hOY/FXJf4EtGSEQ3t2FHRk66EqKRhks/aLbPFvVizHDvB1fw27WWtC2K9mBPUVS9BfsqWeglhovaAD2gg983Zj0GG+3iuuSCH7bWbtQtPZMC/QdvWh7hWZNrv1KIrgw3PUwO5yK+ICsDPTDtDdQiPUpoZCY/optVuHVQuypEnmOWrgMcYb0jYKSF35MUDd1iSHgN2ihcZzYey3M0fP8vVnTtLRx3iOGjSXm+dFZu64pGfFrXlRMF6XArODBbA8XQX95Va4nhLCPDRP7PAdz1HDbtZ8bLsYycyVOPiR6kT4NlPtpRcD+eDAjcjTlhVJwEWeowZ2+PlWVhQz4xrmhot3AOk/ypGHnhOul3iOGpj8QUclc7k1AKZ7c3cAPV3ZUBEXyDy3cwwEXFfCwvbyLEFJCDpIO9/Ji2bmGpzTkCt+B7DPYWG3vXHzsaxbmznwCM8T7Fb/UErSG2PzwVmW4xOaG9069svhQvZUNsfSW2RkF4dvN5PnCbJFE43An/REWjIjoCoxGCoSA9Zbr4owUGdharXpwJkUuOZKCAL6kpynA4G+dfrueR4LWfLzxdffieDnTkk71p4XPtZbbYTxG0lMvTUm6CgU72NuAD2TeMNOxeS/j+d4hSciwm9CFIc8ovh9NF2E7muxMP+gBN6ienA9gv9hbgU1SF6+Xg1QFB+PTleLxrVXqakwI0nwNFaEnjIDdLliGLj7sgGeGEWWm0MPeSdFsQYEYQ/PEzDZOGUwwKIsw2pTE7xOS4P3paWw7G6Ax64MeFiZDkvuevhQVgZvMEeeBZsNpvR6mNDp6r1h2Drttgkjrbjd6prX9hzVUC1Cj6vASZ2uiY7xyeHYlagWm3JvAUXxEe5CO+1axCDWb4snlzfpfIuPAAAAAElFTkSuQmCC" class="nsd-app-label-icon"/>Lea</a>
+            <a href="references/members/paul/index.html" data-nsd-label-uuid="7308aab6-c046-45c9-964b-869d2a48f75c" class="list-group-item list-group-action">
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon"/>Paul</a>
+          </div>
+        </div>
+        <div data-nsd-label-uuid="f6164105-bbfb-45f1-b0a5-8bef36def407" data-nsd-action-uris="uuid:f6164105-bbfb-45f1-b0a5-8bef36def407" class="col nsd-app-content-panel">
+          <div class="container-fluid">
+            <div class="row nsd-app-content-panel-title-and-items-row">
+              <div class="col-auto">
+                <H1><span data-nsd-label-uuid="f6164105-bbfb-45f1-b0a5-8bef36def407" class="nsd-app-content-panel-title"><span class="fas fa-search nsd-app-label-icon"></span>Search</span>
+                </H1>
+              </div>
+            </div>
+            <div class="row nsd-app-content-panel-content-row">
+              <div class="col">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col">		<script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>     
+		<script src="search-documents.js"></script>     
+     	<div id="search-app" class="container-fluid">
+     		<div class="row">
+     			<div class="col">
+					<b-form-group
+			          label="Filter"
+			          label-for="filter-input"
+			          label-cols-sm="3"
+			          label-align-sm="right"
+			          label-size="sm"
+			          class="mb-0"
+					  description="You can use wildcards, e.g. 'foo*' or 'f*o'; title or content fields, e.g. 'title:foo* bar'; boosts, e.g. 'foo^10 bar'; fuzzy matches, e.g. 'foo~1'; and term presence, e.g. '+foo bar -baz'"	          
+			        >
+			          <b-input-group size="sm">
+			            <b-form-input
+			              id="filter-input"
+			              v-model="filter"
+			              type="search"
+			              placeholder="Type to Search"
+			              debounce="700"
+			            ></b-form-input>
+			
+			            <b-input-group-append>
+			              <b-button :disabled="!filter" @click="filter = ''">Clear</b-button>
+			            </b-input-group-append>
+			          </b-input-group>
+			        </b-form-group>		
+     			</div>     		
+     		</div>
+	        
+	        <div class="row flex-nowrap">
+	        	<div class="col-auto border-right border-secondary pb-1">
+	        		<div id="nsd-site-map-tree">
+	        		</div>
+	        	</div>
+	        	<div class="col">
+			        <b-card 
+			        	v-for="searchResult in searchResults" 
+			        	:header-html="searchResult.title" 
+			        	:footer="searchResult.path"
+			        	class="my-1"
+			        	>
+			        	
+			        	<b-card-text><span v-html="searchResult.content"></span></b-card-text>
+			        </b-card>
+	        	</div>
+	        </div>	        
+     	</div>
+     
+		<script>		      
+			new Vue({
+				  el: '#search-app',
+				  data: {
+			        	filter: null,
+				      searchIndex : lunr(function () {
+						  this.ref('url');
+						  this.field('title');
+						  this.field('content');
+						  this.metadataWhitelist = ['position'];
+	
+						  for (const key in searchDocuments) {
+							  let doc = searchDocuments[key];
+							this.add({
+								url: key,
+								title: doc.title,
+								path: doc.path,
+								content: doc.content
+							});  
+						  }
+						})
+				  },				  
+				  computed: {
+					searchResults: function() {
+						if (this.filter) {
+							let searchResult = this.searchIndex.search(this.filter);
+							let actionUuids = searchResult.map(match => searchDocuments[match.ref]['action-uuid']).join(" ");
+							setTimeout(() => {
+								let treeSearchCallback = $('#nsd-site-map-tree').jstree(true).search;
+								if (treeSearchCallback) {
+									$('#nsd-site-map-tree').jstree(true).search(actionUuids);								
+								}
+							});
+							
+							return searchResult.map(function(e) {
+								let doc = searchDocuments[e.ref];
+								let titleMatches = [];
+								let contentMatches = [];
+								let matchMetaData = e.matchData.metadata;
+								for (const term in matchMetaData) {
+									if (matchMetaData[term]['title']) {
+										let positions = matchMetaData[term]['title'].position;
+										for (const match in positions) {
+											titleMatches.push(positions[match]);
+										}										
+									}
+									if (matchMetaData[term]['content']) {
+										let positions = matchMetaData[term]['content'].position;
+										for (const match in positions) {
+											contentMatches.push(positions[match]);
+										}										
+									}
+								}
+								
+								// Title highlighting
+								titleMatches.sort(function (a, b) { return a[0] - b[0] });
+								let titleElements = [];
+								let idx = 0;
+								for (const matchIdx in titleMatches) {
+									let match = titleMatches[matchIdx];
+									if (match[0] > idx) {
+										titleElements.push(doc.title.substring(idx, match[0]));
+									}
+									idx =  match[0] + match[1];
+									titleElements.push(`<span class='nsd-mark'>${doc.title.substring(match[0], idx)}</span>`);
+								}
+								if (idx < doc.title.length - 1) {
+									titleElements.push(doc.title.substring(idx, doc.title.length));
+								}
+								
+								// Content ellipsing and highlighting
+								contentMatches.sort(function (a, b) { return a[0] - b[0] });
+								let contentElements = [];
+								let snippetLength = 10;
+								idx = 0;
+								for (const matchIdx in contentMatches) {
+									let match = contentMatches[matchIdx];
+									if (match[0] > idx) {
+										let words = doc.content.substring(idx, match[0]).split(' ');
+										let snippetedWords = [];
+										if (idx == 0) {
+											if (words.length <= snippetLength) {
+												snippetedWords = words;
+											} else {
+												snippetedWords.push("&hellip;");
+												words.slice(words.length - snippetLength, words.length).forEach(e => snippetedWords.push(e));
+											}
+										} else {
+											if (words.length <= snippetLength * 2) {
+												snippetedWords = words;
+											} else {
+												words.slice(0, snippetLength).forEach(e => snippetedWords.push(e));
+												snippetedWords.push("&hellip;");
+												words.slice(words.length - snippetLength, words.length).forEach(e => snippetedWords.push(e));
+											}
+											
+										}
+										contentElements.push(snippetedWords.join(' '));
+									}
+									idx =  match[0] + match[1];
+									contentElements.push(`<span class='nsd-mark'>${doc.content.substring(match[0], idx)}</span>`);
+								}
+								if (idx < doc.content.length - 1) {
+									let words = doc.content.substring(idx, doc.content.length).split(' ');
+									if (idx == 0) {
+										if (words.length < snippetLength * 2) {
+											contentElements.push(doc.content);
+										} else {
+											let snippetedWords = [];
+											words.slice(0, snippetLength * 2).forEach(e => snippetedWords.push(e));
+											snippetedWords.push("&hellip;");
+											contentElements.push(snippetedWords.join(' '));
+										}
+									} else {
+										let snippetedWords = [];
+										if (words.length <= snippetLength) {
+											snippetedWords = words;
+										} else {
+											words.slice(0, snippetLength).forEach(e => snippetedWords.push(e));
+											snippetedWords.push("&hellip;");
+										}
+										contentElements.push(snippetedWords.join(' '));
+									}
+								}
+								return {
+									title: `<h5><a href="${e.ref}">${titleElements.join('')}</a></h5>`,
+									path: doc.path,
+									content: contentElements.join('')
+								};									
+							});
+						} 
+						setTimeout(() => {
+							let treeSearchCallback = $('#nsd-site-map-tree').jstree(true).search;
+							if (treeSearchCallback) {
+								$('#nsd-site-map-tree').jstree(true).search('');								
+							}
+						});
+						return [];
+					}  
+				  }
+			});   			
+		</script>
+		
+
+<script>$(document).ready( function() {
+$('#nsd-site-map-tree').jstree(function(tree) { tree.state.filter = function(state) { delete state.core.selected; return state; }; tree.search.search_callback = (results, node) => results.split(' ').includes(node.original['data-nsd-label-uuid']); return tree; }({"core":{"data":[{"a_attr":{"onclick":"window.location='https://family.models.nasdanika.org';"},"children":[{"children":[{"data-nsd-label-uuid":"f6164105-bbfb-45f1-b0a5-8bef36def407","icon":"fas fa-search","id":"c953bd30-61ab-44e2-abd6-a07ad0a777fb","text":"Search","type":"leaf"},{"a_attr":{"onclick":"window.location='glossary.html';"},"data-nsd-label-uuid":"50b2c8b5-2931-4083-a9e8-91ef0961af3c","icon":"fas fa-book","id":"b9e9de64-27d8-4d58-a41f-a926f3d48e86","text":"Glossary","type":"leaf"}],"text":"Children"},{"children":[{"a_attr":{"onclick":"window.location='https://github.com/Nasdanika-Models/family';"},"data-nsd-label-uuid":"44d873d2-4993-40e1-9aa8-daa27b99ba20","icon":"fab fa-github","id":"51309ca5-1190-41ed-98ba-3baf7fd362f4","text":"Sources","type":"leaf"}],"text":"Navigation"}],"data-nsd-label-uuid":"65668e80-beb8-4287-8778-67d5c7105a7b","icon":"https://docs.nasdanika.org/images/nasdanika-logo.png","id":"c300453c-f4c7-40ea-a128-e12b608634aa","text":"Nasdanika Family Model","type":"leaf"},{"a_attr":{"onclick":"window.location='index.html';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='references/members/alain/index.html';"},"data-nsd-label-uuid":"22dfc875-9d65-4708-96a4-9b53b693adc9","icon":"https://img.icons8.com/officexs/24/user.png","id":"8c7e4819-f6a9-4afd-bada-befbf45a014b","text":"Alain","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/albert/index.html';"},"data-nsd-label-uuid":"b772d65c-d098-4c58-a95b-c7b07ad24423","icon":"https://img.icons8.com/officexs/24/user.png","id":"d32711ad-9cfd-4daf-a7da-61bcacdb35c9","text":"Albert","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/bryan/index.html';"},"data-nsd-label-uuid":"c48fb040-9ac3-4dad-9fbc-3cd5ea0e8abe","icon":"https://img.icons8.com/officexs/24/user.png","id":"74391086-9282-43d6-b755-69836cd060dc","text":"Bryan","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/clara/index.html';"},"data-nsd-label-uuid":"81cf5993-8172-4d19-bf46-82a593e9da8b","icon":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADEklEQVR4Xp2T20tUURTGTz5FEEQPvfQfFEjpjOaFUs/ojDpzZsa8k6ZdNO+KFs2Z0TlOaoo6aiSmRmrmBUxFIQp6qJccMTEhrAx6rNAoQkmL0tVa2zw62yJwwcdsZn3rt9deex9B+Ec4rb6HZEnrskv+s7JZs/pHz8pN2qO8979ht2hOY/FXJf4EtGSEQ3t2FHRk66EqKRhks/aLbPFvVizHDvB1fw27WWtC2K9mBPUVS9BfsqWeglhovaAD2gg983Zj0GG+3iuuSCH7bWbtQtPZMC/QdvWh7hWZNrv1KIrgw3PUwO5yK+ICsDPTDtDdQiPUpoZCY/optVuHVQuypEnmOWrgMcYb0jYKSF35MUDd1iSHgN2ihcZzYey3M0fP8vVnTtLRx3iOGjSXm+dFZu64pGfFrXlRMF6XArODBbA8XQX95Va4nhLCPDRP7PAdz1HDbtZ8bLsYycyVOPiR6kT4NlPtpRcD+eDAjcjTlhVJwEWeowZ2+PlWVhQz4xrmhot3AOk/ypGHnhOul3iOGpj8QUclc7k1AKZ7c3cAPV3ZUBEXyDy3cwwEXFfCwvbyLEFJCDpIO9/Ji2bmGpzTkCt+B7DPYWG3vXHzsaxbmznwCM8T7Fb/UErSG2PzwVmW4xOaG9069svhQvZUNsfSW2RkF4dvN5PnCbJFE43An/REWjIjoCoxGCoSA9Zbr4owUGdharXpwJkUuOZKCAL6kpynA4G+dfrueR4LWfLzxdffieDnTkk71p4XPtZbbYTxG0lMvTUm6CgU72NuAD2TeMNOxeS/j+d4hSciwm9CFIc8ovh9NF2E7muxMP+gBN6ienA9gv9hbgU1SF6+Xg1QFB+PTleLxrVXqakwI0nwNFaEnjIDdLliGLj7sgGeGEWWm0MPeSdFsQYEYQ/PEzDZOGUwwKIsw2pTE7xOS4P3paWw7G6Ax64MeFiZDkvuevhQVgZvMEeeBZsNpvR6mNDp6r1h2Drttgkjrbjd6prX9hzVUC1Cj6vASZ2uiY7xyeHYlagWm3JvAUXxEe5CO+1axCDWb4snlzfpfIuPAAAAAElFTkSuQmCC","id":"1ac3f52f-b9c4-444a-87e0-b5104a8e3b2d","text":"Clara","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/dave/index.html';"},"data-nsd-label-uuid":"c907b0cc-36d2-462a-97ee-169ba88b641b","icon":"https://img.icons8.com/officexs/24/user.png","id":"01805925-dc73-4082-9678-af07c26aab22","text":"Dave","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/elias/index.html';"},"data-nsd-label-uuid":"b7d63c39-0681-4b8b-9e6b-66f5825f589f","icon":"https://img.icons8.com/officexs/24/user.png","id":"74f2057f-8831-4659-84fb-65123c2fd95c","text":"Elias","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/fiona/index.html';"},"data-nsd-label-uuid":"ff7dd6f9-7654-4e0a-ba63-e0341392574a","icon":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAC0ElEQVR4XtWTXUiTURjHrSauiBVtc7rl/Nicm/tim0734dx0m9OpYGGlBVqGiWQpSR9XSpC76MaLkFIMJRFbipohEaKUSSaEJIQEIUINP7CsBIPC/p33jYG+xrDu+sGfA4fn+fGc95w3LOy/xm63s206pc+mV73IMeuulJfb2cyav2FXhk7dbVLL4TEbcMyVgSK7aYDaZxbuiFRV4hFaZknFm9E+LEw9QkNVKcoLs08wa3dEYoyoz5GqwVjvXawvzePL3DSGW30ocWe8u1NZGc6sD4nBYAgX8rmBptrTWH37Et/XPmLt/Sw+jPtx3GX92Vhz8jCzJyQaiSQyRsD/0XuzHsvTT/B1fgafZicw2dMMjTRuo/niWQGzJyS6pCShRBT9LdugxNxQCxYmBxAY70HdqUKYNIph4B8uJk0lv6SVSZZGfOcx9/AWAiMdsBu1a0pZvJZZuyOkUqlEq9GsdzXUYP5xJxaf9uDCmdLr1Ntk1oYkISFBnJyc7FOr1ctKpRKZVjNe+Vuw+Ow+btRXwWw2rzqdzq6srCwbs/ePiIWCUblMBoVCASIFuXFUlBxFYKwbr/tvw2g0wu12IzMzc6W4uHgvs38b4mjBc2lcLDRERiaFXq+npkJb01WsTPhR5M1BXl4eyITUWsXs34ZYGDVECdVqFS2kJkxPT4fb5cTMYBt8l6uRn58Pj8dDCadyc3MjmI4tkAnv0UKVij6yVqtFWloabDYbqivK0NreSQuDUq/XW8Z0bCFGGNVOCVXkQqjpqG9pMplgsVjgcrnga++nj1xQUACHw0GtfqZjM/sEvEOVkrjYz5uEG9SRrVYrLThXd40WEvl6SkrKIHleJtLHYoqCUD+9mMViOQ5yOLVcLrc5IiKihcPh+EUi0TCfz38gFsd18Hi8RjabXUpqU0kiSXZv1WyHEh8giSaRkChIlCRykviw35L9JHuCDUF+ATGBJDaBDsw0AAAAAElFTkSuQmCC","id":"f535fb6d-e226-413e-8dbb-9247410c1d86","text":"Fiona","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/isa/index.html';"},"data-nsd-label-uuid":"0e35ea25-2962-472c-9ad6-65de86271d09","icon":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADEklEQVR4Xp2T20tUURTGTz5FEEQPvfQfFEjpjOaFUs/ojDpzZsa8k6ZdNO+KFs2Z0TlOaoo6aiSmRmrmBUxFIQp6qJccMTEhrAx6rNAoQkmL0tVa2zw62yJwwcdsZn3rt9deex9B+Ec4rb6HZEnrskv+s7JZs/pHz8pN2qO8979ht2hOY/FXJf4EtGSEQ3t2FHRk66EqKRhks/aLbPFvVizHDvB1fw27WWtC2K9mBPUVS9BfsqWeglhovaAD2gg983Zj0GG+3iuuSCH7bWbtQtPZMC/QdvWh7hWZNrv1KIrgw3PUwO5yK+ICsDPTDtDdQiPUpoZCY/optVuHVQuypEnmOWrgMcYb0jYKSF35MUDd1iSHgN2ihcZzYey3M0fP8vVnTtLRx3iOGjSXm+dFZu64pGfFrXlRMF6XArODBbA8XQX95Va4nhLCPDRP7PAdz1HDbtZ8bLsYycyVOPiR6kT4NlPtpRcD+eDAjcjTlhVJwEWeowZ2+PlWVhQz4xrmhot3AOk/ypGHnhOul3iOGpj8QUclc7k1AKZ7c3cAPV3ZUBEXyDy3cwwEXFfCwvbyLEFJCDpIO9/Ji2bmGpzTkCt+B7DPYWG3vXHzsaxbmznwCM8T7Fb/UErSG2PzwVmW4xOaG9069svhQvZUNsfSW2RkF4dvN5PnCbJFE43An/REWjIjoCoxGCoSA9Zbr4owUGdharXpwJkUuOZKCAL6kpynA4G+dfrueR4LWfLzxdffieDnTkk71p4XPtZbbYTxG0lMvTUm6CgU72NuAD2TeMNOxeS/j+d4hSciwm9CFIc8ovh9NF2E7muxMP+gBN6ienA9gv9hbgU1SF6+Xg1QFB+PTleLxrVXqakwI0nwNFaEnjIDdLliGLj7sgGeGEWWm0MPeSdFsQYEYQ/PEzDZOGUwwKIsw2pTE7xOS4P3paWw7G6Ax64MeFiZDkvuevhQVgZvMEeeBZsNpvR6mNDp6r1h2Drttgkjrbjd6prX9hzVUC1Cj6vASZ2uiY7xyeHYlagWm3JvAUXxEe5CO+1axCDWb4snlzfpfIuPAAAAAElFTkSuQmCC","id":"236b2550-7c98-41fe-bd27-af954c7e30d9","text":"Isa","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/katell/index.html';"},"data-nsd-label-uuid":"b9566bd7-c617-4e61-94f9-af0b4e82e5e1","icon":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADEklEQVR4Xp2T20tUURTGTz5FEEQPvfQfFEjpjOaFUs/ojDpzZsa8k6ZdNO+KFs2Z0TlOaoo6aiSmRmrmBUxFIQp6qJccMTEhrAx6rNAoQkmL0tVa2zw62yJwwcdsZn3rt9deex9B+Ec4rb6HZEnrskv+s7JZs/pHz8pN2qO8979ht2hOY/FXJf4EtGSEQ3t2FHRk66EqKRhks/aLbPFvVizHDvB1fw27WWtC2K9mBPUVS9BfsqWeglhovaAD2gg983Zj0GG+3iuuSCH7bWbtQtPZMC/QdvWh7hWZNrv1KIrgw3PUwO5yK+ICsDPTDtDdQiPUpoZCY/optVuHVQuypEnmOWrgMcYb0jYKSF35MUDd1iSHgN2ihcZzYey3M0fP8vVnTtLRx3iOGjSXm+dFZu64pGfFrXlRMF6XArODBbA8XQX95Va4nhLCPDRP7PAdz1HDbtZ8bLsYycyVOPiR6kT4NlPtpRcD+eDAjcjTlhVJwEWeowZ2+PlWVhQz4xrmhot3AOk/ypGHnhOul3iOGpj8QUclc7k1AKZ7c3cAPV3ZUBEXyDy3cwwEXFfCwvbyLEFJCDpIO9/Ji2bmGpzTkCt+B7DPYWG3vXHzsaxbmznwCM8T7Fb/UErSG2PzwVmW4xOaG9069svhQvZUNsfSW2RkF4dvN5PnCbJFE43An/REWjIjoCoxGCoSA9Zbr4owUGdharXpwJkUuOZKCAL6kpynA4G+dfrueR4LWfLzxdffieDnTkk71p4XPtZbbYTxG0lMvTUm6CgU72NuAD2TeMNOxeS/j+d4hSciwm9CFIc8ovh9NF2E7muxMP+gBN6ienA9gv9hbgU1SF6+Xg1QFB+PTleLxrVXqakwI0nwNFaEnjIDdLliGLj7sgGeGEWWm0MPeSdFsQYEYQ/PEzDZOGUwwKIsw2pTE7xOS4P3paWw7G6Ax64MeFiZDkvuevhQVgZvMEeeBZsNpvR6mNDp6r1h2Drttgkjrbjd6prX9hzVUC1Cj6vASZ2uiY7xyeHYlagWm3JvAUXxEe5CO+1axCDWb4snlzfpfIuPAAAAAElFTkSuQmCC","id":"a3aa652f-cf8e-4a9b-b215-2ff7ef6ca682","text":"Katell","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/lea/index.html';"},"data-nsd-label-uuid":"bced7e3d-3692-43ea-b31b-69638b077b68","icon":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADEklEQVR4Xp2T20tUURTGTz5FEEQPvfQfFEjpjOaFUs/ojDpzZsa8k6ZdNO+KFs2Z0TlOaoo6aiSmRmrmBUxFIQp6qJccMTEhrAx6rNAoQkmL0tVa2zw62yJwwcdsZn3rt9deex9B+Ec4rb6HZEnrskv+s7JZs/pHz8pN2qO8979ht2hOY/FXJf4EtGSEQ3t2FHRk66EqKRhks/aLbPFvVizHDvB1fw27WWtC2K9mBPUVS9BfsqWeglhovaAD2gg983Zj0GG+3iuuSCH7bWbtQtPZMC/QdvWh7hWZNrv1KIrgw3PUwO5yK+ICsDPTDtDdQiPUpoZCY/optVuHVQuypEnmOWrgMcYb0jYKSF35MUDd1iSHgN2ihcZzYey3M0fP8vVnTtLRx3iOGjSXm+dFZu64pGfFrXlRMF6XArODBbA8XQX95Va4nhLCPDRP7PAdz1HDbtZ8bLsYycyVOPiR6kT4NlPtpRcD+eDAjcjTlhVJwEWeowZ2+PlWVhQz4xrmhot3AOk/ypGHnhOul3iOGpj8QUclc7k1AKZ7c3cAPV3ZUBEXyDy3cwwEXFfCwvbyLEFJCDpIO9/Ji2bmGpzTkCt+B7DPYWG3vXHzsaxbmznwCM8T7Fb/UErSG2PzwVmW4xOaG9069svhQvZUNsfSW2RkF4dvN5PnCbJFE43An/REWjIjoCoxGCoSA9Zbr4owUGdharXpwJkUuOZKCAL6kpynA4G+dfrueR4LWfLzxdffieDnTkk71p4XPtZbbYTxG0lMvTUm6CgU72NuAD2TeMNOxeS/j+d4hSciwm9CFIc8ovh9NF2E7muxMP+gBN6ienA9gv9hbgU1SF6+Xg1QFB+PTleLxrVXqakwI0nwNFaEnjIDdLliGLj7sgGeGEWWm0MPeSdFsQYEYQ/PEzDZOGUwwKIsw2pTE7xOS4P3paWw7G6Ax64MeFiZDkvuevhQVgZvMEeeBZsNpvR6mNDp6r1h2Drttgkjrbjd6prX9hzVUC1Cj6vASZ2uiY7xyeHYlagWm3JvAUXxEe5CO+1axCDWb4snlzfpfIuPAAAAAElFTkSuQmCC","id":"4437b855-d038-4a8f-a121-3f510c07ce6c","text":"Lea","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/paul/index.html';"},"data-nsd-label-uuid":"7308aab6-c046-45c9-964b-869d2a48f75c","icon":"https://img.icons8.com/officexs/24/user.png","id":"cc769a45-c3c4-430e-a9b7-e6f9c2b2d52d","text":"Paul","type":"leaf"}],"text":"Members"}],"data-nsd-label-uuid":"a3fd747e-6391-4f81-be4b-2c690de2d976","icon":"https://img.icons8.com/officexs/24/family--v1.png","id":"571425e9-4a45-4466-8be1-fba5510d7140","text":"Sample Family","type":"leaf"}]},"search":{"show_only_matches":true},"plugins":["state","search"],"state":{"key":"nsd-site-map-tree"}}));
+});</script>
+				
+		</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nsd-app-footer">
+          <ul class="nav nsd-app-footer-navs">
+            <li class="nav-item">
+              <a href="https://github.com/Nasdanika-Models/family" data-nsd-label-uuid="44d873d2-4993-40e1-9aa8-daa27b99ba20" class="nav-link"><span class="fab fa-github nsd-app-label-icon"></span>Sources</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

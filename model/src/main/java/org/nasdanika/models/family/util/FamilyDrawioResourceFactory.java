@@ -3,10 +3,12 @@ package org.nasdanika.models.family.util;
 import java.util.function.Function;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.nasdanika.common.NullProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.drawio.model.ModelFactory;
+import org.nasdanika.graph.Element;
 import org.nasdanika.models.family.Person;
 import org.nasdanika.persistence.Marker;
 
@@ -25,7 +27,14 @@ public class FamilyDrawioResourceFactory implements Resource.Factory {
 		
 	@Override
 	public Resource createResource(URI uri) {
-		return new FamilyDrawioResource(uri, uriResolver);
+		return new FamilyDrawioResource(uri, uriResolver) {
+			
+			@Override
+			protected void filterRepresentationElement(Element representationElement, EObject semanticElement, ProgressMonitor progressMonitor) {
+				FamilyDrawioResourceFactory.this.filterRepresentationElement(representationElement, semanticElement, progressMonitor);
+			}
+			
+		};
 	}
 	
 	protected Function<Marker, org.nasdanika.ncore.Marker> getMarkerFactory() {
@@ -39,5 +48,19 @@ public class FamilyDrawioResourceFactory implements Resource.Factory {
 	protected ProgressMonitor getProgressMonitor() {
 		return new NullProgressMonitor();
 	}
+	
+	/**
+	 * Override to implement filtering of a representation element. 
+	 * For example, if an element represents a processing unit, its background color or image can be modified depending on the load - red for overloaded, green for OK, grey for planned offline.  
+	 * @param representationElement
+	 * @param registry
+	 * @param progressMonitor
+	 */
+	protected void filterRepresentationElement(
+			org.nasdanika.graph.Element representationElement, 
+			EObject semanticElement,
+			ProgressMonitor progressMonitor) {
+		
+	}	
 			
 }

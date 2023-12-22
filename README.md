@@ -26,6 +26,15 @@ Sirius links:
 * https://eclipse.dev/sirius/doc/specifier/Sirius%20Specifier%20Manual.html
 * https://eclipse.dev/sirius/doc/specifier/diagrams/Diagrams.html
 
+## Overview of Drawio
+
+TODO, reference the ecore model, migrage the diagram there and possibly have it here
+
+## Overview of Ecore
+
+TODO, reference the ecore model
+
+
 ## Mapping
 
 ### base-uri
@@ -129,6 +138,14 @@ If the connection semantic element is ``null``, then the connection target seman
 #### start
 
 For connections - mapping specification for the connection start feature to map the connection source semantic element to a feature of the connection semantic element.
+
+#### tag-spec
+
+TODO
+
+#### tag-spec-ref
+
+TODO
 
 #### Feature Mapping Specification
 

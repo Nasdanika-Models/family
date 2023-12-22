@@ -20,7 +20,8 @@ import org.nasdanika.common.PrintStreamProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.diagramgenerator.plantuml.PlantUMLDiagramGenerator;
 import org.nasdanika.html.model.app.gen.ActionSiteGenerator;
-import org.nasdanika.models.family.processors.doc.FamilyUtil;
+import org.nasdanika.models.family.processors.doc.FamilyActionGenerator;
+import org.nasdanika.models.family.processors.doc.FamilyNodeProcessorFactory;
 import org.nasdanika.models.family.util.FamilyWorkbookResourceFactory;
 
 public class TestFamilySiteGenFromWorkbook {
@@ -45,11 +46,12 @@ public class TestFamilySiteGenFromWorkbook {
 		actionModelsDir.mkdirs();
 								
 		File output = new File(actionModelsDir, "family-actions.xmi");
+				
+		FamilyActionGenerator actionGenerator = new FamilyActionGenerator(
+				familyResource.getContents().get(0),
+				new FamilyNodeProcessorFactory(context, null));
 		
-		FamilyUtil.generateActionModel(
-				familyResource.getContents().get(0), 
-				context, 
-				null,
+		actionGenerator.generateActionModel(
 				diagnosticConsumer, 
 				output,
 				progressMonitor);

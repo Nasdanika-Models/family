@@ -7,6 +7,7 @@ import java.util.Map.Entry;
 import java.util.function.Consumer;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
@@ -19,9 +20,11 @@ import org.nasdanika.common.MutableContext;
 import org.nasdanika.common.PrintStreamProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.diagramgenerator.plantuml.PlantUMLDiagramGenerator;
+import org.nasdanika.graph.Element;
 import org.nasdanika.html.model.app.gen.ActionSiteGenerator;
 import org.nasdanika.models.family.Person;
-import org.nasdanika.models.family.processors.doc.FamilyUtil;
+import org.nasdanika.models.family.processors.doc.FamilyActionGenerator;
+import org.nasdanika.models.family.processors.doc.FamilyNodeProcessorFactory;
 import org.nasdanika.models.family.util.FamilyDrawioResourceFactory;
 
 public class TestFamilyMappingSiteGen {
@@ -29,7 +32,25 @@ public class TestFamilyMappingSiteGen {
 	@Test
 	public void testGenerateFamilySiteWithMapping() throws Exception {
 		ResourceSet resourceSet = new ResourceSetImpl();
-		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("drawio", new FamilyDrawioResourceFactory(uri -> (Person) resourceSet.getEObject(uri, true)));
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("drawio", new FamilyDrawioResourceFactory(uri -> (Person) resourceSet.getEObject(uri, true)) {
+			
+			@Override
+			protected void filterRepresentationElement(
+					Element representationElement, 
+					EObject semanticElement,
+					ProgressMonitor progressMonitor) {
+				
+				// Demo of representation filtering - adding a black border to Isa
+				if (representationElement instanceof org.nasdanika.drawio.ModelElement) {
+					org.nasdanika.drawio.ModelElement rme = (org.nasdanika.drawio.ModelElement) representationElement;
+					if ("isa".equals(rme.getProperty("semantic-id"))) {
+						rme.getStyle().put("imageBorder", "default");
+					}
+				}
+			}
+			
+		});
+		
 		File familyDiagramFile = new File("family.drawio").getCanonicalFile();
 		Resource familyResource = resourceSet.getResource(URI.createFileURI(familyDiagramFile.getAbsolutePath()), true);
 		
@@ -45,10 +66,11 @@ public class TestFamilyMappingSiteGen {
 								
 		File output = new File(actionModelsDir, "family-actions.xmi");
 		
-		FamilyUtil.generateActionModel(
-				familyResource.getContents().get(0), 
-				context, 
-				null,
+		FamilyActionGenerator actionGenerator = new FamilyActionGenerator(
+				familyResource.getContents().get(0),
+				new FamilyNodeProcessorFactory(context, null));
+		
+		actionGenerator.generateActionModel(
 				diagnosticConsumer, 
 				output,
 				progressMonitor);
