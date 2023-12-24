@@ -34,7 +34,6 @@ TODO, reference the ecore model, migrage the diagram there and possibly have it 
 
 TODO, reference the ecore model
 
-
 ## Mapping
 
 ### base-uri
@@ -175,19 +174,47 @@ The following comparators are provided "out of the box":
 
 ###### clockwise
 
-TODO
+Compares elements by their angle relative to the node of the semantic element which holds the many reference. 
+In the [Living Beings](https://graph.models.nasdanika.org/demo/living-beings/index.html) demo "Bird", "Fish", and "Bacteria" are compared by their angle to the "Living Beings" with the angle counted from "12 o'clock" - 90 degrees (default).
+
+Feature mapping with comparators of "Bird", "Fish", and "Bacteria" are defined at the connections from "Living Beings" as:
+
+```yaml
+source: 
+  elements:
+    comparator: clockwise
+```
+
+To specify the base angle other than 90 degree use the map version of comparator definition where ``clockwise`` is the key mapping to a number or string value. 
+The number value is used as the angle value in degrees. The string value is treated as a [Spring Expression Language (SpEL)](https://docs.spring.io/spring-framework/reference/core/expressions.html) expression evaluated in the context of the "parent" node. The expression may evaluate to a number or to a node. In the latter case the result is used to compute the angle between the context node and the result node.
+
+In the Living Beings example "Streptococcus", ..., "Staphyllococcus" are compared relative to the "Bacteria" node with the base angle being the angle between the "Bacteria" node and "Living Beings" node. As such "Streptococcus" is the smallest node and "Staphyllococcus" is the largest. With the default angle of 90 degrees "Lactobacyllus" would be the smallest and "Streptococcus" would be the largest.
+
+Feature mapping with comparators of "Streptococcus", ..., "Staphyllococcus" is defined at connections from "Bacteria" to the respecive genus nodes as:
+
+```yaml
+source: 
+  elements:
+    comparator: 
+      clockwise: incoming[0].source
+```
+
+``incoming[0]`` evaluates to the connection from "Living Beings" to "Bacteria" and ``source`` evaluates to "Living Beings".
 
 ###### counterclockwise
 
-TODO
+Reverse of ``clockwise``.
 
 ###### down-left
 
-TODO 
+Compares nodes by their vertial order first with higher nodes being smaller and then by horizontal order with nodes on the right being smaller.
+Nodes are considered vertically equal if they vertically overlap.  
 
 ###### down-right
 
-TODO
+Compares nodes by their vertial order first with higher nodes being smaller and then by horizontal order with nodes on the left being smaller.
+Nodes are considered vertically equal if they vertically overlap. 
+This comparator can be used for org. charts.
 
 ###### expression
 
@@ -199,7 +226,16 @@ A [Spring Expression Language (SpEL)](https://docs.spring.io/spring-framework/re
 
 ###### label
 
-Uses diagram element label converted to plain text as a sorting key. String.
+Uses diagram element label converted to plain text as a sorting key. String. 
+In the [Family mapping demo](https://family.models.nasdanika.org/demos/mapping/index.html) family members are sorted by label using the following feature map definition:
+
+```yaml
+container:
+  self: 
+    members:
+      argument-type: Person
+      comparator: label
+```
 
 ###### label-descending
 
@@ -207,11 +243,13 @@ Uses diagram element label converted to plain text as a sorting key to compare i
 
 ###### left-down
 
-TODO 
+Compares nodes by their horizontal order first with nodes on the right being smaller and then by vertial order with higher nodes being smaller.
+Nodes are considered horizontally equal if they horizontally overlap.  
 
 ###### left-up
 
-TODO 
+Compares nodes by their horizontal order first with nodes on the right being smaller and then by vertial order with lower nodes being smaller.
+Nodes are considered horizontally equal if they horizontally overlap.  
 
 ###### natural
 
@@ -230,19 +268,23 @@ The same as property, but compares in reverse alphabetical order.
 
 ###### right-down
 
-TODO
+Compares nodes by their horizontal order first with nodes on the left being smaller and then by vertial order with higher nodes being smaller.
+Nodes are considered horizontally equal if they horizontally overlap.  
 
 ###### right-up
 
-TODO 
+Compares nodes by their horizontal order first with nodes on the left being smaller and then by vertial order with lower nodes being smaller.
+Nodes are considered horizontally equal if they horizontally overlap.  
 
 ###### up-left
 
-TODO 
+Compares nodes by their vertial order first with lower nodes being smaller and then by horizontal order with nodes on the right being smaller.
+Nodes are considered vertically equal if they vertically overlap.  
 
 ###### up-right
 
-TODO
+Compares nodes by their vertial order first with lower nodes being smaller and then by horizontal order with nodes on the left being smaller.
+Nodes are considered vertically equal if they vertically overlap.  
 
 ##### condition
 
@@ -295,7 +337,6 @@ A number specifying the position of the element in the feature collection.
 ##### type
 
 Element type to match. If not specified, then feature's type is used as default.
-
 
 The mappinng specification can be either a string or a map. Strings are trea
 
@@ -352,14 +393,22 @@ Drawio model classes provide convenience methods for finding diagram elements:
 
 * [Document](https://drawio.models.nasdanika.org/references/eClassifiers/Document/operations.html):
     * ``getModelElementById(String id)``
+    * ``getModelElementByProperty(String name, String value)``
+    * ``getModelElementsByProperty(String name, String value)``
     * ``getPageById(String id)``
     * ``getPageByName(String name)``
 * [Page](https://drawio.models.nasdanika.org/references/eClassifiers/Page/operations.html):
     * ``getModelElementById(String id)``
+    * ``getModelElementByProperty(String name, String value)``
+    * ``getModelElementsByProperty(String name, String value)``
+    * ``getTag(String name)``
 * [ModelElement](https://drawio.models.nasdanika.org/references/eClassifiers/ModelElement/operations.html):
     * ``getDocument()``
     * ``getPage()``
+* [Root](https://drawio.models.nasdanika.org/references/eClassifiers/Root/operations.html), [Layer](https://drawio.models.nasdanika.org/references/eClassifiers/Layer/operations.html):    
     * ``getModelElementById(String id)``
+    * ``getModelElementByProperty(String name, String value)``
+    * ``getModelElementsByProperty(String name, String value)``
 
 A prototype must have a semantic element defined using ``constructor``, ``type``, ``selector`` or ``ref-id``. 
 If you want to inherit just configuration, but not the semantic element, then use ``config-prototype`` property instead of ``prototype``.
@@ -385,14 +434,22 @@ Drawio model classes provide convenience methods for finding diagram elements:
 
 * [Document](https://drawio.models.nasdanika.org/references/eClassifiers/Document/operations.html):
     * ``getModelElementById(String id)``
+    * ``getModelElementByProperty(String name, String value)``
+    * ``getModelElementsByProperty(String name, String value)``
     * ``getPageById(String id)``
     * ``getPageByName(String name)``
 * [Page](https://drawio.models.nasdanika.org/references/eClassifiers/Page/operations.html):
     * ``getModelElementById(String id)``
+    * ``getModelElementByProperty(String name, String value)``
+    * ``getModelElementsByProperty(String name, String value)``
+    * ``getTag(String name)``
 * [ModelElement](https://drawio.models.nasdanika.org/references/eClassifiers/ModelElement/operations.html):
     * ``getDocument()``
     * ``getPage()``
+* [Root](https://drawio.models.nasdanika.org/references/eClassifiers/Root/operations.html), [Layer](https://drawio.models.nasdanika.org/references/eClassifiers/Layer/operations.html):    
     * ``getModelElementById(String id)``
+    * ``getModelElementByProperty(String name, String value)``
+    * ``getModelElementsByProperty(String name, String value)``
 
 ### semantic-id
 
