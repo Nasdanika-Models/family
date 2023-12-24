@@ -38,6 +38,7 @@ public class TestFamilyMappingSiteGen {
 			protected void filterRepresentationElement(
 					Element representationElement, 
 					EObject semanticElement,
+					Map<EObject, EObject> registry,
 					ProgressMonitor progressMonitor) {
 				
 				// Demo of representation filtering - adding a black border to Isa
