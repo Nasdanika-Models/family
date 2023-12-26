@@ -52,7 +52,7 @@ See ``prototype`` below.
 ### constructor
 
 [Spring Expression Language (SpEL)](https://docs.spring.io/spring-framework/reference/core/expressions.html) expression evaluating to a semantic element.
-Takes precedence over ``type``. 
+Takes precedence over ``type``. May return ``null`` - in this case ``type`` would be used to create a semantic element, if specified.
 
 This property can be used, for example, to look-up semantic elements defined elsewhere. 
 Say, a list of family members can be defined in an MS Excel workbook, but family relationships in a diagram.
@@ -61,8 +61,8 @@ Another example is "progressive enrichment". For example, high-level architectur
 constructors for already defined architecture elements and ``type`` for their sub-elements. 
 This approach can be applied multiple times similar to how Docker images are assembled from layers and base images.
 
-In order to implement lookup constructors, override ``configureConstructorEvaluationContext()`` in sub-classes of ``AbstractDrawioFactory`` and 
-set variables from which the constructor expression would obtain semantic elements.
+In order to implement lookup constructors, override ``configureConstructorEvaluationContext()`` in sub-classes of ``AbstractDrawioFactory``  or ``createEvaluationContext()`` in Drawio resource factories. 
+Set variables from which the constructor expression would obtain semantic elements.
 
 ### documentation
 
@@ -220,6 +220,32 @@ This comparator can be used for org. charts.
 
 A [Spring Expression Language (SpEL)](https://docs.spring.io/spring-framework/reference/core/expressions.html) expression evaluated in the context of the feature element with ``other`` variable referencing the element to compare with. The exmpression has access to ``registry`` variable containing a map of diagram element to semantic elements.
 
+###### flow
+
+If one element is reacheable from the other by traversing connections, then the reacheable element is larger than the source element.
+In case of circular references the element with the smaller number of traversals to the other element is considered smaller. 
+If elements are not connected they are compared by the fall-back comparator.
+This comparator can be used for workflows and [PERT](https://en.wikipedia.org/wiki/Program_evaluation_and_review_technique) charts.
+
+If this comparator's value is a String, then it is uses as a name of the fallback comparator.
+In the below example children will be smaller than their parents and siblings will be compared using labels.
+
+```yaml
+container:
+  self: 
+    members:
+      argument-type: Person
+      comparator: 
+        flow: label
+```
+
+If the value is a map, then it may have the following keys:
+
+* ``condition`` - A boolean [Spring Expression Language (SpEL)](https://docs.spring.io/spring-framework/reference/core/expressions.html) expression evaluated in the context of a connection being traversed. It may be used to traverse only connections which match the condition. For example, only [transitions](https://flow.models.nasdanika.org/references/eClassifiers/Transition/index.html) between [activities](https://flow.models.nasdanika.org/references/eClassifiers/Activity/index.html) in a process model.
+* ``fallback`` - Fallback comparator.
+
+In the below example...
+
 ###### key
 
 A [Spring Expression Language (SpEL)](https://docs.spring.io/spring-framework/reference/core/expressions.html) expression evaluated in the context of the feature element. The expression must return a value which would be used for comparison using the natural comparator as explained below.
@@ -265,6 +291,10 @@ property: label
 ###### property-descending
 
 The same as property, but compares in reverse alphabetical order.
+
+###### reverse-flow
+
+Same as ``flow`` but with target nodes being smaller than source nodes.
 
 ###### right-down
 
@@ -501,6 +531,11 @@ Type of the semantic element. Types are looked up in the factory packages in the
 * If the value contains a hash (``# ``) then it is treated as a type URI. For example ``ecore://nasdanika.org/models/family#//Man``.
 * If the value contains a doc (``.``) then it is treated as a qualified EClass name with EPackage prefix before the dot. For example ``family.Man``.
 * Otherwise the value is treated as an unqualified EClass name - EPackages are iterated in the order of their registration and the first found EClass with matching name is used to create a semantic element. 
+
+Type is used to create a semantic element if there is no ``constructor`` or the constructor expression returned ``null``.
+A combination of ``constructor`` and ``type`` can be used for mapping in different contexts.
+For example, when loading a stand-alone model ``constructor`` would return ``null`` and then ``type`` would be used. 
+When the same diagram loaded in the context of a larger model, ``constructor`` may return a semantic element looked up in that larger model.
 
 ### Namespaces
 
