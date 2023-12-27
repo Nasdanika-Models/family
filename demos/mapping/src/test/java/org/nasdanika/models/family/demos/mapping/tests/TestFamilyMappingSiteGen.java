@@ -86,9 +86,10 @@ public class TestFamilyMappingSiteGen {
 		String siteMapDomain = "https://family.models.nasdanika.org/demos/mapping";		
 		ActionSiteGenerator actionSiteGenerator = new ActionSiteGenerator() {
 			
-			protected boolean isDeleteOutputPath(String path) {
-				return !"CNAME".equals(path);				
-			};
+			@Override
+			protected Context createContext(ProgressMonitor progressMonitor) {
+				return context;
+			}
 			
 		};		
 		
