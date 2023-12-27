@@ -71,6 +71,7 @@ Property value is used as documentation for semantic elements which extend ``Doc
 ### doc-format
 
 Documentation format - ``markdown`` (default), ``text``, or ``html``.
+For ``doc-ref`` is derived from the reference extension if not set explicitly.
 
 ### doc-ref
 

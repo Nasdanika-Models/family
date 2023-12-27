@@ -89,8 +89,7 @@ public class TestFamilySiteGen {
 		
 		if (errors.size() != 11) {
 			throw new ExecutionException("There are problems with pages: " + errorCount);
-		}		
-		
+		}				
 	}
 	
 }
