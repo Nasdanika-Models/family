@@ -9,7 +9,6 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.nasdanika.common.NullProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.drawio.model.ModelFactory;
-import org.nasdanika.graph.Element;
 import org.nasdanika.models.family.Person;
 import org.nasdanika.persistence.Marker;
 
@@ -32,7 +31,7 @@ public class FamilyDrawioResourceFactory implements Resource.Factory {
 			
 			@Override
 			protected void filterRepresentationElement(
-					Element representationElement, 
+					org.nasdanika.drawio.ModelElement representationElement, 
 					EObject semanticElement, 
 					Map<EObject, EObject> registry,
 					ProgressMonitor progressMonitor) {
@@ -62,7 +61,7 @@ public class FamilyDrawioResourceFactory implements Resource.Factory {
 	 * @param progressMonitor
 	 */
 	protected void filterRepresentationElement(
-			org.nasdanika.graph.Element representationElement, 
+			org.nasdanika.drawio.ModelElement representationElement, 
 			EObject semanticElement,
 			Map<EObject, EObject> registry,
 			ProgressMonitor progressMonitor) {

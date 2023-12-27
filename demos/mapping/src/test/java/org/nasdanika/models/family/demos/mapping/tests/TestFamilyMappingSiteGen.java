@@ -20,7 +20,6 @@ import org.nasdanika.common.MutableContext;
 import org.nasdanika.common.PrintStreamProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.diagramgenerator.plantuml.PlantUMLDiagramGenerator;
-import org.nasdanika.graph.Element;
 import org.nasdanika.html.model.app.gen.ActionSiteGenerator;
 import org.nasdanika.models.family.Person;
 import org.nasdanika.models.family.processors.doc.FamilyActionGenerator;
@@ -36,17 +35,15 @@ public class TestFamilyMappingSiteGen {
 			
 			@Override
 			protected void filterRepresentationElement(
-					Element representationElement, 
+					org.nasdanika.drawio.ModelElement representationElement, 
 					EObject semanticElement,
 					Map<EObject, EObject> registry,
 					ProgressMonitor progressMonitor) {
 				
-				// Demo of representation filtering - adding a black border to Isa
-				if (representationElement instanceof org.nasdanika.drawio.ModelElement) {
-					org.nasdanika.drawio.ModelElement rme = (org.nasdanika.drawio.ModelElement) representationElement;
-					if ("isa".equals(rme.getProperty("semantic-id"))) {
-						rme.getStyle().put("imageBorder", "default");
-					}
+				// Demo of representation filtering - adding a border to Isa
+				org.nasdanika.drawio.ModelElement rme = (org.nasdanika.drawio.ModelElement) representationElement;
+				if ("isa".equals(rme.getProperty("semantic-id"))) {
+					rme.getStyle().put("imageBorder", "default");
 				}
 			}
 			
