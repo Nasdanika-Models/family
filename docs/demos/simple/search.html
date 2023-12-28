@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="EN">
+  <head>
+    <title>Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/themes/default/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.1.0/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.css">
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/dark-head.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/jstree.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/components/table.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/components/table.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9BRJVLK8CC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9BRJVLK8CC');
+</script>    
+
+<script src="../../search-documents.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>
+
+<script>
+// Script for full-text search of JsTree
+
+window.nsdJsTreeSearchCallback = function(str, node) { 
+    var sf = new $.vakata.search(str, true, { caseSensitive : false, fuzzy : false }); 
+    if (sf.search(node.text).isMatch) {
+		return true;
+	} 
+    let searchResult = this.search(str); 
+    for (const sr in searchResult) {
+        if (searchResult[sr].ref === node.original['data-nsd-label-uuid']) {
+            return true;
+        } 
+    } 
+    return false; 
+}.bind(lunr(function () {
+			  this.ref('id');
+			  this.field('title');
+			  this.field('content');
+
+			  for (const key in searchDocuments) {
+				  let doc = searchDocuments[key];
+				this.add({
+					id: doc['action-uuid'],
+					title: doc.title,
+					path: doc.path,
+					content: doc.content
+				});  
+			  }
+			}));
+</script>
+
+<script src="../../search-documents.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>
+
+<script>
+// Script for full-text search of JsTree
+
+window.nsdJsTreeSearchCallback = function(str, node) { 
+    var sf = new $.vakata.search(str, true, { caseSensitive : false, fuzzy : false }); 
+    if (sf.search(node.text).isMatch) {
+		return true;
+	} 
+    let searchResult = this.search(str); 
+    for (const sr in searchResult) {
+        if (searchResult[sr].ref === node.original['data-nsd-label-uuid']) {
+            return true;
+        } 
+    } 
+    return false; 
+}.bind(lunr(function () {
+			  this.ref('id');
+			  this.field('title');
+			  this.field('content');
+
+			  for (const key in searchDocuments) {
+				  let doc = searchDocuments[key];
+				this.add({
+					id: doc['action-uuid'],
+					title: doc.title,
+					path: doc.path,
+					content: doc.content
+				});  
+			  }
+			}));
+</script>
+</head>
+  <body>
+    <div class="container-fluid nsd-app-container">
+      <div class="row">
+        <div class="col nsd-app-header">
+          <a href="https://family.models.nasdanika.org" data-nsd-label-uuid="34d4211e-bb5c-4135-9647-b010384095be" class="nsd-app-header-title">
+            <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon">Nasdanika Family Model</a>
+          <ul class="nav nsd-app-header-navs">
+            <li class="nav-item"><span data-nsd-label-uuid="ccdaa6aa-066c-4c66-98f5-7c4068a02708" class="navbar-text"><span class="fas fa-search nsd-app-label-icon"></span>Search</span>
+            </li>
+            <li class="nav-item">
+              <a href="glossary.html" data-nsd-label-uuid="f5f8fcd6-0d8e-4d63-a755-d38a0fb128e0" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nsd-app-navbar">
+          <ul class="navbar navbar-light navbar-expand-lg">
+            <a href="index.html" data-nsd-label-uuid="9e0d3271-f03f-47c3-aaad-daa5e387645e" class="navbar-brand">
+              <img src="https://img.icons8.com/officexs/24/family--v1.png" class="nsd-app-label-icon">Sample family</a>
+            <button type="button" data-toggle="collapse" data-target="#nsd_br" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="nsd_br" class="collapse navbar-collapse"></div>
+          </ul>
+        </div>
+      </div>
+      <div class="row nsd-app-content-row">
+        <div class="col nsd-app-navigation-panel">
+          <div class="list-group list-group-flush">
+            <a href="references/members/albert/index.html" data-nsd-label-uuid="4522dbfe-c154-4b45-8532-3b6c15893dab" class="list-group-item list-group-action">
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Albert</a>
+            <a href="references/members/paul/index.html" data-nsd-label-uuid="13d7bc78-dda3-4121-9c14-978658657c0b" class="list-group-item list-group-action">
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Paul</a>
+            <a href="references/members/isa/index.html" data-nsd-label-uuid="983aab60-9958-4a6e-9088-32fef948622c" class="list-group-item list-group-action">Isa</a>
+            <a href="references/members/lea/index.html" data-nsd-label-uuid="88529066-4a9f-4f43-9859-79529c22f5c9" class="list-group-item list-group-action">Lea</a>
+            <a href="references/members/elias/index.html" data-nsd-label-uuid="f1856fb9-ebf0-4fe7-8ac8-22398d6b5513" class="list-group-item list-group-action">
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Elias</a>
+            <a href="references/members/katell/index.html" data-nsd-label-uuid="d3d6ffca-b186-40b8-bf43-ce65b215101c" class="list-group-item list-group-action">Katell</a>
+            <a href="references/members/dave/index.html" data-nsd-label-uuid="2630f465-2d9a-4e6f-a04a-03273d5194e8" class="list-group-item list-group-action">
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Dave</a>
+            <a href="references/members/clara/index.html" data-nsd-label-uuid="fc0554b0-3031-4a11-9356-238595130122" class="list-group-item list-group-action">Clara</a>
+            <a href="references/members/bryan/index.html" data-nsd-label-uuid="d2c37710-ad17-4057-9b63-826786556fe8" class="list-group-item list-group-action">
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Bryan</a>
+            <a href="references/members/fiona/index.html" data-nsd-label-uuid="f246b56a-e833-47f1-beb1-b86ccbc49cff" class="list-group-item list-group-action">Fiona</a>
+            <a href="references/members/alain/index.html" data-nsd-label-uuid="d04c49ae-2a36-4e03-b900-a16d0fbc9234" class="list-group-item list-group-action">
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Alain</a>
+          </div>
+        </div>
+        <div data-nsd-label-uuid="ccdaa6aa-066c-4c66-98f5-7c4068a02708" data-nsd-action-uris="uuid:ccdaa6aa-066c-4c66-98f5-7c4068a02708" class="col nsd-app-content-panel">
+          <div class="container-fluid">
+            <div class="row nsd-app-content-panel-title-and-items-row">
+              <div class="col-auto">
+                <h1><span data-nsd-label-uuid="ccdaa6aa-066c-4c66-98f5-7c4068a02708" class="nsd-app-content-panel-title"><span class="fas fa-search nsd-app-label-icon"></span>Search</span>
+                </h1>
+              </div>
+            </div>
+            <div class="row nsd-app-content-panel-content-row">
+              <div class="col">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col">		<script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>     
+		<script src="search-documents.js"></script>     
+     	<div id="search-app" class="container-fluid">
+     		<div class="row">
+     			<div class="col">
+					<b-form-group label="Filter" label-for="filter-input" label-cols-sm="3" label-align-sm="right" label-size="sm" class="mb-0" description="You can use wildcards, e.g. 'foo*' or 'f*o'; title or content fields, e.g. 'title:foo* bar'; boosts, e.g. 'foo^10 bar'; fuzzy matches, e.g. 'foo~1'; and term presence, e.g. '+foo bar -baz'">
+			          <b-input-group size="sm">
+			            <b-form-input id="filter-input" v-model="filter" type="search" placeholder="Type to Search" debounce="700"></b-form-input>
+			
+			            <b-input-group-append>
+			              <b-button :disabled="!filter" @click="filter = ''">Clear</b-button>
+			            </b-input-group-append>
+			          </b-input-group>
+			        </b-form-group>		
+     			</div>     		
+     		</div>
+	        
+	        <div class="row flex-nowrap">
+	        	<div class="col-auto border-right border-secondary pb-1">
+	        		<div id="nsd-site-map-tree">
+	        		</div>
+	        	</div>
+	        	<div class="col">
+			        <b-card v-for="searchResult in searchResults" :header-html="searchResult.title" :footer="searchResult.path" class="my-1">
+			        	
+			        	<b-card-text><span v-html="searchResult.content"></span></b-card-text>
+			        </b-card>
+	        	</div>
+	        </div>	        
+     	</div>
+     
+		<script>		      
+			new Vue({
+				  el: '#search-app',
+				  data: {
+			        	filter: null,
+				      searchIndex : lunr(function () {
+						  this.ref('url');
+						  this.field('title');
+						  this.field('content');
+						  this.metadataWhitelist = ['position'];
+	
+						  for (const key in searchDocuments) {
+							  let doc = searchDocuments[key];
+							this.add({
+								url: key,
+								title: doc.title,
+								path: doc.path,
+								content: doc.content
+							});  
+						  }
+						})
+				  },				  
+				  computed: {
+					searchResults: function() {
+						if (this.filter) {
+							let searchResult = this.searchIndex.search(this.filter);
+							let actionUuids = searchResult.map(match => searchDocuments[match.ref]['action-uuid']).join(" ");
+							setTimeout(() => {
+								let treeSearchCallback = $('#nsd-site-map-tree').jstree(true).search;
+								if (treeSearchCallback) {
+									$('#nsd-site-map-tree').jstree(true).search(actionUuids);								
+								}
+							});
+							
+							return searchResult.map(function(e) {
+								let doc = searchDocuments[e.ref];
+								let titleMatches = [];
+								let contentMatches = [];
+								let matchMetaData = e.matchData.metadata;
+								for (const term in matchMetaData) {
+									if (matchMetaData[term]['title']) {
+										let positions = matchMetaData[term]['title'].position;
+										for (const match in positions) {
+											titleMatches.push(positions[match]);
+										}										
+									}
+									if (matchMetaData[term]['content']) {
+										let positions = matchMetaData[term]['content'].position;
+										for (const match in positions) {
+											contentMatches.push(positions[match]);
+										}										
+									}
+								}
+								
+								// Title highlighting
+								titleMatches.sort(function (a, b) { return a[0] - b[0] });
+								let titleElements = [];
+								let idx = 0;
+								for (const matchIdx in titleMatches) {
+									let match = titleMatches[matchIdx];
+									if (match[0] > idx) {
+										titleElements.push(doc.title.substring(idx, match[0]));
+									}
+									idx =  match[0] + match[1];
+									titleElements.push(`<span class='nsd-mark'>${doc.title.substring(match[0], idx)}</span>`);
+								}
+								if (idx < doc.title.length - 1) {
+									titleElements.push(doc.title.substring(idx, doc.title.length));
+								}
+								
+								// Content ellipsing and highlighting
+								contentMatches.sort(function (a, b) { return a[0] - b[0] });
+								let contentElements = [];
+								let snippetLength = 10;
+								idx = 0;
+								for (const matchIdx in contentMatches) {
+									let match = contentMatches[matchIdx];
+									if (match[0] > idx) {
+										let words = doc.content.substring(idx, match[0]).split(' ');
+										let snippetedWords = [];
+										if (idx == 0) {
+											if (words.length <= snippetLength) {
+												snippetedWords = words;
+											} else {
+												snippetedWords.push("&hellip;");
+												words.slice(words.length - snippetLength, words.length).forEach(e => snippetedWords.push(e));
+											}
+										} else {
+											if (words.length <= snippetLength * 2) {
+												snippetedWords = words;
+											} else {
+												words.slice(0, snippetLength).forEach(e => snippetedWords.push(e));
+												snippetedWords.push("&hellip;");
+												words.slice(words.length - snippetLength, words.length).forEach(e => snippetedWords.push(e));
+											}
+											
+										}
+										contentElements.push(snippetedWords.join(' '));
+									}
+									idx =  match[0] + match[1];
+									contentElements.push(`<span class='nsd-mark'>${doc.content.substring(match[0], idx)}</span>`);
+								}
+								if (idx < doc.content.length - 1) {
+									let words = doc.content.substring(idx, doc.content.length).split(' ');
+									if (idx == 0) {
+										if (words.length < snippetLength * 2) {
+											contentElements.push(doc.content);
+										} else {
+											let snippetedWords = [];
+											words.slice(0, snippetLength * 2).forEach(e => snippetedWords.push(e));
+											snippetedWords.push("&hellip;");
+											contentElements.push(snippetedWords.join(' '));
+										}
+									} else {
+										let snippetedWords = [];
+										if (words.length <= snippetLength) {
+											snippetedWords = words;
+										} else {
+											words.slice(0, snippetLength).forEach(e => snippetedWords.push(e));
+											snippetedWords.push("&hellip;");
+										}
+										contentElements.push(snippetedWords.join(' '));
+									}
+								}
+								return {
+									title: `<h5><a href="${e.ref}">${titleElements.join('')}</a></h5>`,
+									path: doc.path,
+									content: contentElements.join('')
+								};									
+							});
+						} 
+						setTimeout(() => {
+							let treeSearchCallback = $('#nsd-site-map-tree').jstree(true).search;
+							if (treeSearchCallback) {
+								$('#nsd-site-map-tree').jstree(true).search('');								
+							}
+						});
+						return [];
+					}  
+				  }
+			});   			
+		</script>
+		
+
+<script>$(document).ready( function() {
+$('#nsd-site-map-tree').jstree(function(tree) { tree.state.filter = function(state) { delete state.core.selected; return state; }; tree.search.search_callback = (results, node) => results.split(' ').includes(node.original['data-nsd-label-uuid']); return tree; }({"core":{"data":[{"a_attr":{"onclick":"window.location='https://family.models.nasdanika.org';"},"children":[{"children":[{"data-nsd-label-uuid":"ccdaa6aa-066c-4c66-98f5-7c4068a02708","icon":"fas fa-search","id":"a211a194-5318-476e-80f3-af4ab70e1d18","text":"Search","type":"leaf"},{"a_attr":{"onclick":"window.location='glossary.html';"},"data-nsd-label-uuid":"f5f8fcd6-0d8e-4d63-a755-d38a0fb128e0","icon":"fas fa-book","id":"b7953798-1f11-4087-90a6-b3ef5dc6be06","text":"Glossary","type":"leaf"}],"text":"Children"},{"children":[{"a_attr":{"onclick":"window.location='https://github.com/Nasdanika-Models/family';"},"data-nsd-label-uuid":"f53b2e1e-27d2-4054-af24-4321d207fbab","icon":"fab fa-github","id":"2b7fbacf-2794-4497-8716-a5df2cd00bcf","text":"Sources","type":"leaf"}],"text":"Navigation"}],"data-nsd-label-uuid":"34d4211e-bb5c-4135-9647-b010384095be","icon":"https://docs.nasdanika.org/images/nasdanika-logo.png","id":"a93b2408-69f9-472b-892a-9bb6ec1f4ad0","text":"Nasdanika Family Model","type":"leaf"},{"a_attr":{"onclick":"window.location='index.html';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='references/members/albert/index.html';"},"data-nsd-label-uuid":"4522dbfe-c154-4b45-8532-3b6c15893dab","icon":"https://img.icons8.com/officexs/24/user.png","id":"840c2f4d-1afb-45cb-aca7-624513c807c3","text":"Albert","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/paul/index.html';"},"data-nsd-label-uuid":"13d7bc78-dda3-4121-9c14-978658657c0b","icon":"https://img.icons8.com/officexs/24/user.png","id":"ca89714d-3c94-444e-8a84-8c58448bd217","text":"Paul","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/isa/index.html';"},"data-nsd-label-uuid":"983aab60-9958-4a6e-9088-32fef948622c","id":"c1441df9-416e-4d30-aace-78f5f6fdb4da","text":"Isa","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/lea/index.html';"},"data-nsd-label-uuid":"88529066-4a9f-4f43-9859-79529c22f5c9","id":"c9e45957-9b55-4b4a-b608-7a293902d5b5","text":"Lea","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/elias/index.html';"},"data-nsd-label-uuid":"f1856fb9-ebf0-4fe7-8ac8-22398d6b5513","icon":"https://img.icons8.com/officexs/24/user.png","id":"b101cd9c-5dc9-4f6d-84bf-92404cc9d1c9","text":"Elias","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/katell/index.html';"},"data-nsd-label-uuid":"d3d6ffca-b186-40b8-bf43-ce65b215101c","id":"0f38e1b2-b31f-4e9b-9de9-25cd2d262871","text":"Katell","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/dave/index.html';"},"data-nsd-label-uuid":"2630f465-2d9a-4e6f-a04a-03273d5194e8","icon":"https://img.icons8.com/officexs/24/user.png","id":"a7448a25-5bd3-4f81-bda7-96de61c15cf3","text":"Dave","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/clara/index.html';"},"data-nsd-label-uuid":"fc0554b0-3031-4a11-9356-238595130122","id":"b9ddd42d-8196-4507-9282-98ec559bd18b","text":"Clara","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/bryan/index.html';"},"data-nsd-label-uuid":"d2c37710-ad17-4057-9b63-826786556fe8","icon":"https://img.icons8.com/officexs/24/user.png","id":"6386ff44-1830-495f-96ba-642fe2e11814","text":"Bryan","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/fiona/index.html';"},"data-nsd-label-uuid":"f246b56a-e833-47f1-beb1-b86ccbc49cff","id":"afe4e774-f565-4ada-a210-d5afc092e8a2","text":"Fiona","type":"leaf"},{"a_attr":{"onclick":"window.location='references/members/alain/index.html';"},"data-nsd-label-uuid":"d04c49ae-2a36-4e03-b900-a16d0fbc9234","icon":"https://img.icons8.com/officexs/24/user.png","id":"8aeb6746-ebca-4cce-aeaf-6c09147cbf40","text":"Alain","type":"leaf"}],"text":"Members"}],"data-nsd-label-uuid":"9e0d3271-f03f-47c3-aaad-daa5e387645e","icon":"https://img.icons8.com/officexs/24/family--v1.png","id":"88c5be40-8a1f-4ab4-9c60-9a7a02a6c2ef","text":"Sample family","type":"leaf"}]},"search":{"show_only_matches":true},"plugins":["state","search"],"state":{"key":"nsd-site-map-tree"}}));
+});</script>
+				
+		</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nsd-app-footer">
+          <ul class="nav nsd-app-footer-navs">
+            <li class="nav-item">
+              <a href="https://github.com/Nasdanika-Models/family" data-nsd-label-uuid="f53b2e1e-27d2-4054-af24-4321d207fbab" class="nav-link"><span class="fab fa-github nsd-app-label-icon"></span>Sources</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
