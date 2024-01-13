@@ -10,6 +10,7 @@ import java.util.function.Function;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.URIConverter;
 import org.eclipse.emf.ecore.resource.impl.ResourceImpl;
 import org.nasdanika.common.NullProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
@@ -49,6 +50,11 @@ public class FamilyDrawioResource extends ResourceImpl {
 			@Override
 			protected ModelFactory getFactory() {
 				return FamilyDrawioResource.this.getDrawioFactory();
+			}
+			
+			@Override
+			protected URIConverter getURIConverter() {
+				return FamilyDrawioResource.this.getURIConverter();
 			}
 			
 		};
