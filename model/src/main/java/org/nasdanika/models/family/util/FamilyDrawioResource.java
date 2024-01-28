@@ -64,8 +64,13 @@ public class FamilyDrawioResource extends ResourceImpl {
 		FamilyDrawioFactory familyDrawioFactory = new FamilyDrawioFactory() {
 
 			@Override
-			protected Person getByRefId(String refId, int pass, Map<EObject, EObject> registry) {
-				return FamilyDrawioResource.this.getByRefId(refId, pass, registry);
+			protected EObject getByRefId(EObject eObj, String refId, int pass, Map<EObject, EObject> registry) {
+				return FamilyDrawioResource.this.getByRefId(eObj, getBaseURI(eObj), refId, pass, registry);
+			}
+			
+			@Override
+			protected boolean isRefIdProxyURI() {
+				return true;
 			}
 			
 			@Override
@@ -112,18 +117,22 @@ public class FamilyDrawioResource extends ResourceImpl {
 	protected ModelFactory getDrawioFactory() {
 		return org.nasdanika.drawio.model.ModelFactory.eINSTANCE;
 	}	
-	
-	protected Person getByRefId(String refId, int pass, Map<EObject, EObject> registry) {
+		
+	protected EObject getByRefId(EObject eObj, URI baseURI, String refId, int pass, Map<EObject, EObject> registry) {
 		if (uriResolver == null) {
 			return null;
 		}
 		
 		URI refURI = URI.createURI(refId);
 		if(!getURI().isRelative()) {
-			refURI = refURI.resolve(getURI());
+			if (baseURI == null) {
+				refURI = refURI.resolve(getURI());
+			} else {
+				refURI = refURI.resolve(baseURI);
+			}
 		}
 		return uriResolver.apply(refURI);
-	}	
+	}
 
 	protected URI getAppBase() {
 		return AbstractDrawioFactory.DEFAULT_APP_BASE;
