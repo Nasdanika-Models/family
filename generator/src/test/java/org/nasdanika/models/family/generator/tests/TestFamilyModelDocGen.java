@@ -21,6 +21,7 @@ import org.nasdanika.common.ExecutionException;
 import org.nasdanika.common.MutableContext;
 import org.nasdanika.common.NullProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
+import org.nasdanika.html.bootstrap.Theme;
 import org.nasdanika.html.model.app.Action;
 import org.nasdanika.html.model.app.gen.ActionSiteGenerator;
 import org.nasdanika.models.ecore.graph.processors.EcoreActionGenerator;
@@ -76,10 +77,6 @@ public class TestFamilyModelDocGen {
 				
 		String rootActionResource = "actions.yml";
 		URI rootActionURI = URI.createFileURI(new File(rootActionResource).getAbsolutePath());//.appendFragment("/");
-		
-		String pageTemplateResource = "page-template.yml";
-		URI pageTemplateURI = URI.createFileURI(new File(pageTemplateResource).getAbsolutePath());//.appendFragment("/");
-		
 		String siteMapDomain = "https://family.models.nasdanika.org";		
 		ActionSiteGenerator actionSiteGenerator = new ActionSiteGenerator() {
 			
@@ -89,7 +86,13 @@ public class TestFamilyModelDocGen {
 			
 		};		
 		
-		Map<String, Collection<String>> errors = actionSiteGenerator.generate(rootActionURI, pageTemplateURI, siteMapDomain, new File("../docs"), new File("target/doc-site-work-dir"), true);
+		Map<String, Collection<String>> errors = actionSiteGenerator.generate(
+				rootActionURI, 
+				Theme.Cerulean.pageTemplateCdnURI, 
+				siteMapDomain, 
+				new File("../docs"), 
+				new File("target/doc-site-work-dir"), 
+				true);
 				
 		int errorCount = 0;
 		for (Entry<String, Collection<String>> ee: errors.entrySet()) {

@@ -7,7 +7,7 @@
 	<packaging>pom</packaging>
 	<name>Family model, processors, doc generator</name>
 	<description>Family model to demonstrate generation of Ecore documentation, loading from Excel and Drawio, and generation of model documentation</description>
-	<url>https://github.com/Nasdanika-Models/bank</url>
+	<url>https://github.com/Nasdanika-Models/family</url>
 
 	<licenses>
 		<license>
