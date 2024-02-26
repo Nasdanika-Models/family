@@ -89,7 +89,7 @@ public class FamilyProcessorsFactory {
 			description = "A collection of family members",
 			documentation = "Some documentation about family members reference"
 	)
-	public EAttributeNodeProcessor createAnimalNameProcessor(
+	public EAttributeNodeProcessor createFamilyMembersProcessor(
 			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
 			java.util.function.Function<ProgressMonitor, Action> prototypeProvider,
 			BiConsumer<Label, ProgressMonitor> labelConfigurator,
