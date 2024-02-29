@@ -22,6 +22,7 @@ import org.nasdanika.html.model.app.gen.ActionSiteGenerator;
 import org.nasdanika.models.family.Person;
 import org.nasdanika.models.family.processors.doc.FamilyActionGenerator;
 import org.nasdanika.models.family.processors.doc.FamilyNodeProcessorFactory;
+import org.nasdanika.models.family.util.FamilyDrawioResource;
 import org.nasdanika.models.family.util.FamilyDrawioResourceFactory;
 
 public class TestFamilyMappingSiteGen {
@@ -43,6 +44,16 @@ public class TestFamilyMappingSiteGen {
 				if ("isa".equals(rme.getProperty("semantic-id"))) {
 					rme.getStyle().put("imageBorder", "default");
 				}
+				
+				
+			}
+			
+			@Override
+			protected String getProperty(FamilyDrawioResource resource, String name) {
+				if ("alan".equals(name)) {
+					return "Alan";
+				}
+				return super.getProperty(resource, name);
 			}
 			
 		});

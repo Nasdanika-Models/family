@@ -38,6 +38,11 @@ public class FamilyDrawioResourceFactory implements Resource.Factory {
 				FamilyDrawioResourceFactory.this.filterRepresentationElement(representationElement, semanticElement, registry, progressMonitor);
 			}
 			
+			@Override
+			protected String getProperty(String name) {
+				return FamilyDrawioResourceFactory.this.getProperty(this, name);
+			}
+			
 		};
 	}
 	
@@ -67,5 +72,14 @@ public class FamilyDrawioResourceFactory implements Resource.Factory {
 			ProgressMonitor progressMonitor) {
 		
 	}	
+
+	/**
+	 * Override for placeholder expansion
+	 * @param name
+	 * @return
+	 */
+	protected String getProperty(FamilyDrawioResource resource, String name) {
+		return null;
+	}
 			
 }

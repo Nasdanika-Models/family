@@ -57,6 +57,11 @@ public class FamilyDrawioResource extends ResourceImpl {
 				return FamilyDrawioResource.this.getURIConverter();
 			}
 			
+			@Override
+			protected String getProperty(String name) {
+				return FamilyDrawioResource.this.getProperty(name);
+			}
+			
 		};
 		
 		diagramResource.load(inputStream, options);
@@ -86,6 +91,11 @@ public class FamilyDrawioResource extends ResourceImpl {
 					ProgressMonitor progressMonitor) {
 				super.filterRepresentationElement(representationElement, semanticElement, registry, progressMonitor);
 				FamilyDrawioResource.this.filterRepresentationElement(representationElement, semanticElement, registry, progressMonitor);
+			}
+			
+			@Override
+			protected String getProperty(String name) {
+				return FamilyDrawioResource.this.getProperty(name);
 			}
 			
 		};
@@ -152,6 +162,14 @@ public class FamilyDrawioResource extends ResourceImpl {
 			ProgressMonitor progressMonitor) {
 		
 	}
-	
+
+	/**
+	 * Override for placeholder expansion
+	 * @param name
+	 * @return
+	 */
+	protected String getProperty(String name) {
+		return null;
+	}
 	
 }
