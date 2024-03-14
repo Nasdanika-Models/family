@@ -70,90 +70,18 @@ window.nsdJsTreeSearchCallback = function(str, node) {
 			  }
 			}));
 </script>
-
-<script src="../../search-documents.js"></script>
-
-<script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>
-
-<script>
-// Script for full-text search of JsTree
-
-window.nsdJsTreeSearchCallback = function(str, node) { 
-    var sf = new $.vakata.search(str, true, { caseSensitive : false, fuzzy : false }); 
-    if (sf.search(node.text).isMatch) {
-		return true;
-	} 
-    let searchResult = this.search(str); 
-    for (const sr in searchResult) {
-        if (searchResult[sr].ref === node.original['data-nsd-label-uuid']) {
-            return true;
-        } 
-    } 
-    return false; 
-}.bind(lunr(function () {
-			  this.ref('id');
-			  this.field('title');
-			  this.field('content');
-
-			  for (const key in searchDocuments) {
-				  let doc = searchDocuments[key];
-				this.add({
-					id: doc['action-uuid'],
-					title: doc.title,
-					path: doc.path,
-					content: doc.content
-				});  
-			  }
-			}));
-</script>
-
-<script src="../../search-documents.js"></script>
-
-<script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>
-
-<script>
-// Script for full-text search of JsTree
-
-window.nsdJsTreeSearchCallback = function(str, node) { 
-    var sf = new $.vakata.search(str, true, { caseSensitive : false, fuzzy : false }); 
-    if (sf.search(node.text).isMatch) {
-		return true;
-	} 
-    let searchResult = this.search(str); 
-    for (const sr in searchResult) {
-        if (searchResult[sr].ref === node.original['data-nsd-label-uuid']) {
-            return true;
-        } 
-    } 
-    return false; 
-}.bind(lunr(function () {
-			  this.ref('id');
-			  this.field('title');
-			  this.field('content');
-
-			  for (const key in searchDocuments) {
-				  let doc = searchDocuments[key];
-				this.add({
-					id: doc['action-uuid'],
-					title: doc.title,
-					path: doc.path,
-					content: doc.content
-				});  
-			  }
-			}));
-</script>
 </head>
   <body>
     <div class="container-fluid nsd-app-container">
       <div class="row">
         <div class="col nsd-app-header">
-          <a href="https://family.models.nasdanika.org" data-nsd-label-uuid="761b82b8-faf5-4c61-91c4-69385c313652" class="nsd-app-header-title">
+          <a href="https://family.models.nasdanika.org" data-nsd-label-uuid="034e747c-45d3-46ea-8d89-c8d5110b0d77" class="nsd-app-header-title">
             <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon">Nasdanika Family Model</a>
           <ul class="nav nsd-app-header-navs">
             <li class="nav-item">
-              <a href="search.html" data-nsd-label-uuid="26f4db6e-5b5a-48cf-8fb1-3230b483e032" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
+              <a href="search.html" data-nsd-label-uuid="ef09a2c1-b09b-45d4-8cc9-5a145c3a945c" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
             </li>
-            <li class="nav-item"><span data-nsd-label-uuid="55794d00-093a-432a-9708-7987bd2290a5" class="navbar-text"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</span>
+            <li class="nav-item"><span data-nsd-label-uuid="558d4028-6243-4840-a083-f240f4f001ae" class="navbar-text"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</span>
             </li>
           </ul>
         </div>
@@ -161,41 +89,41 @@ window.nsdJsTreeSearchCallback = function(str, node) {
       <div class="row">
         <div class="col nsd-app-navbar">
           <ul class="navbar navbar-light navbar-expand-lg">
-            <a href="index.html" data-nsd-label-uuid="9d1294b6-e3b3-4975-bf0f-8ac04ed8f037" class="navbar-brand">
+            <a href="index.html" data-nsd-label-uuid="b7bb719e-c4e4-46a6-b9c7-ebf95d299ca0" class="navbar-brand">
               <img src="https://img.icons8.com/officexs/24/family--v1.png" class="nsd-app-label-icon">Sample family</a>
-            <button type="button" data-toggle="collapse" data-target="#nsd_3h" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            <button type="button" data-toggle="collapse" data-target="#nsd_35" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
             </button>
-            <div id="nsd_3h" class="collapse navbar-collapse"></div>
+            <div id="nsd_35" class="collapse navbar-collapse"></div>
           </ul>
         </div>
       </div>
       <div class="row nsd-app-content-row">
         <div class="col nsd-app-navigation-panel">
           <div class="list-group list-group-flush">
-            <a href="references/members/albert/index.html" data-nsd-label-uuid="d64ccedd-0758-4c91-a20b-3c403390d31c" class="list-group-item list-group-action">
+            <a href="references/members/albert/index.html" data-nsd-label-uuid="9c01b548-d75d-47d5-92e5-229571d00beb" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Albert</a>
-            <a href="references/members/paul/index.html" data-nsd-label-uuid="9d472ef0-bf97-4126-a1b5-18feb83d9b72" class="list-group-item list-group-action">
+            <a href="references/members/paul/index.html" data-nsd-label-uuid="20f05320-f02f-4b67-950f-cb386571523e" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Paul</a>
-            <a href="references/members/isa/index.html" data-nsd-label-uuid="35d37d6e-4d23-4dbb-8bab-9daca426225a" class="list-group-item list-group-action">Isa</a>
-            <a href="references/members/lea/index.html" data-nsd-label-uuid="dc88d9c0-a63f-45e6-af73-79f63fb2beaa" class="list-group-item list-group-action">Lea</a>
-            <a href="references/members/elias/index.html" data-nsd-label-uuid="3759b62e-af93-4926-96bb-61cbc79dff8a" class="list-group-item list-group-action">
+            <a href="references/members/isa/index.html" data-nsd-label-uuid="c9736af1-d80d-49c9-adbb-6d47d44ae0f2" class="list-group-item list-group-action">Isa</a>
+            <a href="references/members/lea/index.html" data-nsd-label-uuid="274665fd-b665-4047-983e-1d077dd87316" class="list-group-item list-group-action">Lea</a>
+            <a href="references/members/elias/index.html" data-nsd-label-uuid="a4972edd-2213-4e7a-8a4c-68b544a821d8" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Elias</a>
-            <a href="references/members/katell/index.html" data-nsd-label-uuid="5d95cf54-800b-4b07-ac67-89b471f131b3" class="list-group-item list-group-action">Katell</a>
-            <a href="references/members/dave/index.html" data-nsd-label-uuid="99cb3331-64ec-45cb-b7f5-618e2b97136d" class="list-group-item list-group-action">
+            <a href="references/members/katell/index.html" data-nsd-label-uuid="37b74298-1084-46de-bc8c-ee8b5d6a3a57" class="list-group-item list-group-action">Katell</a>
+            <a href="references/members/dave/index.html" data-nsd-label-uuid="6c20494d-7bc8-48a5-8430-f54569937f0e" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Dave</a>
-            <a href="references/members/clara/index.html" data-nsd-label-uuid="a6f65364-4eee-4ad5-8a1c-798463cf4aed" class="list-group-item list-group-action">Clara</a>
-            <a href="references/members/bryan/index.html" data-nsd-label-uuid="21ab1544-7bfd-48ba-84ab-898ea4605052" class="list-group-item list-group-action">
+            <a href="references/members/clara/index.html" data-nsd-label-uuid="4e0bd56d-5dd5-42d1-a946-df0d4f9c3cdf" class="list-group-item list-group-action">Clara</a>
+            <a href="references/members/bryan/index.html" data-nsd-label-uuid="ae7105a4-4f5b-44ac-93fe-312c2b15c53d" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Bryan</a>
-            <a href="references/members/fiona/index.html" data-nsd-label-uuid="b357d133-e205-4912-b104-3defb3fad756" class="list-group-item list-group-action">Fiona</a>
-            <a href="references/members/alain/index.html" data-nsd-label-uuid="e3863014-10d5-436b-8af9-1d24ed937155" class="list-group-item list-group-action">
+            <a href="references/members/fiona/index.html" data-nsd-label-uuid="3e76bcf2-4027-4acc-b2ca-1ea09746d361" class="list-group-item list-group-action">Fiona</a>
+            <a href="references/members/alain/index.html" data-nsd-label-uuid="fed0a3cf-a2e6-4699-b451-2fde93731af7" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Alain</a>
           </div>
         </div>
-        <div data-nsd-label-uuid="55794d00-093a-432a-9708-7987bd2290a5" data-nsd-action-uris="uuid:55794d00-093a-432a-9708-7987bd2290a5" class="col nsd-app-content-panel">
+        <div data-nsd-label-uuid="558d4028-6243-4840-a083-f240f4f001ae" data-nsd-action-uris="uuid:558d4028-6243-4840-a083-f240f4f001ae" class="col nsd-app-content-panel">
           <div class="container-fluid">
             <div class="row nsd-app-content-panel-title-and-items-row">
               <div class="col-auto">
-                <h1><span data-nsd-label-uuid="55794d00-093a-432a-9708-7987bd2290a5" class="nsd-app-content-panel-title"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</span>
+                <h1><span data-nsd-label-uuid="558d4028-6243-4840-a083-f240f4f001ae" class="nsd-app-content-panel-title"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</span>
                 </h1>
               </div>
             </div>
@@ -255,7 +183,7 @@ window.nsdJsTreeSearchCallback = function(str, node) {
 				  el: '#semantic-info-app',
 				  data: {
 			        	filter: null,
-			        	semanticInfo: [{"identifiers":["uuid:761b82b8-faf5-4c61-91c4-69385c313652"],"name":"Nasdanika Family Model","icon":"https://docs.nasdanika.org/images/nasdanika-logo.png","location":"https://family.models.nasdanika.org","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"children","identifiers":["uuid:761b82b8-faf5-4c61-91c4-69385c313652"]},"identifiers":["uuid:26f4db6e-5b5a-48cf-8fb1-3230b483e032"],"name":"Search","icon":"fas fa-search","location":"search.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"children","identifiers":["uuid:761b82b8-faf5-4c61-91c4-69385c313652"]},"identifiers":["uuid:55794d00-093a-432a-9708-7987bd2290a5"],"name":"Glossary","icon":"fas fa-book","location":"glossary.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:761b82b8-faf5-4c61-91c4-69385c313652"]},"identifiers":["uuid:7893ba18-75e7-4a0b-8abf-c80478d33315"],"name":"Sources","icon":"fab fa-github","location":"https://github.com/Nasdanika-Models/family","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"identifiers":["uuid:11f6bb9b-dcb9-48e7-a8af-f7396fc65040"],"name":"Sample family","icon":"https://img.icons8.com/officexs/24/family--v1.png","description":"Family model to demonstrate loading from Excel, loading and mapping from Drawio, and generation of HTML documentation","location":"index.html","type":{"name":"Family","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:11f6bb9b-dcb9-48e7-a8af-f7396fc65040"],"name":"Sample family"},"identifiers":["uuid:518b108f-d56f-4d0d-8f63-3e8d19d73fe6"],"name":"Albert","icon":"https://img.icons8.com/officexs/24/user.png","location":"references/members/albert/index.html","type":{"name":"Man","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:11f6bb9b-dcb9-48e7-a8af-f7396fc65040"],"name":"Sample family"},"identifiers":["uuid:6ced11d1-56e6-4f10-a55b-9ad4b450e167"],"name":"Paul","icon":"https://img.icons8.com/officexs/24/user.png","location":"references/members/paul/index.html","type":{"name":"Man","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:11f6bb9b-dcb9-48e7-a8af-f7396fc65040"],"name":"Sample family"},"identifiers":["uuid:ae904316-d901-4664-9dff-b7ce2e02a03d"],"name":"Isa","location":"references/members/isa/index.html","type":{"name":"Woman","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:11f6bb9b-dcb9-48e7-a8af-f7396fc65040"],"name":"Sample family"},"identifiers":["uuid:7a87ae16-51cc-4bb8-a53a-72d6c8a8b7c8"],"name":"Lea","location":"references/members/lea/index.html","type":{"name":"Woman","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:11f6bb9b-dcb9-48e7-a8af-f7396fc65040"],"name":"Sample family"},"identifiers":["uuid:37e6d2a7-d1e6-424d-9b61-63fb19eebc20"],"name":"Elias","icon":"https://img.icons8.com/officexs/24/user.png","location":"references/members/elias/index.html","type":{"name":"Man","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:11f6bb9b-dcb9-48e7-a8af-f7396fc65040"],"name":"Sample family"},"identifiers":["uuid:36f73d5b-ff5a-4897-89a1-3ff7b4bef982"],"name":"Katell","location":"references/members/katell/index.html","type":{"name":"Woman","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:11f6bb9b-dcb9-48e7-a8af-f7396fc65040"],"name":"Sample family"},"identifiers":["uuid:46c74860-9378-47a2-b488-55d827d7dc3e"],"name":"Dave","icon":"https://img.icons8.com/officexs/24/user.png","location":"references/members/dave/index.html","type":{"name":"Man","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:11f6bb9b-dcb9-48e7-a8af-f7396fc65040"],"name":"Sample family"},"identifiers":["uuid:3dd48c6a-de41-4a1a-818c-462b01be6a88"],"name":"Clara","location":"references/members/clara/index.html","type":{"name":"Woman","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:11f6bb9b-dcb9-48e7-a8af-f7396fc65040"],"name":"Sample family"},"identifiers":["uuid:667b2897-85f7-4b7d-a03a-b22f0a37d31b"],"name":"Bryan","icon":"https://img.icons8.com/officexs/24/user.png","location":"references/members/bryan/index.html","type":{"name":"Man","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:11f6bb9b-dcb9-48e7-a8af-f7396fc65040"],"name":"Sample family"},"identifiers":["uuid:bcd21dab-1403-4a34-9a7f-89068b2e3d94"],"name":"Fiona","location":"references/members/fiona/index.html","type":{"name":"Woman","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:11f6bb9b-dcb9-48e7-a8af-f7396fc65040"],"name":"Sample family"},"identifiers":["uuid:e4e9f393-15b2-4d58-965a-df485a7fe9e9"],"name":"Alain","icon":"https://img.icons8.com/officexs/24/user.png","location":"references/members/alain/index.html","type":{"name":"Man","ns-uri":"ecore://nasdanika.org/models/family"}}],
+			        	semanticInfo: [{"identifiers":["uuid:034e747c-45d3-46ea-8d89-c8d5110b0d77"],"name":"Nasdanika Family Model","icon":"https://docs.nasdanika.org/images/nasdanika-logo.png","location":"https://family.models.nasdanika.org","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"children","identifiers":["uuid:034e747c-45d3-46ea-8d89-c8d5110b0d77"]},"identifiers":["uuid:ef09a2c1-b09b-45d4-8cc9-5a145c3a945c"],"name":"Search","icon":"fas fa-search","location":"search.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"children","identifiers":["uuid:034e747c-45d3-46ea-8d89-c8d5110b0d77"]},"identifiers":["uuid:558d4028-6243-4840-a083-f240f4f001ae"],"name":"Glossary","icon":"fas fa-book","location":"glossary.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:034e747c-45d3-46ea-8d89-c8d5110b0d77"]},"identifiers":["uuid:13d3c07e-ea19-49b6-81d9-8fa001275e33"],"name":"Sources","icon":"fab fa-github","location":"https://github.com/Nasdanika-Models/family","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"identifiers":["uuid:b327b1aa-5980-4ace-8054-cad99804a639"],"name":"Sample family","icon":"https://img.icons8.com/officexs/24/family--v1.png","description":"Family model to demonstrate loading from Excel, loading and mapping from Drawio, and generation of HTML documentation","location":"index.html","type":{"name":"Family","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:b327b1aa-5980-4ace-8054-cad99804a639"],"name":"Sample family"},"identifiers":["uuid:e6f765b3-71ce-46c2-85dc-f322d087cb17"],"name":"Albert","icon":"https://img.icons8.com/officexs/24/user.png","location":"references/members/albert/index.html","type":{"name":"Man","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:b327b1aa-5980-4ace-8054-cad99804a639"],"name":"Sample family"},"identifiers":["uuid:8939a40b-7b3c-46d4-98e1-b024fac0c976"],"name":"Paul","icon":"https://img.icons8.com/officexs/24/user.png","location":"references/members/paul/index.html","type":{"name":"Man","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:b327b1aa-5980-4ace-8054-cad99804a639"],"name":"Sample family"},"identifiers":["uuid:0576bf14-529b-4df3-9acb-0eca6ad77685"],"name":"Isa","location":"references/members/isa/index.html","type":{"name":"Woman","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:b327b1aa-5980-4ace-8054-cad99804a639"],"name":"Sample family"},"identifiers":["uuid:b14b335f-a099-483d-bfe9-8b5454818e43"],"name":"Lea","location":"references/members/lea/index.html","type":{"name":"Woman","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:b327b1aa-5980-4ace-8054-cad99804a639"],"name":"Sample family"},"identifiers":["uuid:7dc4d425-f81a-4874-a66a-b5636d6cf428"],"name":"Elias","icon":"https://img.icons8.com/officexs/24/user.png","location":"references/members/elias/index.html","type":{"name":"Man","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:b327b1aa-5980-4ace-8054-cad99804a639"],"name":"Sample family"},"identifiers":["uuid:acdf69e2-0566-4004-9bd4-2d5a27f1cd8b"],"name":"Katell","location":"references/members/katell/index.html","type":{"name":"Woman","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:b327b1aa-5980-4ace-8054-cad99804a639"],"name":"Sample family"},"identifiers":["uuid:21d4fd28-2909-4675-b17d-593f653164fd"],"name":"Dave","icon":"https://img.icons8.com/officexs/24/user.png","location":"references/members/dave/index.html","type":{"name":"Man","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:b327b1aa-5980-4ace-8054-cad99804a639"],"name":"Sample family"},"identifiers":["uuid:9f181fa3-43ed-4f90-bc66-36fa43fcc3a3"],"name":"Clara","location":"references/members/clara/index.html","type":{"name":"Woman","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:b327b1aa-5980-4ace-8054-cad99804a639"],"name":"Sample family"},"identifiers":["uuid:ebe32b25-d6d5-4af7-bf89-403fed25c995"],"name":"Bryan","icon":"https://img.icons8.com/officexs/24/user.png","location":"references/members/bryan/index.html","type":{"name":"Man","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:b327b1aa-5980-4ace-8054-cad99804a639"],"name":"Sample family"},"identifiers":["uuid:8f895f88-fb65-4cba-b5ad-232caa12dfa1"],"name":"Fiona","location":"references/members/fiona/index.html","type":{"name":"Woman","ns-uri":"ecore://nasdanika.org/models/family"}},{"container":{"reference":"members","identifiers":["uuid:b327b1aa-5980-4ace-8054-cad99804a639"],"name":"Sample family"},"identifiers":["uuid:e84d5239-1fba-469e-ae30-94ecf3cf6126"],"name":"Alain","icon":"https://img.icons8.com/officexs/24/user.png","location":"references/members/alain/index.html","type":{"name":"Man","ns-uri":"ecore://nasdanika.org/models/family"}}],
 			        	identifierField: false,
 			        	hideUUID: true
 				  },				  
@@ -367,7 +295,7 @@ window.nsdJsTreeSearchCallback = function(str, node) {
         <div class="col nsd-app-footer">
           <ul class="nav nsd-app-footer-navs">
             <li class="nav-item">
-              <a href="https://github.com/Nasdanika-Models/family" data-nsd-label-uuid="7893ba18-75e7-4a0b-8abf-c80478d33315" class="nav-link"><span class="fab fa-github nsd-app-label-icon"></span>Sources</a>
+              <a href="https://github.com/Nasdanika-Models/family" data-nsd-label-uuid="13d3c07e-ea19-49b6-81d9-8fa001275e33" class="nav-link"><span class="fab fa-github nsd-app-label-icon"></span>Sources</a>
             </li>
           </ul>
         </div>

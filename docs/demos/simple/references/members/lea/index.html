@@ -70,91 +70,19 @@ window.nsdJsTreeSearchCallback = function(str, node) {
 			  }
 			}));
 </script>
-
-<script src="../../../../../search-documents.js"></script>
-
-<script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>
-
-<script>
-// Script for full-text search of JsTree
-
-window.nsdJsTreeSearchCallback = function(str, node) { 
-    var sf = new $.vakata.search(str, true, { caseSensitive : false, fuzzy : false }); 
-    if (sf.search(node.text).isMatch) {
-		return true;
-	} 
-    let searchResult = this.search(str); 
-    for (const sr in searchResult) {
-        if (searchResult[sr].ref === node.original['data-nsd-label-uuid']) {
-            return true;
-        } 
-    } 
-    return false; 
-}.bind(lunr(function () {
-			  this.ref('id');
-			  this.field('title');
-			  this.field('content');
-
-			  for (const key in searchDocuments) {
-				  let doc = searchDocuments[key];
-				this.add({
-					id: doc['action-uuid'],
-					title: doc.title,
-					path: doc.path,
-					content: doc.content
-				});  
-			  }
-			}));
-</script>
-
-<script src="../../../../../search-documents.js"></script>
-
-<script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>
-
-<script>
-// Script for full-text search of JsTree
-
-window.nsdJsTreeSearchCallback = function(str, node) { 
-    var sf = new $.vakata.search(str, true, { caseSensitive : false, fuzzy : false }); 
-    if (sf.search(node.text).isMatch) {
-		return true;
-	} 
-    let searchResult = this.search(str); 
-    for (const sr in searchResult) {
-        if (searchResult[sr].ref === node.original['data-nsd-label-uuid']) {
-            return true;
-        } 
-    } 
-    return false; 
-}.bind(lunr(function () {
-			  this.ref('id');
-			  this.field('title');
-			  this.field('content');
-
-			  for (const key in searchDocuments) {
-				  let doc = searchDocuments[key];
-				this.add({
-					id: doc['action-uuid'],
-					title: doc.title,
-					path: doc.path,
-					content: doc.content
-				});  
-			  }
-			}));
-</script>
 </head>
   <body>
     <div class="container-fluid nsd-app-container">
       <div class="row">
         <div class="col nsd-app-header">
-          <a href="https://family.models.nasdanika.org" data-nsd-label-uuid="a8762a02-f5b4-4717-aba7-da65ad3ab068" class="nsd-app-header-title">
+          <a href="https://family.models.nasdanika.org" data-nsd-label-uuid="8b452b9c-90b4-4aae-9433-b0092aa590f8" class="nsd-app-header-title">
             <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon">Nasdanika Family Model</a>
           <ul class="nav nsd-app-header-navs">
             <li class="nav-item">
-              <a href="../../../search.html" data-nsd-label-uuid="e556afcc-d148-4c9a-b03e-45feac4f2d57" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
+              <a href="../../../search.html" data-nsd-label-uuid="0d1056fb-5315-4460-973e-cce26769bac9" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
             </li>
             <li class="nav-item">
-              <a href="../../../glossary.html" data-nsd-label-uuid="9b3f3e9c-2c24-4d17-9fe3-8632f79f55b5" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
+              <a href="../../../glossary.html" data-nsd-label-uuid="6bbad438-3c17-4b8a-a85f-0ffb8069d875" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
             </li>
           </ul>
         </div>
@@ -162,40 +90,40 @@ window.nsdJsTreeSearchCallback = function(str, node) {
       <div class="row">
         <div class="col nsd-app-navbar">
           <ul class="navbar navbar-light navbar-expand-lg">
-            <a href="../../../index.html" data-nsd-label-uuid="a075afbe-9067-4022-8d05-afffb8a8f36e" class="navbar-brand">
+            <a href="../../../index.html" data-nsd-label-uuid="f141d0be-b92e-4aaa-97c2-d1bf11c6cfbc" class="navbar-brand">
               <img src="https://img.icons8.com/officexs/24/family--v1.png" class="nsd-app-label-icon">Sample family</a>
-            <button type="button" data-toggle="collapse" data-target="#nsd_2h" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            <button type="button" data-toggle="collapse" data-target="#nsd_d3" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
             </button>
-            <div id="nsd_2h" class="collapse navbar-collapse"></div>
+            <div id="nsd_d3" class="collapse navbar-collapse"></div>
           </ul>
         </div>
       </div>
       <div class="row nsd-app-content-row">
         <div class="col nsd-app-navigation-panel">
           <div class="list-group list-group-flush">
-            <a href="../albert/index.html" data-nsd-label-uuid="6ba9db73-2e50-4185-b10f-bc082c9e40af" class="list-group-item list-group-action">
+            <a href="../albert/index.html" data-nsd-label-uuid="9bee965b-707a-4f9f-9bf5-6d9be96f6185" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Albert</a>
-            <a href="../paul/index.html" data-nsd-label-uuid="4ed8cd24-ecac-4b02-a55c-393c78ae1041" class="list-group-item list-group-action">
+            <a href="../paul/index.html" data-nsd-label-uuid="63180560-7244-44b9-b97d-9f1a7e81531a" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Paul</a>
-            <a href="../isa/index.html" data-nsd-label-uuid="dcecd8e0-6b01-474a-8c16-97888f76d5d9" class="list-group-item list-group-action">Isa</a><span data-nsd-label-uuid="beea73b4-9743-4996-81a3-438ef5227e4b" class="list-group-item list-group-action active">Lea</span>
-            <a href="../elias/index.html" data-nsd-label-uuid="70a0c201-f37a-4904-9215-829084d9c26a" class="list-group-item list-group-action">
+            <a href="../isa/index.html" data-nsd-label-uuid="bdf257dc-4312-4490-85ed-a34dca3894f0" class="list-group-item list-group-action">Isa</a><span data-nsd-label-uuid="40306fc7-9258-4b14-95a7-3304c3441a02" class="list-group-item list-group-action active">Lea</span>
+            <a href="../elias/index.html" data-nsd-label-uuid="5688ebb1-d1c1-4b19-8afa-f9a690e8273b" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Elias</a>
-            <a href="../katell/index.html" data-nsd-label-uuid="5cb6b135-10aa-4fba-8c51-c0d3135ef8c2" class="list-group-item list-group-action">Katell</a>
-            <a href="../dave/index.html" data-nsd-label-uuid="cb0fd5f9-7670-4e02-a564-d31eedc8fa7a" class="list-group-item list-group-action">
+            <a href="../katell/index.html" data-nsd-label-uuid="0d2bd58e-1301-4e55-9451-7e5c5ba2b9a3" class="list-group-item list-group-action">Katell</a>
+            <a href="../dave/index.html" data-nsd-label-uuid="ad1eebab-dc15-4f07-aa56-e05f9ded1b87" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Dave</a>
-            <a href="../clara/index.html" data-nsd-label-uuid="0d9aac7a-14f1-47e7-aa6d-e95581da256c" class="list-group-item list-group-action">Clara</a>
-            <a href="../bryan/index.html" data-nsd-label-uuid="3878c5c9-bd50-4a01-b481-6fccae7102b3" class="list-group-item list-group-action">
+            <a href="../clara/index.html" data-nsd-label-uuid="7e949f98-29a3-488d-8b5a-c8fee06bb8e3" class="list-group-item list-group-action">Clara</a>
+            <a href="../bryan/index.html" data-nsd-label-uuid="a65e04e6-54d2-4089-ba69-4e8486db70d3" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Bryan</a>
-            <a href="../fiona/index.html" data-nsd-label-uuid="954a7e16-77a6-45c8-9fa7-0c15a7ff8a8b" class="list-group-item list-group-action">Fiona</a>
-            <a href="../alain/index.html" data-nsd-label-uuid="b941d48a-501c-467a-91d8-011a94a122b5" class="list-group-item list-group-action">
+            <a href="../fiona/index.html" data-nsd-label-uuid="2636ac9f-8d08-4878-9cdd-8b55996c7a1a" class="list-group-item list-group-action">Fiona</a>
+            <a href="../alain/index.html" data-nsd-label-uuid="162998e7-333d-4f35-b201-c56d2b5b805e" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Alain</a>
           </div>
         </div>
-        <div data-nsd-label-uuid="beea73b4-9743-4996-81a3-438ef5227e4b" data-nsd-action-uris="uuid:beea73b4-9743-4996-81a3-438ef5227e4b" class="col nsd-app-content-panel">
+        <div data-nsd-label-uuid="40306fc7-9258-4b14-95a7-3304c3441a02" data-nsd-action-uris="uuid:40306fc7-9258-4b14-95a7-3304c3441a02" class="col nsd-app-content-panel">
           <div class="container-fluid">
             <div class="row nsd-app-content-panel-title-and-items-row">
               <div class="col-auto">
-                <h1><span data-nsd-label-uuid="beea73b4-9743-4996-81a3-438ef5227e4b" class="nsd-app-content-panel-title">Lea</span>
+                <h1><span data-nsd-label-uuid="40306fc7-9258-4b14-95a7-3304c3441a02" class="nsd-app-content-panel-title">Lea</span>
                 </h1>
               </div>
             </div>
@@ -211,7 +139,7 @@ window.nsdJsTreeSearchCallback = function(str, node) {
         <div class="col nsd-app-footer">
           <ul class="nav nsd-app-footer-navs">
             <li class="nav-item">
-              <a href="https://github.com/Nasdanika-Models/family" data-nsd-label-uuid="b41ff038-cda2-460c-bcd6-d5446b2c8942" class="nav-link"><span class="fab fa-github nsd-app-label-icon"></span>Sources</a>
+              <a href="https://github.com/Nasdanika-Models/family" data-nsd-label-uuid="e8b42c30-1518-4648-93de-59bd3d949ada" class="nav-link"><span class="fab fa-github nsd-app-label-icon"></span>Sources</a>
             </li>
           </ul>
         </div>
