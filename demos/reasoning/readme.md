@@ -1,0 +1,1 @@
+Demonstrates deriving sister/brother and other family relationships using backward reasoning (chaining) feature of [Nasdanika capability framework](https://docs.nasdanika.org/core/capability/index.html).
