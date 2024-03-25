@@ -5,8 +5,13 @@ import org.nasdanika.models.family.Woman;
 
 public class Sister extends Sibling {
 
-	public Sister(Woman sister, Person object) {
-		super(sister, object);
+	public Sister(Woman sister, Person object, Relative... inputs) {
+		super(sister, object, inputs);
+	}
+	
+	@Override
+	public Woman getSubject() {
+		return (Woman) super.getSubject();
 	}
 
 }

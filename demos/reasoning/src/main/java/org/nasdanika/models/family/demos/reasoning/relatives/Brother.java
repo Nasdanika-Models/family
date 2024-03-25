@@ -5,8 +5,13 @@ import org.nasdanika.models.family.Person;
 
 public class Brother extends Sibling {
 
-	public Brother(Man brother, Person object) {
-		super(brother, object);
+	public Brother(Man brother, Person object, Relative... inputs) {
+		super(brother, object, inputs);
+	}
+	
+	@Override
+	public Man getSubject() {
+		return (Man) super.getSubject();
 	}
 
 }

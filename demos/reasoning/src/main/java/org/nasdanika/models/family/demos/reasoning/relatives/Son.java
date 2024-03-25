@@ -8,5 +8,10 @@ public class Son extends Child {
 	public Son(Man son, Person parent) {
 		super(son, parent);
 	}
+	
+	@Override
+	public Man getSubject() {
+		return (Man) super.getSubject();
+	}
 
 }

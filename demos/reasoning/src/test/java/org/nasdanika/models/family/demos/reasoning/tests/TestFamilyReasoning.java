@@ -115,8 +115,8 @@ public class TestFamilyReasoning {
 		factories.add((CapabilityFactory) new FatherFactory(familyResource));
 		factories.add((CapabilityFactory) new MotherFactory(familyResource));
 		factories.add((CapabilityFactory) new SonFactory(familyResource));
-//		factories.add((CapabilityFactory) new DaughterFactory(familyResource));
-//		factories.add((CapabilityFactory) new SisterFactory());
+		factories.add((CapabilityFactory) new DaughterFactory(familyResource));
+		factories.add((CapabilityFactory) new SisterFactory());
 //		Aunt.java
 //		Brother.java
 //		Cousin.java
@@ -129,16 +129,9 @@ public class TestFamilyReasoning {
 		CapabilityLoader capabilityLoader = new CapabilityLoader(factories);
 		ProgressMonitor progressMonitor = new NullProgressMonitor(); // PrintStreamProgressMonitor();
 		
-		TreeIterator<EObject> frit = familyResource.getAllContents();
-		while (frit.hasNext()) {
-			EObject next = frit.next();
-			if (next instanceof Person) {
-				System.out.println("--- " + ((Person) next).getName() + " ---");
-				for (CapabilityProvider<?> cp: capabilityLoader.load(new ServiceCapabilityFactory.Requirement(Relative.class, null, next), progressMonitor)) {
-					Flux<?> publisher = cp.getPublisher();					
-					publisher.subscribe(System.out::println);
-				}				
-			}
+		for (CapabilityProvider<?> cp: capabilityLoader.load(ServiceCapabilityFactory.createRequirement(Relative.class), progressMonitor)) {
+			Flux<?> publisher = cp.getPublisher();					
+			publisher.subscribe(System.out::println);
 		}				
 	}
 	

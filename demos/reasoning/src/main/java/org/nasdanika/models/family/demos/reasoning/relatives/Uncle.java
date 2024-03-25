@@ -5,8 +5,13 @@ import org.nasdanika.models.family.Person;
 
 public class Uncle extends Conclusion {
 
-	public Uncle(Man uncle, Person object) {
-		super(uncle, object);
+	public Uncle(Man uncle, Person object, Relative... inputs) {
+		super(uncle, object, inputs);
+	}
+	
+	@Override
+	public Man getSubject() {
+		return (Man) super.getSubject();
 	}
 
 }

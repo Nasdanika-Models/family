@@ -4,8 +4,8 @@ import org.nasdanika.models.family.Person;
 
 public abstract class GrandParent extends Conclusion {
 
-	public GrandParent(Person grandparent, Person grandchild) {
-		super(grandparent, grandchild);
+	public GrandParent(Person grandparent, Person grandchild, Relative... inputs) {
+		super(grandparent, grandchild, inputs);
 	}
 
 }

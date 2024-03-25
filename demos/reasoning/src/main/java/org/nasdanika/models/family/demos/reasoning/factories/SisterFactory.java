@@ -2,8 +2,6 @@ package org.nasdanika.models.family.demos.reasoning.factories;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 import java.util.function.BiFunction;
 
@@ -11,11 +9,9 @@ import org.nasdanika.capability.CapabilityProvider;
 import org.nasdanika.capability.ServiceCapabilityFactory;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.models.family.Person;
-import org.nasdanika.models.family.Woman;
+import org.nasdanika.models.family.demos.reasoning.relatives.Child;
 import org.nasdanika.models.family.demos.reasoning.relatives.Daughter;
-import org.nasdanika.models.family.demos.reasoning.relatives.Parent;
 import org.nasdanika.models.family.demos.reasoning.relatives.Sister;
-import org.reactivestreams.Publisher;
 
 import reactor.core.publisher.Flux;
 
@@ -35,48 +31,27 @@ public class SisterFactory extends ServiceCapabilityFactory<Person, Sister> {
 			Person serviceRequirement,
 			BiFunction<Object, ProgressMonitor, CompletionStage<Iterable<CapabilityProvider<Object>>>> resolver,
 			ProgressMonitor progressMonitor) {
-		
-		if (serviceRequirement != null) {			
-			// Sister is a daughter of the same parent.
-			// We can get parent directly, but we'll use parent requirement
-			CompletionStage<Iterable<CapabilityProvider<Object>>> parentsCs = resolver.apply(ServiceCapabilityFactory.createRequirement(Parent.class, null, serviceRequirement), progressMonitor);
-			return parentsCs.thenApply(parents -> applyParents(serviceRequirement, parents, resolver, progressMonitor));
 			
-//			return CompletableFuture.completedStage(Collections.singleton(new CapabilityProvider<Sister>() {
-//
-//				@Override
-//				public Flux<Sister> getPublisher() {
-//					return Flux.fromStream(
-//							serviceRequirement
-//								.getChildren()
-//								.stream()
-//								.filter(Woman.class::isInstance)
-//								.map(Woman.class::cast)
-//								.map(daughter -> new Daughter(daughter, serviceRequirement)));
-//				}
-//				
-//			}));
-		}
-		
-		return CompletableFuture.completedStage(Collections.emptyList());
+			CompletionStage<Iterable<CapabilityProvider<Object>>> childrenCS = resolver.apply(ServiceCapabilityFactory.createRequirement(Child.class, null, serviceRequirement), progressMonitor);
+			return childrenCS.thenApply(children -> applyChildren(serviceRequirement, children, resolver, progressMonitor));
 	}
 	
-	protected Iterable<CapabilityProvider<Sister>> applyParents(
+	protected Iterable<CapabilityProvider<Sister>> applyChildren(
 			Person person,
-			Iterable<CapabilityProvider<Object>> parentsCapabilityProviders,
+			Iterable<CapabilityProvider<Object>> childrenCapabilityProviders,
 			BiFunction<Object, ProgressMonitor, CompletionStage<Iterable<CapabilityProvider<Object>>>> resolver,
 			ProgressMonitor progressMonitor) {
 		
 		Collection<CapabilityProvider<Sister>> ret = new ArrayList<>();
 		
-		for (CapabilityProvider<Object> pcp: parentsCapabilityProviders) {
+		for (CapabilityProvider<Object> pcp: childrenCapabilityProviders) {
 			ret.add(new CapabilityProvider<Sister>() {
 				
 				@Override
 				public Flux<Sister> getPublisher() {
 					return pcp
 							.getPublisher()
-							.flatMap(parent -> sisters((Parent) parent, resolver, progressMonitor));
+							.flatMap(child -> sisters(person, (Child) child, childrenCapabilityProviders, progressMonitor));
 				}
 			});
 		}
@@ -84,21 +59,27 @@ public class SisterFactory extends ServiceCapabilityFactory<Person, Sister> {
 		return ret;
 	}
 	
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	protected Flux<Sister> sisters(
-			Parent parent,
-			BiFunction<Object, ProgressMonitor, CompletionStage<Iterable<CapabilityProvider<Object>>>> resolver,
+			Person person,
+			Child child,
+			Iterable<CapabilityProvider<Object>> childrenCapabilityProviders,
 			ProgressMonitor progressMonitor) {
 		
-		// Getting subject's daughters and filtering for non-equality to object		
-		CompletionStage<Iterable<CapabilityProvider<Object>>> daughtersCs = resolver.apply(ServiceCapabilityFactory.createRequirement(Daughter.class, null, parent.getSubject()), progressMonitor);
-		Iterable<CapabilityProvider<Object>> daughtersCp = daughtersCs.toCompletableFuture().join();
-		Collection<Publisher<Daughter>> dp = new ArrayList<>();
-		for (CapabilityProvider<Object> dcp: daughtersCp) {
-			dp.add((Publisher) dcp.getPublisher());
-		}
-		return Flux.concat(dp)
-			.filter(d -> d.getSubject() != parent.getObject())
-			.map(d -> new Sister((Woman) d.getSubject(), parent.getObject()));
+		System.out.println("--- " + child);
+		childPublisher.subscribe(System.out::println);
+		
+//		return childPublisher
+//			.filter(c -> {
+//				System.out.println("\t" + c);
+//				return true;
+//			})	
+//			.filter(Daughter.class::isInstance) // only daughters
+//			.map(Daughter.class::cast)
+//			.filter(d -> !d.getSubject().equals(child.getSubject())) // only siblings, not self
+//			.filter(d -> child.getObject().equals(d.getObject())) // same parent
+//			.map(d -> new Sister(d.getSubject(), child.getSubject(), child, d))
+//			.filter(s -> person == null || s.getObject().equals(person));
+		
+		return Flux.empty();
 	}
 }

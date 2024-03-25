@@ -7,13 +7,16 @@ import org.nasdanika.models.family.Person;
 
 public class Conclusion extends Relative {
 	
-	protected Conclusion(Person subject, Person object) {
+	protected Conclusion(Person subject, Person object, Relative... inputs) {
 		super(subject, object);
+		for (Relative input: inputs) {
+			this.inputs.add(input);
+		}
 	}
 
-	private Collection<Object> inputs = new ArrayList<>();
+	private Collection<Relative> inputs = new ArrayList<>();
 	
-	public Collection<Object> getInputs() {
+	public Collection<Relative> getInputs() {
 		return inputs;
 	}
 	

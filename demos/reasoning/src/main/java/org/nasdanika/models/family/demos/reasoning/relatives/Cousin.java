@@ -4,8 +4,8 @@ import org.nasdanika.models.family.Person;
 
 public class Cousin extends Conclusion {
 
-	public Cousin(Person cousin, Person object) {
-		super(cousin, object);
+	public Cousin(Person cousin, Person object, Relative... inputs) {
+		super(cousin, object, inputs);
 	}
 
 }
