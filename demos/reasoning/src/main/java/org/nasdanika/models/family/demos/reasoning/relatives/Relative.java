@@ -3,12 +3,11 @@ package org.nasdanika.models.family.demos.reasoning.relatives;
 import java.util.Objects;
 
 import org.nasdanika.models.family.Person;
-import org.nasdanika.models.family.demos.reasoning.Conclusion;
 
 /**
  * Family relationships. E.g. "Alice is a sister of Bob" with "Alice" being the subject and "Bob" being the object.
  */
-public abstract class Relative extends Conclusion {
+public abstract class Relative {
 	
 	private Person subject;
 	private Person object;
