@@ -19,13 +19,19 @@ import org.nasdanika.capability.CapabilityLoader;
 import org.nasdanika.capability.CapabilityProvider;
 import org.nasdanika.capability.ServiceCapabilityFactory;
 import org.nasdanika.common.NullProgressMonitor;
+import org.nasdanika.common.PrintStreamProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.models.family.Person;
+import org.nasdanika.models.family.demos.reasoning.factories.AuntFactory;
+import org.nasdanika.models.family.demos.reasoning.factories.BrotherFactory;
 import org.nasdanika.models.family.demos.reasoning.factories.DaughterFactory;
 import org.nasdanika.models.family.demos.reasoning.factories.FatherFactory;
+import org.nasdanika.models.family.demos.reasoning.factories.GrandDaughterFactory;
+import org.nasdanika.models.family.demos.reasoning.factories.GrandSonFactory;
 import org.nasdanika.models.family.demos.reasoning.factories.MotherFactory;
 import org.nasdanika.models.family.demos.reasoning.factories.SisterFactory;
 import org.nasdanika.models.family.demos.reasoning.factories.SonFactory;
+import org.nasdanika.models.family.demos.reasoning.factories.UncleFactory;
 import org.nasdanika.models.family.demos.reasoning.relatives.Daughter;
 import org.nasdanika.models.family.demos.reasoning.relatives.Father;
 import org.nasdanika.models.family.demos.reasoning.relatives.Relative;
@@ -117,20 +123,18 @@ public class TestFamilyReasoning {
 		factories.add((CapabilityFactory) new SonFactory(familyResource));
 		factories.add((CapabilityFactory) new DaughterFactory(familyResource));
 		factories.add((CapabilityFactory) new SisterFactory());
-//		Aunt.java
-//		Brother.java
-//		Cousin.java
-//		GrandDaughter.java
+		factories.add((CapabilityFactory) new BrotherFactory());
+		factories.add((CapabilityFactory) new UncleFactory());
+		factories.add((CapabilityFactory) new AuntFactory());
+		factories.add((CapabilityFactory) new GrandSonFactory());
+		factories.add((CapabilityFactory) new GrandDaughterFactory());
 //		GrandFather.java
 //		GrandMother.java
-//		GrandSon.java
-//		Sister.java
-//		Uncle.java
 		CapabilityLoader capabilityLoader = new CapabilityLoader(factories);
-		ProgressMonitor progressMonitor = new NullProgressMonitor(); // PrintStreamProgressMonitor();
+		ProgressMonitor progressMonitor = new /* NullProgressMonitor(); // */ PrintStreamProgressMonitor(true);
 		
 		for (CapabilityProvider<?> cp: capabilityLoader.load(ServiceCapabilityFactory.createRequirement(Relative.class), progressMonitor)) {
-			Flux<?> publisher = cp.getPublisher();					
+			Flux<?> publisher = cp.getPublisher().distinct();					
 			publisher.subscribe(System.out::println);
 		}				
 	}

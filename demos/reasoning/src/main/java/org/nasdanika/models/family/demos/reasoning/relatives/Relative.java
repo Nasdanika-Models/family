@@ -32,5 +32,22 @@ public abstract class Relative {
 		String rn = cn.substring(lastDot + 1);
 		return subject.getName() + " is a " + rn + " of " + object.getName();
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(object, subject);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Relative other = (Relative) obj;
+		return Objects.equals(object, other.object) && Objects.equals(subject, other.subject);
+	}
 	
 }

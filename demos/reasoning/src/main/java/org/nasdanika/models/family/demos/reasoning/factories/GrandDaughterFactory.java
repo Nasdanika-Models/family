@@ -9,48 +9,48 @@ import org.nasdanika.capability.CapabilityProvider;
 import org.nasdanika.capability.ServiceCapabilityFactory;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.models.family.Person;
+import org.nasdanika.models.family.demos.reasoning.relatives.GrandDaughter;
 import org.nasdanika.models.family.demos.reasoning.relatives.Child;
 import org.nasdanika.models.family.demos.reasoning.relatives.Daughter;
-import org.nasdanika.models.family.demos.reasoning.relatives.Sister;
 
 import reactor.core.publisher.Flux;
 
 /**
  * Provides father of a requirement person.
  */
-public class SisterFactory extends ServiceCapabilityFactory<Person, Sister> {
+public class GrandDaughterFactory extends ServiceCapabilityFactory<Person, GrandDaughter> {
 
 	@Override
 	public boolean isForServiceType(Class<?> type) {
-		return type.isAssignableFrom(Sister.class);
+		return type.isAssignableFrom(GrandDaughter.class);
 	}
 
 	@Override
-	protected CompletionStage<Iterable<CapabilityProvider<Sister>>> createService(
-			Class<Sister> serviceType,
+	protected CompletionStage<Iterable<CapabilityProvider<GrandDaughter>>> createService(
+			Class<GrandDaughter> serviceType,
 			Person serviceRequirement,
 			BiFunction<Object, ProgressMonitor, CompletionStage<Iterable<CapabilityProvider<Object>>>> resolver,
 			ProgressMonitor progressMonitor) {
 			
 			CompletionStage<Iterable<CapabilityProvider<Object>>> childrenCS = resolver.apply(ServiceCapabilityFactory.createRequirement(Child.class, null, serviceRequirement), progressMonitor);
-			return childrenCS.thenApply(children -> applyChildren(serviceRequirement, children, progressMonitor));
+			return childrenCS.thenApply(children -> applyChildren(serviceRequirement, children,  progressMonitor));
 	}
 	
-	protected Iterable<CapabilityProvider<Sister>> applyChildren(
+	protected Iterable<CapabilityProvider<GrandDaughter>> applyChildren(
 			Person person,
 			Iterable<CapabilityProvider<Object>> childrenCapabilityProviders,
 			ProgressMonitor progressMonitor) {
 		
-		Collection<CapabilityProvider<Sister>> ret = new ArrayList<>();
+		Collection<CapabilityProvider<GrandDaughter>> ret = new ArrayList<>();
 		
 		for (CapabilityProvider<Object> pcp: childrenCapabilityProviders) {
-			ret.add(new CapabilityProvider<Sister>() {
+			ret.add(new CapabilityProvider<GrandDaughter>() {
 				
 				@Override
-				public Flux<Sister> getPublisher() {
+				public Flux<GrandDaughter> getPublisher() {
 					return pcp
 							.getPublisher()
-							.flatMap(child -> sisters(person, (Child) child, childrenCapabilityProviders, progressMonitor));
+							.flatMap(child -> grandDaughters(person, (Child) child, childrenCapabilityProviders, progressMonitor));
 				}
 			});
 		}
@@ -58,26 +58,24 @@ public class SisterFactory extends ServiceCapabilityFactory<Person, Sister> {
 		return ret;
 	}
 	
-	protected Flux<Sister> sisters(
+	protected Flux<GrandDaughter> grandDaughters(
 			Person person,
 			Child child,
 			Iterable<CapabilityProvider<Object>> childrenCapabilityProviders,
 			ProgressMonitor progressMonitor) {
 		
-		Collection<Flux<Sister>> sisterPublishers = new ArrayList<>();
+		Collection<Flux<GrandDaughter>> grandDaughterPublishers = new ArrayList<>();
 		
 		for (CapabilityProvider<Object> ccp: childrenCapabilityProviders) {
 			Flux<Object> childPublisher = ccp.getPublisher();
-			sisterPublishers.add(childPublisher
-				.filter(Daughter.class::isInstance) // only daughters
+			grandDaughterPublishers.add(childPublisher
+				.filter(Daughter.class::isInstance) // only sons
 				.map(Daughter.class::cast)
-				.filter(d -> !d.getSubject().equals(child.getSubject())) // only siblings, not self
-				.filter(d -> child.getObject().equals(d.getObject())) // same parent
-				.map(d -> new Sister(d.getSubject(), child.getSubject(), child, d))
+				.filter(s -> child.getSubject().equals(s.getObject())) 
+				.map(s -> new GrandDaughter(s.getSubject(), child.getObject(), child, s))
 				.filter(s -> person == null || s.getObject().equals(person)));
 		}
 		
-		return Flux.concat(sisterPublishers).distinct();
-		
+		return Flux.concat(grandDaughterPublishers).distinct();		
 	}
 }
