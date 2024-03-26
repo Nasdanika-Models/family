@@ -27,6 +27,8 @@ import org.nasdanika.models.family.demos.reasoning.factories.BrotherFactory;
 import org.nasdanika.models.family.demos.reasoning.factories.DaughterFactory;
 import org.nasdanika.models.family.demos.reasoning.factories.FatherFactory;
 import org.nasdanika.models.family.demos.reasoning.factories.GrandDaughterFactory;
+import org.nasdanika.models.family.demos.reasoning.factories.GrandFatherFactory;
+import org.nasdanika.models.family.demos.reasoning.factories.GrandMotherFactory;
 import org.nasdanika.models.family.demos.reasoning.factories.GrandSonFactory;
 import org.nasdanika.models.family.demos.reasoning.factories.MotherFactory;
 import org.nasdanika.models.family.demos.reasoning.factories.SisterFactory;
@@ -128,8 +130,8 @@ public class TestFamilyReasoning {
 		factories.add((CapabilityFactory) new AuntFactory());
 		factories.add((CapabilityFactory) new GrandSonFactory());
 		factories.add((CapabilityFactory) new GrandDaughterFactory());
-//		GrandFather.java
-//		GrandMother.java
+		factories.add((CapabilityFactory) new GrandMotherFactory());
+		factories.add((CapabilityFactory) new GrandFatherFactory());
 		CapabilityLoader capabilityLoader = new CapabilityLoader(factories);
 		ProgressMonitor progressMonitor = new /* NullProgressMonitor(); // */ PrintStreamProgressMonitor(true);
 		
