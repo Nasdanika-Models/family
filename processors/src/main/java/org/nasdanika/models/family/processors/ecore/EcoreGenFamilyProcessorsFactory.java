@@ -52,8 +52,6 @@ public class EcoreGenFamilyProcessorsFactory {
                     app-action:
                         text: Param
                         icon: fas fa-user					
-					
-					
 					""",
 			icon = "https://img.icons8.com/officel/30/family--v2.png",
 			description = "A model of a family",
