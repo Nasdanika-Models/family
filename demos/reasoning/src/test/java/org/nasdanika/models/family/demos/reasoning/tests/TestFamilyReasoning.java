@@ -16,6 +16,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.nasdanika.capability.CapabilityFactory;
 import org.nasdanika.capability.CapabilityLoader;
+import org.nasdanika.capability.CapabilityLoader.FactoryNode;
 import org.nasdanika.capability.CapabilityProvider;
 import org.nasdanika.capability.ServiceCapabilityFactory;
 import org.nasdanika.common.NullProgressMonitor;
@@ -140,7 +141,20 @@ public class TestFamilyReasoning {
 		for (CapabilityProvider<?> cp: capabilityLoader.load(ServiceCapabilityFactory.createRequirement(Relative.class), progressMonitor)) {
 			Flux<?> publisher = cp.getPublisher().distinct();					
 			publisher.subscribe(System.out::println);
-		}				
+		}		
+		
+		System.out.println("-------------");
+		
+		for (FactoryNode fe: capabilityLoader.getFactoryNodes()) {			
+			System.out.println(fe.requirement());
+			System.out.println("\tFactory: " + fe.factory());
+			if (!fe.dependencies().isEmpty()) {
+				System.out.println("\tDependencies");
+				for (Object dependency: fe.dependencies()) {
+					System.out.println("\t\t" + dependency);
+				}
+			}
+		}
 	}
 	
 }

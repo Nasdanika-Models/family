@@ -28,7 +28,7 @@ public abstract class FactFactory<T extends Relative> extends ServiceCapabilityF
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	protected Iterable<Object> getResourceFactory(Person serviceRequirement) {
+	protected Iterable<Object> getResourceContents(Person serviceRequirement) {
 		return serviceRequirement == null ? () -> (Iterator) familyResource.getAllContents() : Collections.singleton(serviceRequirement);
 	}
 
@@ -39,7 +39,7 @@ public abstract class FactFactory<T extends Relative> extends ServiceCapabilityF
 			BiFunction<Object, ProgressMonitor, CompletionStage<Iterable<CapabilityProvider<Object>>>> resolver,
 			ProgressMonitor progressMonitor) {
 		
-		Iterable<Object> pit = getResourceFactory(serviceRequirement);		
+		Iterable<Object> pit = getResourceContents(serviceRequirement);		
 		
 		return CompletableFuture.completedStage(Collections.singleton(new CapabilityProvider<T>() {
 
