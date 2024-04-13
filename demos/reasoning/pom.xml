@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.nasdanika.models.family.demos</groupId>
-	<version>2024.3.0</version>
+	<version>2024.4.0</version>
 	<artifactId>reasoning</artifactId>
 	<packaging>jar</packaging>
 	<name>Reasoning</name>
@@ -55,12 +55,12 @@
 		<dependency>
 			<groupId>org.nasdanika.models.family</groupId>
 			<artifactId>model</artifactId>
-			<version>2024.3.0</version>
+			<version>2024.4.0</version>
 		</dependency>		
 		<dependency>
 			<groupId>org.nasdanika.core</groupId>
 			<artifactId>capability</artifactId>
-			<version>2024.3.1</version>
+			<version>2024.4.0</version>
 		</dependency>		
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
