@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.nasdanika.exec.util.DocLoadingDrawioFactory;
 import org.nasdanika.models.family.FamilyPackage;
 import org.nasdanika.ncore.NcorePackage;
@@ -16,6 +17,10 @@ import org.nasdanika.ncore.NcorePackage;
  */
 public abstract class FamilyDrawioFactory extends DocLoadingDrawioFactory<EObject> {
 	
+	public FamilyDrawioFactory(ResourceSet resourceSet) {
+		super(resourceSet);
+	}
+
 	/**
 	 * Returns a map with graph and ncore entries.
 	 */

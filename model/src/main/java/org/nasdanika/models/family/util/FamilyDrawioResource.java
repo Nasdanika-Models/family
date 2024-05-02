@@ -66,7 +66,7 @@ public class FamilyDrawioResource extends ResourceImpl {
 		
 		diagramResource.load(inputStream, options);
 		
-		FamilyDrawioFactory familyDrawioFactory = new FamilyDrawioFactory() {
+		FamilyDrawioFactory familyDrawioFactory = new FamilyDrawioFactory(getResourceSet()) {
 
 			@Override
 			protected EObject getByRefId(EObject eObj, String refId, int pass, Map<EObject, EObject> registry) {
