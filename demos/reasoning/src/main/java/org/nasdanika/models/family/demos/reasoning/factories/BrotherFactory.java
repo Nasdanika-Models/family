@@ -49,8 +49,8 @@ public class BrotherFactory extends ServiceCapabilityFactory<Person, Brother> {
 				@Override
 				public Flux<Brother> getPublisher() {
 					return pcp
-							.getPublisher()
-							.flatMap(child -> brothers(person, (Child) child, childrenCapabilityProviders, progressMonitor));
+						.getPublisher()
+						.flatMap(child -> brothers(person, (Child) child, childrenCapabilityProviders, progressMonitor));
 				}
 			});
 		}
