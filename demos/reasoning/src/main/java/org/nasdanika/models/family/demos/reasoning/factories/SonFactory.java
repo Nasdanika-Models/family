@@ -18,7 +18,7 @@ public class SonFactory extends FactFactory<Son> {
 	}
 
 	@Override
-	public boolean isForServiceType(Class<?> type) {
+	public boolean isFor(Class<?> type, Object requirement) {
 		return type.isAssignableFrom(Son.class);
 	}
 

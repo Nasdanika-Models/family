@@ -21,7 +21,7 @@ import reactor.core.publisher.Flux;
 public class CousinFactory extends ServiceCapabilityFactory<Person, Cousin> {
 
 	@Override
-	public boolean isForServiceType(Class<?> type) {
+	public boolean isFor(Class<?> type, Object requirement) {
 		return type.isAssignableFrom(Cousin.class);
 	}
 
