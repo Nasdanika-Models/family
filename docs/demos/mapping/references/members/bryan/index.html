@@ -70,91 +70,19 @@ window.nsdJsTreeSearchCallback = function(str, node) {
 			  }
 			}));
 </script>
-
-<script src="../../../../../search-documents.js"></script>
-
-<script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>
-
-<script>
-// Script for full-text search of JsTree
-
-window.nsdJsTreeSearchCallback = function(str, node) { 
-    var sf = new $.vakata.search(str, true, { caseSensitive : false, fuzzy : false }); 
-    if (sf.search(node.text).isMatch) {
-		return true;
-	} 
-    let searchResult = this.search(str); 
-    for (const sr in searchResult) {
-        if (searchResult[sr].ref === node.original['data-nsd-label-uuid']) {
-            return true;
-        } 
-    } 
-    return false; 
-}.bind(lunr(function () {
-			  this.ref('id');
-			  this.field('title');
-			  this.field('content');
-
-			  for (const key in searchDocuments) {
-				  let doc = searchDocuments[key];
-				this.add({
-					id: doc['action-uuid'],
-					title: doc.title,
-					path: doc.path,
-					content: doc.content
-				});  
-			  }
-			}));
-</script>
-
-<script src="../../../../../search-documents.js"></script>
-
-<script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>
-
-<script>
-// Script for full-text search of JsTree
-
-window.nsdJsTreeSearchCallback = function(str, node) { 
-    var sf = new $.vakata.search(str, true, { caseSensitive : false, fuzzy : false }); 
-    if (sf.search(node.text).isMatch) {
-		return true;
-	} 
-    let searchResult = this.search(str); 
-    for (const sr in searchResult) {
-        if (searchResult[sr].ref === node.original['data-nsd-label-uuid']) {
-            return true;
-        } 
-    } 
-    return false; 
-}.bind(lunr(function () {
-			  this.ref('id');
-			  this.field('title');
-			  this.field('content');
-
-			  for (const key in searchDocuments) {
-				  let doc = searchDocuments[key];
-				this.add({
-					id: doc['action-uuid'],
-					title: doc.title,
-					path: doc.path,
-					content: doc.content
-				});  
-			  }
-			}));
-</script>
 </head>
   <body>
     <div class="container-fluid nsd-app-container">
       <div class="row">
         <div class="col nsd-app-header">
-          <a href="https://family.models.nasdanika.org" data-nsd-label-uuid="27cb0788-d456-401b-83a5-e0e34b48fae8" class="nsd-app-header-title">
+          <a href="https://family.models.nasdanika.org" data-nsd-label-uuid="bd363dbb-1a72-4278-9b1f-67cfc21e9bcb" class="nsd-app-header-title">
             <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon">Nasdanika Family Model</a>
           <ul class="nav nsd-app-header-navs">
             <li class="nav-item">
-              <a href="../../../search.html" data-nsd-label-uuid="947fffaa-b83b-4ea4-9e26-2714c1c2617d" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
+              <a href="../../../search.html" data-nsd-label-uuid="4e29a519-039f-42d1-a8ad-fd7c643addda" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
             </li>
             <li class="nav-item">
-              <a href="../../../glossary.html" data-nsd-label-uuid="fab7393e-9543-4ba2-90b9-12f3611bec5e" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
+              <a href="../../../glossary.html" data-nsd-label-uuid="ed8234de-d66e-43c5-b0a4-6994a1e5e947" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
             </li>
           </ul>
         </div>
@@ -162,44 +90,44 @@ window.nsdJsTreeSearchCallback = function(str, node) {
       <div class="row">
         <div class="col nsd-app-navbar">
           <ul class="navbar navbar-light navbar-expand-lg">
-            <a href="../../../index.html" data-nsd-label-uuid="00880f7f-148a-4399-9760-1f404db1ced2" class="navbar-brand">
+            <a href="../../../index.html" data-nsd-label-uuid="2a4d3976-f44e-451c-9e6c-0837034996c8" class="navbar-brand">
               <img src="https://img.icons8.com/officexs/24/family--v1.png" class="nsd-app-label-icon">Sample Family</a>
-            <button type="button" data-toggle="collapse" data-target="#nsd_3h" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            <button type="button" data-toggle="collapse" data-target="#nsd_1h" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
             </button>
-            <div id="nsd_3h" class="collapse navbar-collapse"></div>
+            <div id="nsd_1h" class="collapse navbar-collapse"></div>
           </ul>
         </div>
       </div>
       <div class="row nsd-app-content-row">
         <div class="col nsd-app-navigation-panel">
           <div class="list-group list-group-flush">
-            <a href="../alain/index.html" data-nsd-label-uuid="dd053252-3b75-4b72-9cce-3fcfb2ae8d9e" class="list-group-item list-group-action">
+            <a href="../alain/index.html" data-nsd-label-uuid="3f82bde6-3ba6-418d-94d2-9d5c75f65886" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Alan</a>
-            <a href="../albert/index.html" data-nsd-label-uuid="a6e32f92-1b31-454b-8476-9942c6c21bc8" class="list-group-item list-group-action">
-              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Albert</a><span data-nsd-label-uuid="679cf31d-fb58-465d-86cb-92a1239644ab" class="list-group-item list-group-action active"><img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Bryan</span>
-            <a href="../clara/index.html" data-nsd-label-uuid="62486fe2-e189-40de-844a-28ad33d26a33" class="list-group-item list-group-action">
+            <a href="../albert/index.html" data-nsd-label-uuid="e5dbe2e1-7c96-4a7b-b585-7aed66cda6f3" class="list-group-item list-group-action">
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Albert</a><span data-nsd-label-uuid="65ae1491-60f7-42a1-a27d-235eb82145d6" class="list-group-item list-group-action active"><img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Bryan</span>
+            <a href="../clara/index.html" data-nsd-label-uuid="c7536022-b9c4-4d91-bd95-94c8f9af8f94" class="list-group-item list-group-action">
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADEklEQVR4Xp2T20tUURTGTz5FEEQPvfQfFEjpjOaFUs/ojDpzZsa8k6ZdNO+KFs2Z0TlOaoo6aiSmRmrmBUxFIQp6qJccMTEhrAx6rNAoQkmL0tVa2zw62yJwwcdsZn3rt9deex9B+Ec4rb6HZEnrskv+s7JZs/pHz8pN2qO8979ht2hOY/FXJf4EtGSEQ3t2FHRk66EqKRhks/aLbPFvVizHDvB1fw27WWtC2K9mBPUVS9BfsqWeglhovaAD2gg983Zj0GG+3iuuSCH7bWbtQtPZMC/QdvWh7hWZNrv1KIrgw3PUwO5yK+ICsDPTDtDdQiPUpoZCY/optVuHVQuypEnmOWrgMcYb0jYKSF35MUDd1iSHgN2ihcZzYey3M0fP8vVnTtLRx3iOGjSXm+dFZu64pGfFrXlRMF6XArODBbA8XQX95Va4nhLCPDRP7PAdz1HDbtZ8bLsYycyVOPiR6kT4NlPtpRcD+eDAjcjTlhVJwEWeowZ2+PlWVhQz4xrmhot3AOk/ypGHnhOul3iOGpj8QUclc7k1AKZ7c3cAPV3ZUBEXyDy3cwwEXFfCwvbyLEFJCDpIO9/Ji2bmGpzTkCt+B7DPYWG3vXHzsaxbmznwCM8T7Fb/UErSG2PzwVmW4xOaG9069svhQvZUNsfSW2RkF4dvN5PnCbJFE43An/REWjIjoCoxGCoSA9Zbr4owUGdharXpwJkUuOZKCAL6kpynA4G+dfrueR4LWfLzxdffieDnTkk71p4XPtZbbYTxG0lMvTUm6CgU72NuAD2TeMNOxeS/j+d4hSciwm9CFIc8ovh9NF2E7muxMP+gBN6ienA9gv9hbgU1SF6+Xg1QFB+PTleLxrVXqakwI0nwNFaEnjIDdLliGLj7sgGeGEWWm0MPeSdFsQYEYQ/PEzDZOGUwwKIsw2pTE7xOS4P3paWw7G6Ax64MeFiZDkvuevhQVgZvMEeeBZsNpvR6mNDp6r1h2Drttgkjrbjd6prX9hzVUC1Cj6vASZ2uiY7xyeHYlagWm3JvAUXxEe5CO+1axCDWb4snlzfpfIuPAAAAAElFTkSuQmCC" class="nsd-app-label-icon">Clara</a>
-            <a href="../dave/index.html" data-nsd-label-uuid="a6c558ab-d306-4dd9-92ab-33bccccfce30" class="list-group-item list-group-action">
+            <a href="../dave/index.html" data-nsd-label-uuid="bc5c8e74-749f-441d-8f16-e8014ac77cd7" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Dave</a>
-            <a href="../elias/index.html" data-nsd-label-uuid="4bb46aee-fb83-4153-ae03-132d3cfc8200" class="list-group-item list-group-action">
+            <a href="../elias/index.html" data-nsd-label-uuid="85bd2a82-7c97-47de-9b84-e7159a6f6670" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Elias</a>
-            <a href="../fiona/index.html" data-nsd-label-uuid="cb7e2400-499e-4b5d-b593-3f8476973824" class="list-group-item list-group-action">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAC0ElEQVR4XtWTXUiTURjHrSauiBVtc7rl/Nicm/tim0734dx0m9OpYGGlBVqGiWQpSR9XSpC76MaLkFIMJRFbipohEaKUSSaEJIQEIUINP7CsBIPC/p33jYG+xrDu+sGfA4fn+fGc95w3LOy/xm63s206pc+mV73IMeuulJfb2cyav2FXhk7dbVLL4TEbcMyVgSK7aYDaZxbuiFRV4hFaZknFm9E+LEw9QkNVKcoLs08wa3dEYoyoz5GqwVjvXawvzePL3DSGW30ocWe8u1NZGc6sD4nBYAgX8rmBptrTWH37Et/XPmLt/Sw+jPtx3GX92Vhz8jCzJyQaiSQyRsD/0XuzHsvTT/B1fgafZicw2dMMjTRuo/niWQGzJyS6pCShRBT9LdugxNxQCxYmBxAY70HdqUKYNIph4B8uJk0lv6SVSZZGfOcx9/AWAiMdsBu1a0pZvJZZuyOkUqlEq9GsdzXUYP5xJxaf9uDCmdLr1Ntk1oYkISFBnJyc7FOr1ctKpRKZVjNe+Vuw+Ow+btRXwWw2rzqdzq6srCwbs/ePiIWCUblMBoVCASIFuXFUlBxFYKwbr/tvw2g0wu12IzMzc6W4uHgvs38b4mjBc2lcLDRERiaFXq+npkJb01WsTPhR5M1BXl4eyITUWsXs34ZYGDVECdVqFS2kJkxPT4fb5cTMYBt8l6uRn58Pj8dDCadyc3MjmI4tkAnv0UKVij6yVqtFWloabDYbqivK0NreSQuDUq/XW8Z0bCFGGNVOCVXkQqjpqG9pMplgsVjgcrnga++nj1xQUACHw0GtfqZjM/sEvEOVkrjYz5uEG9SRrVYrLThXd40WEvl6SkrKIHleJtLHYoqCUD+9mMViOQ5yOLVcLrc5IiKihcPh+EUi0TCfz38gFsd18Hi8RjabXUpqU0kiSXZv1WyHEh8giSaRkChIlCRykviw35L9JHuCDUF+ATGBJDaBDsw0AAAAAElFTkSuQmCC" class="nsd-app-label-icon">Fiona</a>
-            <a href="../isa/index.html" data-nsd-label-uuid="3694a3b5-7227-4ee2-983a-2b833b938e75" class="list-group-item list-group-action">
+            <a href="../fiona/index.html" data-nsd-label-uuid="9480aec9-c9af-484d-8d37-caf73312637d" class="list-group-item list-group-action">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAC1UlEQVR4XtWUXUhTYRjHrbTZBxqpm245dZu6r7Phps6zzblNZ9t0QZKhFqQVapGoJGE3ZRd+QDd1kRRmKJX4sdBELCqUMimFqIQQIkRIS8uyLCQK+/eexSCPsay7fvDnwOF5frzPec45fn7/NWazOdCYQNWbNNSDTFpbXZmbu4Fd8zesSU2g2mhKCrtei922VOw00z3MfXbhqkhSSnM8MkMing248Xq0DydKC1CYlZ7Hrl0VsZGCa5ZEFQbdl7A4O4mPE4/R39SAvMzUFxeKiwPY9T7RarUB/LCQ6bqKIsw/H8HXhXf49HIcU0OdZHTj95qyPdvYPT5RicXcSF7YN/fpKrx9cgsLk2N4Pz6Mhx1nQUmil2rLD/LYPT5JiI/niwXhX9K1Ckz0NWJmpAfTQ+2o3LsDtEp6A/+yGLKUo+o48ezthjJM9J7D1J0WmJPUnxVxMWp27aqQSCRitUq1ePXkEUzebMXM3XaUF+WfYt5Ndq1PRCKRUC6X11GU8o1SoUCaUY9HXWTsex2orSoBTdPzGRkZV6xWq4nd+1uEfN6ANC4WMpkMFEWBbBz783fh1WAbnnafhy45GTabDWlpprlcmv7zlxMZwbsvjo6CisjISaHRaKDX63Gxrhpzw53IydoOp9MJi8WCbKezlN2/gshwXi8jpJRKj5A5YUpKCjJt6Ri73oT6Y4eRnZ0Nu91OxI5Rh8PBYTuWIYzgXfYKmZHVajV0Oh1MJhMOHdiHpuZWj9ArdbmchWzHMsgJmxkhsxDmdDKplFkEDAaD59k1NHd7Rna5XLCSscm1k+34lY280K3FoijhB69QLpMtMSMbjUbPcyupPO4REvliolbbI5VIaNLnzxZ5WU8S5e/vbwkKCqoICQk5w+FwGrcEB3cJBIJ+LpfrFgqjW0JDQ2s2BQYWkNokEi7J2uWalTB/k2ASPomYRE6iJJGSxPj9lGwmWedt8PIDc8MjDfZmTCEAAAAASUVORK5CYII=" class="nsd-app-label-icon">Fiona</a>
+            <a href="../isa/index.html" data-nsd-label-uuid="42ff61a4-6bc2-4cdf-9264-25cb7abaa6d0" class="list-group-item list-group-action">
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADEklEQVR4Xp2T20tUURTGTz5FEEQPvfQfFEjpjOaFUs/ojDpzZsa8k6ZdNO+KFs2Z0TlOaoo6aiSmRmrmBUxFIQp6qJccMTEhrAx6rNAoQkmL0tVa2zw62yJwwcdsZn3rt9deex9B+Ec4rb6HZEnrskv+s7JZs/pHz8pN2qO8979ht2hOY/FXJf4EtGSEQ3t2FHRk66EqKRhks/aLbPFvVizHDvB1fw27WWtC2K9mBPUVS9BfsqWeglhovaAD2gg983Zj0GG+3iuuSCH7bWbtQtPZMC/QdvWh7hWZNrv1KIrgw3PUwO5yK+ICsDPTDtDdQiPUpoZCY/optVuHVQuypEnmOWrgMcYb0jYKSF35MUDd1iSHgN2ihcZzYey3M0fP8vVnTtLRx3iOGjSXm+dFZu64pGfFrXlRMF6XArODBbA8XQX95Va4nhLCPDRP7PAdz1HDbtZ8bLsYycyVOPiR6kT4NlPtpRcD+eDAjcjTlhVJwEWeowZ2+PlWVhQz4xrmhot3AOk/ypGHnhOul3iOGpj8QUclc7k1AKZ7c3cAPV3ZUBEXyDy3cwwEXFfCwvbyLEFJCDpIO9/Ji2bmGpzTkCt+B7DPYWG3vXHzsaxbmznwCM8T7Fb/UErSG2PzwVmW4xOaG9069svhQvZUNsfSW2RkF4dvN5PnCbJFE43An/REWjIjoCoxGCoSA9Zbr4owUGdharXpwJkUuOZKCAL6kpynA4G+dfrueR4LWfLzxdffieDnTkk71p4XPtZbbYTxG0lMvTUm6CgU72NuAD2TeMNOxeS/j+d4hSciwm9CFIc8ovh9NF2E7muxMP+gBN6ienA9gv9hbgU1SF6+Xg1QFB+PTleLxrVXqakwI0nwNFaEnjIDdLliGLj7sgGeGEWWm0MPeSdFsQYEYQ/PEzDZOGUwwKIsw2pTE7xOS4P3paWw7G6Ax64MeFiZDkvuevhQVgZvMEeeBZsNpvR6mNDp6r1h2Drttgkjrbjd6prX9hzVUC1Cj6vASZ2uiY7xyeHYlagWm3JvAUXxEe5CO+1axCDWb4snlzfpfIuPAAAAAElFTkSuQmCC" class="nsd-app-label-icon">Isa</a>
-            <a href="../katell/index.html" data-nsd-label-uuid="911ac845-8d85-410c-82f3-7b784a3b04e6" class="list-group-item list-group-action">
+            <a href="../katell/index.html" data-nsd-label-uuid="1d814065-7ca0-4f66-92bf-94d8f0ee56c4" class="list-group-item list-group-action">
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADEklEQVR4Xp2T20tUURTGTz5FEEQPvfQfFEjpjOaFUs/ojDpzZsa8k6ZdNO+KFs2Z0TlOaoo6aiSmRmrmBUxFIQp6qJccMTEhrAx6rNAoQkmL0tVa2zw62yJwwcdsZn3rt9deex9B+Ec4rb6HZEnrskv+s7JZs/pHz8pN2qO8979ht2hOY/FXJf4EtGSEQ3t2FHRk66EqKRhks/aLbPFvVizHDvB1fw27WWtC2K9mBPUVS9BfsqWeglhovaAD2gg983Zj0GG+3iuuSCH7bWbtQtPZMC/QdvWh7hWZNrv1KIrgw3PUwO5yK+ICsDPTDtDdQiPUpoZCY/optVuHVQuypEnmOWrgMcYb0jYKSF35MUDd1iSHgN2ihcZzYey3M0fP8vVnTtLRx3iOGjSXm+dFZu64pGfFrXlRMF6XArODBbA8XQX95Va4nhLCPDRP7PAdz1HDbtZ8bLsYycyVOPiR6kT4NlPtpRcD+eDAjcjTlhVJwEWeowZ2+PlWVhQz4xrmhot3AOk/ypGHnhOul3iOGpj8QUclc7k1AKZ7c3cAPV3ZUBEXyDy3cwwEXFfCwvbyLEFJCDpIO9/Ji2bmGpzTkCt+B7DPYWG3vXHzsaxbmznwCM8T7Fb/UErSG2PzwVmW4xOaG9069svhQvZUNsfSW2RkF4dvN5PnCbJFE43An/REWjIjoCoxGCoSA9Zbr4owUGdharXpwJkUuOZKCAL6kpynA4G+dfrueR4LWfLzxdffieDnTkk71p4XPtZbbYTxG0lMvTUm6CgU72NuAD2TeMNOxeS/j+d4hSciwm9CFIc8ovh9NF2E7muxMP+gBN6ienA9gv9hbgU1SF6+Xg1QFB+PTleLxrVXqakwI0nwNFaEnjIDdLliGLj7sgGeGEWWm0MPeSdFsQYEYQ/PEzDZOGUwwKIsw2pTE7xOS4P3paWw7G6Ax64MeFiZDkvuevhQVgZvMEeeBZsNpvR6mNDp6r1h2Drttgkjrbjd6prX9hzVUC1Cj6vASZ2uiY7xyeHYlagWm3JvAUXxEe5CO+1axCDWb4snlzfpfIuPAAAAAElFTkSuQmCC" class="nsd-app-label-icon">Katell</a>
-            <a href="../lea/index.html" data-nsd-label-uuid="b40904f4-c012-43b9-8faa-0b24deae2b06" class="list-group-item list-group-action">
+            <a href="../lea/index.html" data-nsd-label-uuid="28762553-3008-4d74-b74f-0288abc5301f" class="list-group-item list-group-action">
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADEklEQVR4Xp2T20tUURTGTz5FEEQPvfQfFEjpjOaFUs/ojDpzZsa8k6ZdNO+KFs2Z0TlOaoo6aiSmRmrmBUxFIQp6qJccMTEhrAx6rNAoQkmL0tVa2zw62yJwwcdsZn3rt9deex9B+Ec4rb6HZEnrskv+s7JZs/pHz8pN2qO8979ht2hOY/FXJf4EtGSEQ3t2FHRk66EqKRhks/aLbPFvVizHDvB1fw27WWtC2K9mBPUVS9BfsqWeglhovaAD2gg983Zj0GG+3iuuSCH7bWbtQtPZMC/QdvWh7hWZNrv1KIrgw3PUwO5yK+ICsDPTDtDdQiPUpoZCY/optVuHVQuypEnmOWrgMcYb0jYKSF35MUDd1iSHgN2ihcZzYey3M0fP8vVnTtLRx3iOGjSXm+dFZu64pGfFrXlRMF6XArODBbA8XQX95Va4nhLCPDRP7PAdz1HDbtZ8bLsYycyVOPiR6kT4NlPtpRcD+eDAjcjTlhVJwEWeowZ2+PlWVhQz4xrmhot3AOk/ypGHnhOul3iOGpj8QUclc7k1AKZ7c3cAPV3ZUBEXyDy3cwwEXFfCwvbyLEFJCDpIO9/Ji2bmGpzTkCt+B7DPYWG3vXHzsaxbmznwCM8T7Fb/UErSG2PzwVmW4xOaG9069svhQvZUNsfSW2RkF4dvN5PnCbJFE43An/REWjIjoCoxGCoSA9Zbr4owUGdharXpwJkUuOZKCAL6kpynA4G+dfrueR4LWfLzxdffieDnTkk71p4XPtZbbYTxG0lMvTUm6CgU72NuAD2TeMNOxeS/j+d4hSciwm9CFIc8ovh9NF2E7muxMP+gBN6ienA9gv9hbgU1SF6+Xg1QFB+PTleLxrVXqakwI0nwNFaEnjIDdLliGLj7sgGeGEWWm0MPeSdFsQYEYQ/PEzDZOGUwwKIsw2pTE7xOS4P3paWw7G6Ax64MeFiZDkvuevhQVgZvMEeeBZsNpvR6mNDp6r1h2Drttgkjrbjd6prX9hzVUC1Cj6vASZ2uiY7xyeHYlagWm3JvAUXxEe5CO+1axCDWb4snlzfpfIuPAAAAAElFTkSuQmCC" class="nsd-app-label-icon">Lea</a>
-            <a href="../paul/index.html" data-nsd-label-uuid="f6b31677-d7c4-4d50-bcdd-e9dc7405bfdc" class="list-group-item list-group-action">
+            <a href="../paul/index.html" data-nsd-label-uuid="ee2f5d34-8998-48f1-af04-d49c36012ee6" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Paul</a>
           </div>
         </div>
-        <div data-nsd-label-uuid="679cf31d-fb58-465d-86cb-92a1239644ab" data-nsd-action-uris="uuid:679cf31d-fb58-465d-86cb-92a1239644ab" class="col nsd-app-content-panel">
+        <div data-nsd-label-uuid="65ae1491-60f7-42a1-a27d-235eb82145d6" data-nsd-action-uris="uuid:65ae1491-60f7-42a1-a27d-235eb82145d6" class="col nsd-app-content-panel">
           <div class="container-fluid">
             <div class="row nsd-app-content-panel-title-and-items-row">
               <div class="col-auto">
-                <h1><span data-nsd-label-uuid="679cf31d-fb58-465d-86cb-92a1239644ab" class="nsd-app-content-panel-title"><img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Bryan</span>
+                <h1><span data-nsd-label-uuid="65ae1491-60f7-42a1-a27d-235eb82145d6" class="nsd-app-content-panel-title"><img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Bryan</span>
                 </h1>
               </div>
             </div>
@@ -215,7 +143,7 @@ window.nsdJsTreeSearchCallback = function(str, node) {
         <div class="col nsd-app-footer">
           <ul class="nav nsd-app-footer-navs">
             <li class="nav-item">
-              <a href="https://github.com/Nasdanika-Models/family" data-nsd-label-uuid="0a9728b5-c4ea-4634-8580-15bd5949fc35" class="nav-link"><span class="fab fa-github nsd-app-label-icon"></span>Sources</a>
+              <a href="https://github.com/Nasdanika-Models/family" data-nsd-label-uuid="3cc6bb58-ff5d-40b5-b3a9-e79da6125a42" class="nav-link"><span class="fab fa-github nsd-app-label-icon"></span>Sources</a>
             </li>
           </ul>
         </div>

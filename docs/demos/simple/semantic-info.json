@@ -1,6 +1,6 @@
 [
     {
-        "identifiers": ["uuid:f8d4619c-9fd6-4b0e-952f-837cab077899"],
+        "identifiers": ["uuid:384a777e-724c-4c73-8a2b-2f78c2c1f7d4"],
         "name": "Nasdanika Family Model",
         "icon": "https://docs.nasdanika.org/images/nasdanika-logo.png",
         "location": "https://family.models.nasdanika.org",
@@ -12,9 +12,9 @@
     {
         "container": {
             "reference": "children",
-            "identifiers": ["uuid:f8d4619c-9fd6-4b0e-952f-837cab077899"]
+            "identifiers": ["uuid:384a777e-724c-4c73-8a2b-2f78c2c1f7d4"]
         },
-        "identifiers": ["uuid:8878b52c-6a22-4111-bbb7-ac3fb0d996e5"],
+        "identifiers": ["uuid:04f8c0d4-abdc-4747-9a31-8d4be8c015a5"],
         "name": "Search",
         "icon": "fas fa-search",
         "location": "search.html",
@@ -26,9 +26,9 @@
     {
         "container": {
             "reference": "children",
-            "identifiers": ["uuid:f8d4619c-9fd6-4b0e-952f-837cab077899"]
+            "identifiers": ["uuid:384a777e-724c-4c73-8a2b-2f78c2c1f7d4"]
         },
-        "identifiers": ["uuid:c01459a3-4f82-4bac-876e-448e2aaf1025"],
+        "identifiers": ["uuid:6d625e28-f8bc-4e38-aa1f-69c447a25839"],
         "name": "Glossary",
         "icon": "fas fa-book",
         "location": "glossary.html",
@@ -40,9 +40,9 @@
     {
         "container": {
             "reference": "navigation",
-            "identifiers": ["uuid:f8d4619c-9fd6-4b0e-952f-837cab077899"]
+            "identifiers": ["uuid:384a777e-724c-4c73-8a2b-2f78c2c1f7d4"]
         },
-        "identifiers": ["uuid:c826bc95-db85-4df1-b24d-eb9517c89fa4"],
+        "identifiers": ["uuid:b5c0738b-4fe8-4143-a75b-ce9ee56a80e3"],
         "name": "Sources",
         "icon": "fab fa-github",
         "location": "https://github.com/Nasdanika-Models/family",
@@ -52,7 +52,7 @@
         }
     },
     {
-        "identifiers": ["uuid:e1715c1e-b625-449a-a251-b651a4ac717a"],
+        "identifiers": ["uuid:53b3b084-dc78-48da-a888-f95e04398927"],
         "name": "Sample family",
         "icon": "https://img.icons8.com/officexs/24/family--v1.png",
         "description": "Family model to demonstrate loading from Excel, loading and mapping from Drawio, and generation of HTML documentation",
@@ -65,10 +65,10 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:e1715c1e-b625-449a-a251-b651a4ac717a"],
+            "identifiers": ["uuid:53b3b084-dc78-48da-a888-f95e04398927"],
             "name": "Sample family"
         },
-        "identifiers": ["uuid:02c65ebc-cce8-494e-9bc4-fc20cb021732"],
+        "identifiers": ["uuid:2d141792-3b01-49dc-a644-1fe78a0dcde5"],
         "name": "Albert",
         "icon": "https://img.icons8.com/officexs/24/user.png",
         "location": "references/members/albert/index.html",
@@ -80,10 +80,10 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:e1715c1e-b625-449a-a251-b651a4ac717a"],
+            "identifiers": ["uuid:53b3b084-dc78-48da-a888-f95e04398927"],
             "name": "Sample family"
         },
-        "identifiers": ["uuid:df2d15d3-0c9e-4c50-ab86-9503c0cdb450"],
+        "identifiers": ["uuid:312fe8fd-fd02-4e65-a764-e2454d2e2d4a"],
         "name": "Paul",
         "icon": "https://img.icons8.com/officexs/24/user.png",
         "location": "references/members/paul/index.html",
@@ -95,10 +95,10 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:e1715c1e-b625-449a-a251-b651a4ac717a"],
+            "identifiers": ["uuid:53b3b084-dc78-48da-a888-f95e04398927"],
             "name": "Sample family"
         },
-        "identifiers": ["uuid:4db579fb-4fb0-4fd1-962a-eb22f8daa3a5"],
+        "identifiers": ["uuid:882f88e9-2333-4500-b98c-d3349efa1ed9"],
         "name": "Isa",
         "location": "references/members/isa/index.html",
         "type": {
@@ -109,10 +109,10 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:e1715c1e-b625-449a-a251-b651a4ac717a"],
+            "identifiers": ["uuid:53b3b084-dc78-48da-a888-f95e04398927"],
             "name": "Sample family"
         },
-        "identifiers": ["uuid:14d1dac7-2169-44eb-93a7-f899a196959d"],
+        "identifiers": ["uuid:2a89a627-b377-43a0-9848-dfe835c06f57"],
         "name": "Lea",
         "location": "references/members/lea/index.html",
         "type": {
@@ -123,10 +123,10 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:e1715c1e-b625-449a-a251-b651a4ac717a"],
+            "identifiers": ["uuid:53b3b084-dc78-48da-a888-f95e04398927"],
             "name": "Sample family"
         },
-        "identifiers": ["uuid:5298bd3e-b670-4db6-9341-98250681b930"],
+        "identifiers": ["uuid:c1943866-aadd-427d-943c-95af3b544204"],
         "name": "Elias",
         "icon": "https://img.icons8.com/officexs/24/user.png",
         "location": "references/members/elias/index.html",
@@ -138,10 +138,10 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:e1715c1e-b625-449a-a251-b651a4ac717a"],
+            "identifiers": ["uuid:53b3b084-dc78-48da-a888-f95e04398927"],
             "name": "Sample family"
         },
-        "identifiers": ["uuid:ff4fc486-5f94-4e3d-aa9e-9669516fa974"],
+        "identifiers": ["uuid:bb23bb64-94e4-4844-b51e-feeef341b057"],
         "name": "Katell",
         "location": "references/members/katell/index.html",
         "type": {
@@ -152,10 +152,10 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:e1715c1e-b625-449a-a251-b651a4ac717a"],
+            "identifiers": ["uuid:53b3b084-dc78-48da-a888-f95e04398927"],
             "name": "Sample family"
         },
-        "identifiers": ["uuid:4cc0dce8-2150-44d2-94af-0af2d337fefc"],
+        "identifiers": ["uuid:d902bff7-09ec-4cc5-bbc3-b974fa944266"],
         "name": "Dave",
         "icon": "https://img.icons8.com/officexs/24/user.png",
         "location": "references/members/dave/index.html",
@@ -167,10 +167,10 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:e1715c1e-b625-449a-a251-b651a4ac717a"],
+            "identifiers": ["uuid:53b3b084-dc78-48da-a888-f95e04398927"],
             "name": "Sample family"
         },
-        "identifiers": ["uuid:ec7c4c82-ebb6-403c-b560-5959c62dbfec"],
+        "identifiers": ["uuid:7905a723-251d-4f04-acde-7ae702c1f00b"],
         "name": "Clara",
         "location": "references/members/clara/index.html",
         "type": {
@@ -181,10 +181,10 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:e1715c1e-b625-449a-a251-b651a4ac717a"],
+            "identifiers": ["uuid:53b3b084-dc78-48da-a888-f95e04398927"],
             "name": "Sample family"
         },
-        "identifiers": ["uuid:d6ef0257-b08d-4495-935b-053fae6fadbe"],
+        "identifiers": ["uuid:36f3fc45-f6ac-4649-a550-40f567a9b6c5"],
         "name": "Bryan",
         "icon": "https://img.icons8.com/officexs/24/user.png",
         "location": "references/members/bryan/index.html",
@@ -196,10 +196,10 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:e1715c1e-b625-449a-a251-b651a4ac717a"],
+            "identifiers": ["uuid:53b3b084-dc78-48da-a888-f95e04398927"],
             "name": "Sample family"
         },
-        "identifiers": ["uuid:45118194-4c48-4abf-a806-05429b13b27d"],
+        "identifiers": ["uuid:c86d0ff0-51b1-4ea9-858b-fcb413c6de8a"],
         "name": "Fiona",
         "location": "references/members/fiona/index.html",
         "type": {
@@ -210,10 +210,10 @@
     {
         "container": {
             "reference": "members",
-            "identifiers": ["uuid:e1715c1e-b625-449a-a251-b651a4ac717a"],
+            "identifiers": ["uuid:53b3b084-dc78-48da-a888-f95e04398927"],
             "name": "Sample family"
         },
-        "identifiers": ["uuid:a1909e74-c630-447a-8916-9d6e9bfdcdf2"],
+        "identifiers": ["uuid:cd72dc4e-7136-4fdd-bf95-ec7b05f6cdaf"],
         "name": "Alain",
         "icon": "https://img.icons8.com/officexs/24/user.png",
         "location": "references/members/alain/index.html",
