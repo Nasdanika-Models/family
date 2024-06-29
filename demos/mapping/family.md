@@ -88,6 +88,9 @@ protected void filterRepresentationElement(
 }
 ```
 
+Border of ``Fiona`` is also set during generation by ``FamilyRepresentationElementFilter`` class which is loaded using the [Capability framework](https://docs.nasdanika.org/core/capability/index.html).
+This approach allows to decouple representation filtering logic from the generation logic.
+
 Representation filtering may be used to inject information which is not available during diagram creation or dynamic, but is available during generation.
 
 ## Markdown documentation

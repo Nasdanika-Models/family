@@ -40,12 +40,10 @@ public class TestFamilyMappingSiteGen {
 					ProgressMonitor progressMonitor) {
 				
 				// Demo of representation filtering - adding a border to Isa
-				org.nasdanika.drawio.ModelElement rme = (org.nasdanika.drawio.ModelElement) representationElement;
-				if ("isa".equals(rme.getProperty("semantic-id"))) {
-					rme.getStyle().put("imageBorder", "default");
+				if ("isa".equals(representationElement.getProperty("semantic-id"))) {
+					representationElement.getStyle().put("imageBorder", "default");
 				}
-				
-				
+								
 			}
 			
 			@Override
