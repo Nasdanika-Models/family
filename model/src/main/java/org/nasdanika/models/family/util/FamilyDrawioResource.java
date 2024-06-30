@@ -94,7 +94,7 @@ public class FamilyDrawioResource extends ResourceImpl {
 			}
 			
 			@Override
-			protected String getProperty(String name) {
+			protected String getProperty(String name, URI sourceURI, ProgressMonitor progressMonitor) {
 				return FamilyDrawioResource.this.getProperty(name);
 			}
 			
