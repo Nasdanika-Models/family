@@ -3,18 +3,23 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.nasdanika.models.family</groupId>
-		<version>2024.7.0</version>
+		<version>2024.6.0</version>
 		<artifactId>parent</artifactId>
 		<relativePath>..</relativePath>
 	</parent>
-	<artifactId>generator</artifactId>
+	<artifactId>processors</artifactId>
 	<packaging>jar</packaging>
-	<name>Documentation generator</name>
+	<name>Node processors</name>
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>processors</artifactId>
+			<artifactId>model</artifactId>
 			<version>${project.version}</version>
+		</dependency>		
+		<dependency>
+			<groupId>org.nasdanika.models.ecore</groupId>
+			<artifactId>graph</artifactId>
+			<version>${models.ecore.version}</version>
 		</dependency>		
 	</dependencies>
 </project>
