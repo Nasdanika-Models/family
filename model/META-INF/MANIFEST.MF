@@ -13,5 +13,6 @@ Export-Package: org.nasdanika.models.family,
  org.nasdanika.models.family.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.nasdanika.ncore;visibility:=reexport
+ org.nasdanika.ncore;visibility:=reexport,
+ org.nasdanika.models.party;visibility:=reexport
 Bundle-ActivationPolicy: lazy

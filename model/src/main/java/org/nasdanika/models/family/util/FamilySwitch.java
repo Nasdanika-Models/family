@@ -11,6 +11,7 @@ import org.nasdanika.common.Adaptable;
 
 import org.nasdanika.models.family.*;
 
+import org.nasdanika.models.party.Party;
 import org.nasdanika.ncore.Documented;
 import org.nasdanika.ncore.DocumentedNamedElement;
 import org.nasdanika.ncore.DocumentedNamedStringIdentity;
@@ -93,6 +94,8 @@ public class FamilySwitch<T> extends Switch<T> {
 			case FamilyPackage.PERSON: {
 				Person person = (Person)theEObject;
 				T result = casePerson(person);
+				if (result == null) result = caseParty_Person(person);
+				if (result == null) result = caseParty(person);
 				if (result == null) result = caseDocumentedNamedStringIdentity(person);
 				if (result == null) result = caseDocumentedNamedElement(person);
 				if (result == null) result = caseStringIdentity(person);
@@ -109,6 +112,8 @@ public class FamilySwitch<T> extends Switch<T> {
 				Man man = (Man)theEObject;
 				T result = caseMan(man);
 				if (result == null) result = casePerson(man);
+				if (result == null) result = caseParty_Person(man);
+				if (result == null) result = caseParty(man);
 				if (result == null) result = caseDocumentedNamedStringIdentity(man);
 				if (result == null) result = caseDocumentedNamedElement(man);
 				if (result == null) result = caseStringIdentity(man);
@@ -125,6 +130,8 @@ public class FamilySwitch<T> extends Switch<T> {
 				Woman woman = (Woman)theEObject;
 				T result = caseWoman(woman);
 				if (result == null) result = casePerson(woman);
+				if (result == null) result = caseParty_Person(woman);
+				if (result == null) result = caseParty(woman);
 				if (result == null) result = caseDocumentedNamedStringIdentity(woman);
 				if (result == null) result = caseDocumentedNamedElement(woman);
 				if (result == null) result = caseStringIdentity(woman);
@@ -333,6 +340,36 @@ public class FamilySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDocumentedNamedStringIdentity(DocumentedNamedStringIdentity object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Party</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Party</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseParty(Party object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Person</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Person</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseParty_Person(org.nasdanika.models.party.Person object) {
 		return null;
 	}
 

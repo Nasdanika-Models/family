@@ -6,8 +6,6 @@ import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.nasdanika.ncore.DocumentedNamedStringIdentity;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Person</b></em>'.
@@ -28,7 +26,7 @@ import org.nasdanika.ncore.DocumentedNamedStringIdentity;
  * @model abstract="true"
  * @generated
  */
-public interface Person extends DocumentedNamedStringIdentity {
+public interface Person extends org.nasdanika.models.party.Person {
 	/**
 	 * Returns the value of the '<em><b>Date Of Birth</b></em>' attribute.
 	 * <!-- begin-user-doc -->

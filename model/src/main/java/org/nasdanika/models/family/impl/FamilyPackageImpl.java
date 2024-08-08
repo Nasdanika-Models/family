@@ -16,6 +16,7 @@ import org.nasdanika.models.family.FamilyPackage;
 import org.nasdanika.models.family.Man;
 import org.nasdanika.models.family.Person;
 import org.nasdanika.models.family.Woman;
+import org.nasdanika.models.party.PartyPackage;
 import org.nasdanika.ncore.NcorePackage;
 
 /**
@@ -99,6 +100,7 @@ public class FamilyPackageImpl extends EPackageImpl implements FamilyPackage {
 
 		// Initialize simple dependencies
 		NcorePackage.eINSTANCE.eClass();
+		PartyPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theFamilyPackage.createPackageContents();
@@ -283,6 +285,7 @@ public class FamilyPackageImpl extends EPackageImpl implements FamilyPackage {
 
 		// Obtain other dependent packages
 		NcorePackage theNcorePackage = (NcorePackage)EPackage.Registry.INSTANCE.getEPackage(NcorePackage.eNS_URI);
+		PartyPackage thePartyPackage = (PartyPackage)EPackage.Registry.INSTANCE.getEPackage(PartyPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -290,7 +293,7 @@ public class FamilyPackageImpl extends EPackageImpl implements FamilyPackage {
 
 		// Add supertypes to classes
 		familyEClass.getESuperTypes().add(theNcorePackage.getDocumentedNamedElement());
-		personEClass.getESuperTypes().add(theNcorePackage.getDocumentedNamedStringIdentity());
+		personEClass.getESuperTypes().add(thePartyPackage.getPerson());
 		manEClass.getESuperTypes().add(this.getPerson());
 		womanEClass.getESuperTypes().add(this.getPerson());
 

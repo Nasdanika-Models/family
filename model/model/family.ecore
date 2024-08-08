@@ -8,7 +8,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="members" upperBound="-1"
         eType="#//Person" containment="true" eKeys="../../org.nasdanika.ncore/model/ncore.ecore#//StringIdentity/id"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Person" abstract="true" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//DocumentedNamedStringIdentity">
+  <eClassifiers xsi:type="ecore:EClass" name="Person" abstract="true" eSuperTypes="../../org.nasdanika.models.party/model/party.ecore#//Person">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateOfBirth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//Person" eOpposite="#//Person/parents"/>

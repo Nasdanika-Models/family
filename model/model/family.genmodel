@@ -4,7 +4,7 @@
     editorDirectory="" modelPluginID="org.nasdanika.models.family" modelName="Family"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
     featureDelegation="Dynamic" complianceLevel="17.0" suppressGenModelAnnotations="false"
-    copyrightFields="false" usedGenPackages="../../org.nasdanika.ncore/model/ncore.genmodel#//ncore"
+    copyrightFields="false" usedGenPackages="../../org.nasdanika.ncore/model/ncore.genmodel#//ncore ../../org.nasdanika.models.party/model/party.genmodel#//party"
     operationReflection="true" importOrganizing="true">
   <foreignModel>family.ecore</foreignModel>
   <genPackages prefix="Family" basePackage="org.nasdanika.models" disposableProviderFactory="true"

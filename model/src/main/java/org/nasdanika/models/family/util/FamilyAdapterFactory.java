@@ -13,6 +13,7 @@ import org.nasdanika.common.Adaptable;
 
 import org.nasdanika.models.family.*;
 
+import org.nasdanika.models.party.Party;
 import org.nasdanika.ncore.Documented;
 import org.nasdanika.ncore.DocumentedNamedElement;
 import org.nasdanika.ncore.DocumentedNamedStringIdentity;
@@ -129,6 +130,14 @@ public class FamilyAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseDocumentedNamedStringIdentity(DocumentedNamedStringIdentity object) {
 				return createDocumentedNamedStringIdentityAdapter();
+			}
+			@Override
+			public Adapter caseParty(Party object) {
+				return createPartyAdapter();
+			}
+			@Override
+			public Adapter caseParty_Person(org.nasdanika.models.party.Person object) {
+				return createParty_PersonAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -329,6 +338,34 @@ public class FamilyAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDocumentedNamedStringIdentityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.party.Party <em>Party</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.party.Party
+	 * @generated
+	 */
+	public Adapter createPartyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.party.Person <em>Person</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.party.Person
+	 * @generated
+	 */
+	public Adapter createParty_PersonAdapter() {
 		return null;
 	}
 

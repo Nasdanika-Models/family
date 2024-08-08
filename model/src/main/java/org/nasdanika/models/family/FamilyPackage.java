@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.EReference;
+import org.nasdanika.models.party.PartyPackage;
 import org.nasdanika.ncore.NcorePackage;
 
 /**
@@ -206,7 +207,7 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__MARKERS = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__MARKERS;
+	int PERSON__MARKERS = PartyPackage.PERSON__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -215,7 +216,7 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__URIS = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__URIS;
+	int PERSON__URIS = PartyPackage.PERSON__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -224,7 +225,7 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__DESCRIPTION = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__DESCRIPTION;
+	int PERSON__DESCRIPTION = PartyPackage.PERSON__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
@@ -233,7 +234,7 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__UUID = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__UUID;
+	int PERSON__UUID = PartyPackage.PERSON__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
@@ -242,7 +243,7 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__LABEL_PROTOTYPE = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__LABEL_PROTOTYPE;
+	int PERSON__LABEL_PROTOTYPE = PartyPackage.PERSON__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -251,7 +252,7 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__REPRESENTATIONS = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__REPRESENTATIONS;
+	int PERSON__REPRESENTATIONS = PartyPackage.PERSON__REPRESENTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
@@ -260,7 +261,7 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__ANNOTATIONS = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__ANNOTATIONS;
+	int PERSON__ANNOTATIONS = PartyPackage.PERSON__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -269,7 +270,7 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__NAME = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__NAME;
+	int PERSON__NAME = PartyPackage.PERSON__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
@@ -278,7 +279,7 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__DOCUMENTATION = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__DOCUMENTATION;
+	int PERSON__DOCUMENTATION = PartyPackage.PERSON__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
@@ -287,7 +288,7 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__CONTEXT_HELP = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__CONTEXT_HELP;
+	int PERSON__CONTEXT_HELP = PartyPackage.PERSON__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -296,7 +297,16 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__ID = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__ID;
+	int PERSON__ID = PartyPackage.PERSON__ID;
+
+	/**
+	 * The feature id for the '<em><b>Contact Methods</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSON__CONTACT_METHODS = PartyPackage.PERSON__CONTACT_METHODS;
 
 	/**
 	 * The feature id for the '<em><b>Date Of Birth</b></em>' attribute.
@@ -305,7 +315,7 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__DATE_OF_BIRTH = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY_FEATURE_COUNT + 0;
+	int PERSON__DATE_OF_BIRTH = PartyPackage.PERSON_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' reference list.
@@ -314,7 +324,7 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__CHILDREN = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY_FEATURE_COUNT + 1;
+	int PERSON__CHILDREN = PartyPackage.PERSON_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Parents</b></em>' reference list.
@@ -323,7 +333,7 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__PARENTS = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY_FEATURE_COUNT + 2;
+	int PERSON__PARENTS = PartyPackage.PERSON_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Mother</b></em>' reference.
@@ -332,7 +342,7 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__MOTHER = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY_FEATURE_COUNT + 3;
+	int PERSON__MOTHER = PartyPackage.PERSON_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Father</b></em>' reference.
@@ -341,7 +351,7 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__FATHER = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY_FEATURE_COUNT + 4;
+	int PERSON__FATHER = PartyPackage.PERSON_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Person</em>' class.
@@ -350,7 +360,7 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON_FEATURE_COUNT = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY_FEATURE_COUNT + 5;
+	int PERSON_FEATURE_COUNT = PartyPackage.PERSON_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Person</em>' class.
@@ -359,7 +369,7 @@ public interface FamilyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON_OPERATION_COUNT = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY_OPERATION_COUNT + 0;
+	int PERSON_OPERATION_COUNT = PartyPackage.PERSON_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.family.impl.ManImpl <em>Man</em>}' class.
@@ -469,6 +479,15 @@ public interface FamilyPackage extends EPackage {
 	 * @ordered
 	 */
 	int MAN__ID = PERSON__ID;
+
+	/**
+	 * The feature id for the '<em><b>Contact Methods</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAN__CONTACT_METHODS = PERSON__CONTACT_METHODS;
 
 	/**
 	 * The feature id for the '<em><b>Date Of Birth</b></em>' attribute.
@@ -641,6 +660,15 @@ public interface FamilyPackage extends EPackage {
 	 * @ordered
 	 */
 	int WOMAN__ID = PERSON__ID;
+
+	/**
+	 * The feature id for the '<em><b>Contact Methods</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WOMAN__CONTACT_METHODS = PERSON__CONTACT_METHODS;
 
 	/**
 	 * The feature id for the '<em><b>Date Of Birth</b></em>' attribute.

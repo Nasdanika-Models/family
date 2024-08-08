@@ -19,8 +19,6 @@ import org.nasdanika.models.family.Man;
 import org.nasdanika.models.family.Person;
 import org.nasdanika.models.family.Woman;
 
-import org.nasdanika.ncore.impl.DocumentedNamedStringIdentityImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Person</b></em>'.
@@ -38,7 +36,7 @@ import org.nasdanika.ncore.impl.DocumentedNamedStringIdentityImpl;
  *
  * @generated
  */
-public abstract class PersonImpl extends DocumentedNamedStringIdentityImpl implements Person {
+public abstract class PersonImpl extends org.nasdanika.models.party.impl.PersonImpl implements Person {
 	/**
 	 * The default value of the '{@link #getDateOfBirth() <em>Date Of Birth</em>}' attribute.
 	 * <!-- begin-user-doc -->
