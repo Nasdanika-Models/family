@@ -18,7 +18,7 @@ import org.nasdanika.common.ExecutionException;
 import org.nasdanika.common.MutableContext;
 import org.nasdanika.common.PrintStreamProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
-import org.nasdanika.html.model.app.gen.ActionSiteGenerator;
+import org.nasdanika.html.model.app.gen.AppSiteGenerator;
 import org.nasdanika.models.family.Person;
 import org.nasdanika.models.family.processors.doc.FamilyActionGenerator;
 import org.nasdanika.models.family.processors.doc.FamilyNodeProcessorFactory;
@@ -87,7 +87,7 @@ public class TestFamilyMappingSiteGen {
 		URI pageTemplateURI = URI.createFileURI(new File(pageTemplateResource).getAbsolutePath());//.appendFragment("/");
 		
 		String siteMapDomain = "https://family.models.nasdanika.org/demos/mapping";		
-		ActionSiteGenerator actionSiteGenerator = new ActionSiteGenerator() {
+		AppSiteGenerator actionSiteGenerator = new AppSiteGenerator() {
 			
 			@Override
 			protected Context createContext(ProgressMonitor progressMonitor) {
