@@ -1,21 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="EN">
   <head>
     <title>Search</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet"/>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/css/app.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/themes/default/style.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.1.0/github-markdown.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/default.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/themes/default/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.1.0/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.css">
     <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/common.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/dark-head.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/jstree.min.js"></script>
@@ -34,13 +34,49 @@
 
   gtag('config', 'G-9BRJVLK8CC');
 </script>    
+
+<script src="../../search-documents.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>
+
+<script>
+// Script for full-text search of JsTree
+
+window.nsdJsTreeSearchCallback = function(str, node) { 
+    var sf = new $.vakata.search(str, true, { caseSensitive : false, fuzzy : false }); 
+    if (sf.search(node.text).isMatch) {
+		return true;
+	} 
+    let searchResult = this.search(str); 
+    for (const sr in searchResult) {
+        if (searchResult[sr].ref === node.original['data-nsd-label-uuid']) {
+            return true;
+        } 
+    } 
+    return false; 
+}.bind(lunr(function () {
+			  this.ref('id');
+			  this.field('title');
+			  this.field('content');
+
+			  for (const key in searchDocuments) {
+				  let doc = searchDocuments[key];
+				this.add({
+					id: doc['action-uuid'],
+					title: doc.title,
+					path: doc.path,
+					content: doc.content
+				});  
+			  }
+			}));
+</script>
 </head>
   <body>
     <div class="container-fluid nsd-app-container">
       <div class="row">
         <div class="col nsd-app-header">
           <a href="https://family.models.nasdanika.org" data-nsd-label-uuid="0a54be59-913a-454e-b767-580bdf6feb56" class="nsd-app-header-title">
-            <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon"/>Nasdanika Family Model</a>
+            <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon">Nasdanika Family Model</a>
           <ul class="nav nsd-app-header-navs">
             <li class="nav-item"><span data-nsd-label-uuid="8eaf45d1-0488-46e3-9e6c-bfa4171a0e07" class="navbar-text"><span class="fas fa-search nsd-app-label-icon"></span>Search</span>
             </li>
@@ -54,7 +90,7 @@
         <div class="col nsd-app-navbar">
           <ul class="navbar navbar-light navbar-expand-lg">
             <a href="index.html" data-nsd-label-uuid="85dd7e05-6a3e-4763-bc2d-d0c6215956cd" class="navbar-brand">
-              <img src="https://img.icons8.com/officexs/24/family--v1.png" class="nsd-app-label-icon"/>Sample family</a>
+              <img src="https://img.icons8.com/officexs/24/family--v1.png" class="nsd-app-label-icon">Sample family</a>
             <button type="button" data-toggle="collapse" data-target="#nsd_h" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
             </button>
             <div id="nsd_h" class="collapse navbar-collapse"></div>
@@ -65,30 +101,30 @@
         <div class="col nsd-app-navigation-panel">
           <div class="list-group list-group-flush">
             <a href="references/members/albert/index.html" data-nsd-label-uuid="875714b2-9f66-4a96-96e9-0a0350c77dcb" class="list-group-item list-group-action">
-              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon"/>Albert</a>
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Albert</a>
             <a href="references/members/paul/index.html" data-nsd-label-uuid="5b41c9a8-fbfa-45b7-a460-71e1ed4ff0ee" class="list-group-item list-group-action">
-              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon"/>Paul</a>
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Paul</a>
             <a href="references/members/isa/index.html" data-nsd-label-uuid="1d26ea67-7344-4c47-b31a-880b630c448d" class="list-group-item list-group-action">Isa</a>
             <a href="references/members/lea/index.html" data-nsd-label-uuid="f82c296b-57c8-4955-a81d-b185cb8ef12e" class="list-group-item list-group-action">Lea</a>
             <a href="references/members/elias/index.html" data-nsd-label-uuid="e91082bf-459c-42b0-bd48-a4d899244aef" class="list-group-item list-group-action">
-              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon"/>Elias</a>
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Elias</a>
             <a href="references/members/katell/index.html" data-nsd-label-uuid="477a742b-a442-4e34-a05e-7c156009f40d" class="list-group-item list-group-action">Katell</a>
             <a href="references/members/dave/index.html" data-nsd-label-uuid="f416868a-64c5-4343-a916-2078e5a20684" class="list-group-item list-group-action">
-              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon"/>Dave</a>
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Dave</a>
             <a href="references/members/clara/index.html" data-nsd-label-uuid="b083c2fe-63e6-42a2-b609-e2ece7c6146e" class="list-group-item list-group-action">Clara</a>
             <a href="references/members/bryan/index.html" data-nsd-label-uuid="90aba7fd-41c6-48cc-898b-03a81290fab7" class="list-group-item list-group-action">
-              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon"/>Bryan</a>
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Bryan</a>
             <a href="references/members/fiona/index.html" data-nsd-label-uuid="e7d189ab-0500-4718-94eb-2a0ac58b60d3" class="list-group-item list-group-action">Fiona</a>
             <a href="references/members/alain/index.html" data-nsd-label-uuid="c06bea75-4209-419d-97ac-95e21558015c" class="list-group-item list-group-action">
-              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon"/>Alain</a>
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Alain</a>
           </div>
         </div>
         <div data-nsd-label-uuid="8eaf45d1-0488-46e3-9e6c-bfa4171a0e07" data-nsd-action-uris="uuid:8eaf45d1-0488-46e3-9e6c-bfa4171a0e07" class="col nsd-app-content-panel">
           <div class="container-fluid">
             <div class="row nsd-app-content-panel-title-and-items-row">
               <div class="col-auto">
-                <H1><span data-nsd-label-uuid="8eaf45d1-0488-46e3-9e6c-bfa4171a0e07" class="nsd-app-content-panel-title"><span class="fas fa-search nsd-app-label-icon"></span>Search</span>
-                </H1>
+                <h1><span data-nsd-label-uuid="8eaf45d1-0488-46e3-9e6c-bfa4171a0e07" class="nsd-app-content-panel-title"><span class="fas fa-search nsd-app-label-icon"></span>Search</span>
+                </h1>
               </div>
             </div>
             <div class="row nsd-app-content-panel-content-row">
@@ -100,23 +136,9 @@
      	<div id="search-app" class="container-fluid">
      		<div class="row">
      			<div class="col">
-					<b-form-group
-			          label="Filter"
-			          label-for="filter-input"
-			          label-cols-sm="3"
-			          label-align-sm="right"
-			          label-size="sm"
-			          class="mb-0"
-					  description="You can use wildcards, e.g. 'foo*' or 'f*o'; title or content fields, e.g. 'title:foo* bar'; boosts, e.g. 'foo^10 bar'; fuzzy matches, e.g. 'foo~1'; and term presence, e.g. '+foo bar -baz'"	          
-			        >
+					<b-form-group label="Filter" label-for="filter-input" label-cols-sm="3" label-align-sm="right" label-size="sm" class="mb-0" description="You can use wildcards, e.g. 'foo*' or 'f*o'; title or content fields, e.g. 'title:foo* bar'; boosts, e.g. 'foo^10 bar'; fuzzy matches, e.g. 'foo~1'; and term presence, e.g. '+foo bar -baz'">
 			          <b-input-group size="sm">
-			            <b-form-input
-			              id="filter-input"
-			              v-model="filter"
-			              type="search"
-			              placeholder="Type to Search"
-			              debounce="700"
-			            ></b-form-input>
+			            <b-form-input id="filter-input" v-model="filter" type="search" placeholder="Type to Search" debounce="700"></b-form-input>
 			
 			            <b-input-group-append>
 			              <b-button :disabled="!filter" @click="filter = ''">Clear</b-button>
@@ -132,12 +154,7 @@
 	        		</div>
 	        	</div>
 	        	<div class="col">
-			        <b-card 
-			        	v-for="searchResult in searchResults" 
-			        	:header-html="searchResult.title" 
-			        	:footer="searchResult.path"
-			        	class="my-1"
-			        	>
+			        <b-card v-for="searchResult in searchResults" :header-html="searchResult.title" :footer="searchResult.path" class="my-1">
 			        	
 			        	<b-card-text><span v-html="searchResult.content"></span></b-card-text>
 			        </b-card>

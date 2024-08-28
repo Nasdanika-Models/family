@@ -18,7 +18,7 @@ import org.nasdanika.common.MutableContext;
 import org.nasdanika.common.PrintStreamProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.html.model.app.gen.AppSiteGenerator;
-import org.nasdanika.models.family.processors.doc.FamilyActionGenerator;
+import org.nasdanika.models.family.processors.doc.FamilyHtmlAppGenerator;
 import org.nasdanika.models.family.processors.doc.FamilyNodeProcessorFactory;
 import org.nasdanika.models.family.util.FamilyWorkbookResourceFactory;
 
@@ -44,11 +44,11 @@ public class TestFamilySiteGenFromWorkbook {
 								
 		File output = new File(actionModelsDir, "family-actions.xmi");
 				
-		FamilyActionGenerator actionGenerator = new FamilyActionGenerator(
+		FamilyHtmlAppGenerator htmlAppGenerator = new FamilyHtmlAppGenerator(
 				familyResource.getContents().get(0),
 				new FamilyNodeProcessorFactory(context, null));
 		
-		actionGenerator.generateActionModel(
+		htmlAppGenerator.generateHtmlAppModel(
 				diagnosticConsumer, 
 				output,
 				progressMonitor);

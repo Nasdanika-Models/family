@@ -11,13 +11,13 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.nasdanika.common.Context;
-import org.nasdanika.html.model.app.graph.emf.ActionGenerator;
+import org.nasdanika.html.model.app.graph.emf.HtmlAppGenerator;
 import org.nasdanika.models.family.FamilyPackage;
 import org.nasdanika.ncore.NcorePackage;
 
-public class FamilyActionGenerator extends ActionGenerator {
+public class FamilyHtmlAppGenerator extends HtmlAppGenerator {
 
-	public FamilyActionGenerator(
+	public FamilyHtmlAppGenerator(
 			Collection<? extends EObject> sources, 
 			Collection<? extends EObject> references,
 			Function<? super EObject, URI> uriResolver,
@@ -30,7 +30,7 @@ public class FamilyActionGenerator extends ActionGenerator {
 			Map.entry(NcorePackage.eINSTANCE, URI.createURI("https://ncore.models.nasdanika.org/")),			
 			Map.entry(FamilyPackage.eINSTANCE, URI.createURI("https://family.models.nasdanika.org/")));
 		
-	public FamilyActionGenerator(
+	public FamilyHtmlAppGenerator(
 			EObject source,
 			URI baseURI,
 			FamilyNodeProcessorFactory nodeProcessorFactory) {
@@ -46,11 +46,11 @@ public class FamilyActionGenerator extends ActionGenerator {
 			nodeProcessorFactory);
 	}
 		
-	public FamilyActionGenerator(EObject source, FamilyNodeProcessorFactory nodeProcessorFactory) {
+	public FamilyHtmlAppGenerator(EObject source, FamilyNodeProcessorFactory nodeProcessorFactory) {
 		this(source, URI.createURI("tmp://" + UUID.randomUUID() + "/" + UUID.randomUUID() + "/"), nodeProcessorFactory);
 	}
 	
-	public FamilyActionGenerator(EObject source) {
+	public FamilyHtmlAppGenerator(EObject source) {
 		this(source, new FamilyNodeProcessorFactory(Context.EMPTY_CONTEXT, null));
 	}
 	
