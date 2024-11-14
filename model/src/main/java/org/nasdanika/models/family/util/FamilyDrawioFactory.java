@@ -6,7 +6,7 @@ import java.util.Map;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.nasdanika.emf.SpecLoadingDrawioFactory;
+import org.nasdanika.emf.ConfigurationLoadingDrawioFactory;
 import org.nasdanika.models.family.FamilyPackage;
 import org.nasdanika.ncore.NcorePackage;
 
@@ -15,7 +15,7 @@ import org.nasdanika.ncore.NcorePackage;
  * @param <F>
  * @param <P>
  */
-public abstract class FamilyDrawioFactory extends SpecLoadingDrawioFactory<EObject> {
+public abstract class FamilyDrawioFactory extends ConfigurationLoadingDrawioFactory<EObject> {
 	
 	public FamilyDrawioFactory(ResourceSet resourceSet) {
 		super(resourceSet);

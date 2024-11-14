@@ -1,1 +1,0 @@
-A demo which loads model elements from an Excel file and connects them as specified in a diagram using a reflective factory. 

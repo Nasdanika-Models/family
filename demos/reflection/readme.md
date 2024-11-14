@@ -1,1 +1,0 @@
-A demo which loads model elements a diagram using a reflective factory. 
