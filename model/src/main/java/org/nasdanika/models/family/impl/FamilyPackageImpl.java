@@ -15,6 +15,7 @@ import org.nasdanika.models.family.FamilyPackage;
 
 import org.nasdanika.models.family.Man;
 import org.nasdanika.models.family.Person;
+import org.nasdanika.models.family.Polity;
 import org.nasdanika.models.family.Woman;
 import org.nasdanika.models.party.PartyPackage;
 import org.nasdanika.ncore.NcorePackage;
@@ -51,6 +52,13 @@ public class FamilyPackageImpl extends EPackageImpl implements FamilyPackage {
 	 * @generated
 	 */
 	private EClass womanEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass polityEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -222,6 +230,36 @@ public class FamilyPackageImpl extends EPackageImpl implements FamilyPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getPolity() {
+		return polityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPolity_Constituents() {
+		return (EReference)polityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPolity_Residents() {
+		return (EReference)polityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public FamilyFactory getFamilyFactory() {
 		return (FamilyFactory)getEFactoryInstance();
 	}
@@ -258,6 +296,10 @@ public class FamilyPackageImpl extends EPackageImpl implements FamilyPackage {
 		manEClass = createEClass(MAN);
 
 		womanEClass = createEClass(WOMAN);
+
+		polityEClass = createEClass(POLITY);
+		createEReference(polityEClass, POLITY__CONSTITUENTS);
+		createEReference(polityEClass, POLITY__RESIDENTS);
 	}
 
 	/**
@@ -296,6 +338,7 @@ public class FamilyPackageImpl extends EPackageImpl implements FamilyPackage {
 		personEClass.getESuperTypes().add(thePartyPackage.getPerson());
 		manEClass.getESuperTypes().add(this.getPerson());
 		womanEClass.getESuperTypes().add(this.getPerson());
+		polityEClass.getESuperTypes().add(theNcorePackage.getDocumentedNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(familyEClass, Family.class, "Family", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -306,12 +349,16 @@ public class FamilyPackageImpl extends EPackageImpl implements FamilyPackage {
 		initEAttribute(getPerson_DateOfBirth(), ecorePackage.getEDate(), "dateOfBirth", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPerson_Children(), this.getPerson(), this.getPerson_Parents(), "children", null, 0, -1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPerson_Parents(), this.getPerson(), this.getPerson_Children(), "parents", null, 0, 2, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPerson_Mother(), this.getWoman(), null, "mother", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getPerson_Father(), this.getMan(), null, "father", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getPerson_Mother(), this.getWoman(), null, "mother", null, 0, 1, Person.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getPerson_Father(), this.getMan(), null, "father", null, 0, 1, Person.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(manEClass, Man.class, "Man", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(womanEClass, Woman.class, "Woman", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(polityEClass, Polity.class, "Polity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPolity_Constituents(), this.getPolity(), null, "constituents", null, 0, -1, Polity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPolity_Residents(), this.getPerson(), null, "residents", null, 0, -1, Polity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

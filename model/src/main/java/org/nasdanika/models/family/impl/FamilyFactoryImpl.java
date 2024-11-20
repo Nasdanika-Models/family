@@ -59,6 +59,7 @@ public class FamilyFactoryImpl extends EFactoryImpl implements FamilyFactory {
 			case FamilyPackage.FAMILY: return createFamily();
 			case FamilyPackage.MAN: return createMan();
 			case FamilyPackage.WOMAN: return createWoman();
+			case FamilyPackage.POLITY: return createPolity();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -95,6 +96,17 @@ public class FamilyFactoryImpl extends EFactoryImpl implements FamilyFactory {
 	public Woman createWoman() {
 		WomanImpl woman = new WomanImpl();
 		return woman;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Polity createPolity() {
+		PolityImpl polity = new PolityImpl();
+		return polity;
 	}
 
 	/**

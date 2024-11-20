@@ -84,7 +84,7 @@ public interface Person extends org.nasdanika.models.party.Person {
 	 * @return the value of the '<em>Mother</em>' reference.
 	 * @see #setMother(Woman)
 	 * @see org.nasdanika.models.family.FamilyPackage#getPerson_Mother()
-	 * @model derived="true"
+	 * @model transient="true" derived="true"
 	 * @generated
 	 */
 	Woman getMother();
@@ -106,7 +106,7 @@ public interface Person extends org.nasdanika.models.party.Person {
 	 * @return the value of the '<em>Father</em>' reference.
 	 * @see #setFather(Man)
 	 * @see org.nasdanika.models.family.FamilyPackage#getPerson_Father()
-	 * @model derived="true"
+	 * @model transient="true" derived="true"
 	 * @generated
 	 */
 	Man getFather();

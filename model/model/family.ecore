@@ -15,10 +15,16 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="parents" upperBound="2"
         eType="#//Person" eOpposite="#//Person/children"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="mother" eType="#//Woman"
-        derived="true"/>
+        transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="father" eType="#//Man"
-        derived="true"/>
+        transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Man" eSuperTypes="#//Person"/>
   <eClassifiers xsi:type="ecore:EClass" name="Woman" eSuperTypes="#//Person"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Polity" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//DocumentedNamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constituents" upperBound="-1"
+        eType="#//Polity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="residents" upperBound="-1"
+        eType="#//Person" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

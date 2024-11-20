@@ -49,6 +49,15 @@ public interface FamilyFactory extends EFactory {
 	Woman createWoman();
 
 	/**
+	 * Returns a new object of class '<em>Polity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Polity</em>'.
+	 * @generated
+	 */
+	Polity createPolity();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

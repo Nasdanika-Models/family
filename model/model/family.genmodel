@@ -21,5 +21,9 @@
     </genClasses>
     <genClasses ecoreClass="family.ecore#//Man"/>
     <genClasses ecoreClass="family.ecore#//Woman"/>
+    <genClasses ecoreClass="family.ecore#//Polity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference family.ecore#//Polity/constituents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference family.ecore#//Polity/residents"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

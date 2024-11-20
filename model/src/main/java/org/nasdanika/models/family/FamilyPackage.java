@@ -735,6 +735,143 @@ public interface FamilyPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link org.nasdanika.models.family.impl.PolityImpl <em>Polity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.family.impl.PolityImpl
+	 * @see org.nasdanika.models.family.impl.FamilyPackageImpl#getPolity()
+	 * @generated
+	 */
+	int POLITY = 4;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLITY__MARKERS = NcorePackage.DOCUMENTED_NAMED_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLITY__URIS = NcorePackage.DOCUMENTED_NAMED_ELEMENT__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLITY__DESCRIPTION = NcorePackage.DOCUMENTED_NAMED_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLITY__UUID = NcorePackage.DOCUMENTED_NAMED_ELEMENT__UUID;
+
+	/**
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLITY__LABEL_PROTOTYPE = NcorePackage.DOCUMENTED_NAMED_ELEMENT__LABEL_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Representations</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLITY__REPRESENTATIONS = NcorePackage.DOCUMENTED_NAMED_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLITY__ANNOTATIONS = NcorePackage.DOCUMENTED_NAMED_ELEMENT__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLITY__NAME = NcorePackage.DOCUMENTED_NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLITY__DOCUMENTATION = NcorePackage.DOCUMENTED_NAMED_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLITY__CONTEXT_HELP = NcorePackage.DOCUMENTED_NAMED_ELEMENT__CONTEXT_HELP;
+
+	/**
+	 * The feature id for the '<em><b>Constituents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLITY__CONSTITUENTS = NcorePackage.DOCUMENTED_NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Residents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLITY__RESIDENTS = NcorePackage.DOCUMENTED_NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Polity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLITY_FEATURE_COUNT = NcorePackage.DOCUMENTED_NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Polity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLITY_OPERATION_COUNT = NcorePackage.DOCUMENTED_NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.family.Family <em>Family</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -841,6 +978,38 @@ public interface FamilyPackage extends EPackage {
 	EClass getWoman();
 
 	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.family.Polity <em>Polity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Polity</em>'.
+	 * @see org.nasdanika.models.family.Polity
+	 * @generated
+	 */
+	EClass getPolity();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.family.Polity#getConstituents <em>Constituents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Constituents</em>'.
+	 * @see org.nasdanika.models.family.Polity#getConstituents()
+	 * @see #getPolity()
+	 * @generated
+	 */
+	EReference getPolity_Constituents();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.family.Polity#getResidents <em>Residents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Residents</em>'.
+	 * @see org.nasdanika.models.family.Polity#getResidents()
+	 * @see #getPolity()
+	 * @generated
+	 */
+	EReference getPolity_Residents();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -941,6 +1110,29 @@ public interface FamilyPackage extends EPackage {
 		 * @generated
 		 */
 		EClass WOMAN = eINSTANCE.getWoman();
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.family.impl.PolityImpl <em>Polity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.family.impl.PolityImpl
+		 * @see org.nasdanika.models.family.impl.FamilyPackageImpl#getPolity()
+		 * @generated
+		 */
+		EClass POLITY = eINSTANCE.getPolity();
+		/**
+		 * The meta object literal for the '<em><b>Constituents</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POLITY__CONSTITUENTS = eINSTANCE.getPolity_Constituents();
+		/**
+		 * The meta object literal for the '<em><b>Residents</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POLITY__RESIDENTS = eINSTANCE.getPolity_Residents();
 
 	}
 

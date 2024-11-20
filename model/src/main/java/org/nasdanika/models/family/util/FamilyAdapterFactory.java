@@ -96,6 +96,10 @@ public class FamilyAdapterFactory extends AdapterFactoryImpl {
 				return createWomanAdapter();
 			}
 			@Override
+			public Adapter casePolity(Polity object) {
+				return createPolityAdapter();
+			}
+			@Override
 			public Adapter caseIMarked(Marked object) {
 				return createIMarkedAdapter();
 			}
@@ -212,6 +216,20 @@ public class FamilyAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createWomanAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.family.Polity <em>Polity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.family.Polity
+	 * @generated
+	 */
+	public Adapter createPolityAdapter() {
 		return null;
 	}
 

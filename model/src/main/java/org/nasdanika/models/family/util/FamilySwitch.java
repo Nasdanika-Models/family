@@ -144,6 +144,19 @@ public class FamilySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case FamilyPackage.POLITY: {
+				Polity polity = (Polity)theEObject;
+				T result = casePolity(polity);
+				if (result == null) result = caseDocumentedNamedElement(polity);
+				if (result == null) result = caseNamedElement(polity);
+				if (result == null) result = caseDocumented(polity);
+				if (result == null) result = caseModelElement(polity);
+				if (result == null) result = caseMarked(polity);
+				if (result == null) result = caseAdaptable(polity);
+				if (result == null) result = caseIMarked(polity);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -205,6 +218,21 @@ public class FamilySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseWoman(Woman object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Polity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Polity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePolity(Polity object) {
 		return null;
 	}
 
