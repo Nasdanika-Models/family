@@ -11,11 +11,11 @@ import org.nasdanika.common.Context;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.graph.emf.EReferenceConnection;
 import org.nasdanika.graph.processor.NodeProcessorConfig;
-import org.nasdanika.html.model.app.Action;
-import org.nasdanika.html.model.app.Label;
-import org.nasdanika.html.model.app.graph.WidgetFactory;
-import org.nasdanika.html.model.app.graph.emf.EObjectNodeProcessor;
-import org.nasdanika.html.model.app.graph.emf.OutgoingReferenceBuilder;
+import org.nasdanika.models.app.Action;
+import org.nasdanika.models.app.Label;
+import org.nasdanika.models.app.graph.WidgetFactory;
+import org.nasdanika.models.app.graph.emf.EObjectNodeProcessor;
+import org.nasdanika.models.app.graph.emf.OutgoingReferenceBuilder;
 import org.nasdanika.models.family.Family;
 import org.nasdanika.models.family.FamilyPackage;
 

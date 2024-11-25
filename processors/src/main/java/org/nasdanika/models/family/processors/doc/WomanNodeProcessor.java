@@ -5,9 +5,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.graph.processor.NodeProcessorConfig;
-import org.nasdanika.html.model.app.Action;
-import org.nasdanika.html.model.app.Label;
-import org.nasdanika.html.model.app.graph.WidgetFactory;
+import org.nasdanika.models.app.Action;
+import org.nasdanika.models.app.Label;
+import org.nasdanika.models.app.graph.WidgetFactory;
 import org.nasdanika.models.family.Woman;
 
 public class WomanNodeProcessor extends PersonNodeProcessor<Woman> {
