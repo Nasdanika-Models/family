@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="EN">
   <head>
-    <title>Circular Graph</title>
+    <title>Inheritance</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -72,16 +72,6 @@ window.nsdJsTreeSearchCallback = function(str, node) {
 </script>
 </head>
   <body>
-    <div tabindex="-1" id="nsd_ab" class="modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">Hover mouse over nodes elements to display tooltips.
-Double-click on nodes to navigate go documentation.
-Drag to rearrange.
-</div>
-        </div>
-      </div>
-    </div>
     <div class="container-fluid nsd-app-container">
       <div class="row">
         <div class="col nsd-app-header">
@@ -102,9 +92,9 @@ Drag to rearrange.
           <ul class="navbar navbar-light navbar-expand-lg">
             <a href="../../../index.html" title="A model of a family" data-nsd-label-uuid="c8538119-1fb1-46c6-852b-cb94bfe435eb" class="navbar-brand">
               <img src="https://img.icons8.com/officel/30/family--v2.png" class="nsd-app-label-icon">Family Model</a>
-            <button type="button" data-toggle="collapse" data-target="#nsd_a5" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            <button type="button" data-toggle="collapse" data-target="#nsd_f0" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
             </button>
-            <div id="nsd_a5" class="collapse navbar-collapse">
+            <div id="nsd_f0" class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                   <a href="../../../classifiers.html" data-nsd-label-uuid="2f836236-4f74-4919-bd3a-2fe873b02a5a" class="nav-link">Classifiers</a>
@@ -139,25 +129,24 @@ Drag to rearrange.
               <img src="https://img.icons8.com/officexs/24/family--v1.png" class="nsd-app-label-icon">Family</a>
             <a href="../Man/index.html" title="An adult male human" data-nsd-label-uuid="1b2aeb62-4936-4d08-9ebf-93c0f9987e1b" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Man</a>
-            <a href="index.html" title="In this model a person is an abstract supertype of Man and Woman" data-nsd-label-uuid="68a80f32-c48e-4a36-8e9a-e71a093e2a22" class="list-group-item list-group-action active"><span class="fas fa-user nsd-app-label-icon"></span><i>Person</i></a>
-            <a href="../Polity/index.html" data-nsd-label-uuid="843f0716-2e41-4803-8b8d-f1dde1988120" class="list-group-item list-group-action">
+            <a href="../Person/index.html" title="In this model a person is an abstract supertype of Man and Woman" data-nsd-label-uuid="68a80f32-c48e-4a36-8e9a-e71a093e2a22" class="list-group-item list-group-action"><span class="fas fa-user nsd-app-label-icon"></span><i>Person</i></a>
+            <a href="index.html" data-nsd-label-uuid="843f0716-2e41-4803-8b8d-f1dde1988120" class="list-group-item list-group-action active">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Polity</a>
             <a href="../Woman/index.html" title="An adult female human" data-nsd-label-uuid="ccdbd860-5f94-49a6-96f5-a4cd0623a6d2" class="list-group-item list-group-action">
               <img src="https://img.icons8.com/officexs/24/guest-female.png" class="nsd-app-label-icon">Woman</a>
           </div>
         </div>
-        <div data-nsd-label-uuid="dbf88d47-fecd-427c-9683-ccf50526b596" data-nsd-action-uris="uuid:dbf88d47-fecd-427c-9683-ccf50526b596" class="col nsd-app-content-panel">
+        <div data-nsd-label-uuid="47913b80-d3b3-4fa9-9460-a63953d05728" data-nsd-action-uris="uuid:47913b80-d3b3-4fa9-9460-a63953d05728" class="col nsd-app-content-panel">
           <div class="container-fluid">
             <div class="row nsd-app-content-panel-breadcrumb-row">
               <div class="col">
                 <nav aria-label="breadcrumb" class="nsd-app-content-panel-breadcrumb">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                      <a href="index.html" title="In this model a person is an abstract supertype of Man and Woman" data-nsd-label-uuid="68a80f32-c48e-4a36-8e9a-e71a093e2a22"><span class="fas fa-user nsd-app-label-icon"></span><i>Person</i></a>
+                      <a href="index.html" data-nsd-label-uuid="843f0716-2e41-4803-8b8d-f1dde1988120">
+                        <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Polity</a>
                     </li>
-                    <li class="breadcrumb-item"><span data-nsd-label-uuid="56a944ec-d785-4516-a32c-3ce92dc54daf"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/external-diagram-seo-media-dreamstale-lineal-dreamstale.png" class="nsd-app-label-icon">Graphs</span>
-                    </li>
-                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="dbf88d47-fecd-427c-9683-ccf50526b596">Circular Graph</span>
+                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="47913b80-d3b3-4fa9-9460-a63953d05728"><img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif" class="nsd-app-label-icon">Inheritance</span>
                     </li>
                   </ol>
                 </nav>
@@ -165,7 +154,7 @@ Drag to rearrange.
             </div>
             <div class="row nsd-app-content-panel-title-and-items-row">
               <div class="col-auto">
-                <h1><span data-nsd-label-uuid="dbf88d47-fecd-427c-9683-ccf50526b596" class="nsd-app-content-panel-title">Circular Graph<a data-toggle="modal" data-target="#nsd_ab" href="#" title="A circular layout graph of this classifier and related classifiers showing relationships between them" style="vertical-align:super;font-size:x-small;margin-left:0.2em"><span class="far fa-question-circle nsd-app-label-icon"></span></a></span>
+                <h1><span data-nsd-label-uuid="47913b80-d3b3-4fa9-9460-a63953d05728" class="nsd-app-content-panel-title"><img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif" class="nsd-app-label-icon">Inheritance</span>
                 </h1>
               </div>
             </div>
@@ -173,36 +162,31 @@ Drag to rearrange.
               <div class="col">
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col"><div id="graph-container-5" class="row" style="height:80vh;width:100%">
-</div>
-<script type="text/javascript">
-	$(document).ready(function() {
-		var dom = document.getElementById("graph-container-5");
-		var myChart = echarts.init(dom, null, {
-			render: "canvas",
-			useDirtyRect: false
-		});
-		var option = {"legend":{},"series":[{"type":"graph","emphasis":{"focus":"adjacency"},"data":[{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"Person@ecore://nasdanika.org/models/party","name":"Person","value":{"description":"A human party.","externalLink":"index.html"},"x":574.3695786783152,"y":199.92661014916487,"category":0},{"symbol":"image://https://img.icons8.com/officexs/24/family--v1.png","id":"Family@ecore://nasdanika.org/models/family","name":"Family","value":{"description":"Family is a group of related people","externalLink":"../Family/index.html"},"x":217.10241724103855,"y":570.7039551142603,"category":1},{"symbol":"image://https://img.icons8.com/officexs/24/user.png","id":"Man@ecore://nasdanika.org/models/family","name":"Man","value":{"description":"An adult male human","externalLink":"../Man/index.html"},"x":325.7452907241376,"y":139.49980517646813,"category":1},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"Polity@ecore://nasdanika.org/models/family","name":"Polity","value":{"externalLink":"../Polity/index.html"},"x":646.3527864250569,"y":447.65995074760247,"category":1},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EDataType.gif","id":"EDate@http://www.eclipse.org/emf/2002/Ecore","name":"EDate","value":{"externalLink":"https://ecore.models.nasdanika.org/references/eClassifiers/EDate/index.html"},"x":466.3973047377485,"y":630.118416136382,"category":2},{"id":"Person@ecore://nasdanika.org/models/family","name":"Person","value":{"description":"In this model a person is an abstract supertype of Man and Woman","externalLink":""},"x":395.8740282817954,"y":384.145141952282,"category":1},{"symbol":"image://https://img.icons8.com/officexs/24/guest-female.png","id":"Woman@ecore://nasdanika.org/models/family","name":"Woman","value":{"description":"An adult female human","externalLink":"../Woman/index.html"},"x":146.85662513596327,"y":322.4405433158443,"category":1}],"symbolSize":20,"roam":true,"layout":"circular","links":[{"source":0,"target":5},{"source":1,"target":5},{"source":2,"target":5},{"source":3,"target":5},{"source":5,"target":0},{"source":5,"target":1},{"source":5,"target":2},{"source":5,"target":3},{"source":5,"target":4},{"source":5,"target":6},{"source":6,"target":5}],"categories":[{"name":"party"},{"name":"family"},{"name":"ecore"}],"draggable":true,"label":{"show":true,"position":"right"},"lineStyle":{"color":"source","curveness":0.3},"circular":{"rotateLabel":true}}]};
-		option.tooltip = {};
-		option.series[0].tooltip = {
-			formatter: function(arg) {
-				return arg.value ? arg.value.description : null;
-			}
-		};
-		myChart.setOption(option);
-		myChart.on("dblclick", function(params) {
-			if (params.value) {
-				if (params.value.link) {
-					window.open(params.value.link, "_self");
-				} else if (params.value.externalLink) {
-					window.open(params.value.externalLink);
-				}
-			}
-		});
-		window.addEventListener("resize", myChart.resize);
-	});
-</script>
-</div>
+                    <div data-nsd-action-uris="uuid:ccee69da-e0fe-4fb6-84e0-39a3a5ebdbcc" class="col">
+                      <div class="container-fluid">
+                        <div class="row nsd-app-content-panel-title-and-items-row">
+                          <div class="col-auto">
+                            <h2><span data-nsd-label-uuid="ccee69da-e0fe-4fb6-84e0-39a3a5ebdbcc" class="nsd-app-content-panel-title">Supertypes</span>
+                            </h2>
+                          </div>
+                        </div>
+                        <div class="row nsd-app-content-panel-content-row">
+                          <div class="col">
+                            <div class="container-fluid">
+                              <div class="row">
+                                <div class="col">
+<div>
+  <div id="supertypes-table">
+    <nsd-ecore-doc-table :columns="[{&quot;key&quot;:&quot;name&quot;,&quot;visible&quot;:true,&quot;label&quot;:&quot;Name&quot;},{&quot;key&quot;:&quot;description&quot;,&quot;visible&quot;:true,&quot;label&quot;:&quot;Description&quot;}]" :items="[{&quot;name&quot;:&quot;\r\n<a href=\&quot;https://ncore.models.nasdanika.org/references/eClassifiers/IMarked/index.html\&quot;>\r\n  <img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EInterface.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/><i>IMarked<\/i><\/a>&quot;},{&quot;name&quot;:&quot;\r\n<a href=\&quot;https://ncore.models.nasdanika.org/references/eClassifiers/Marked/index.html\&quot;>\r\n  <img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EInterface.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/><i>Marked<\/i><\/a>&quot;},{&quot;name&quot;:&quot;\r\n<a href=\&quot;https://ncore.models.nasdanika.org/references/eClassifiers/Adaptable/index.html\&quot;>\r\n  <img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EInterface.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/><i>Adaptable<\/i><\/a>&quot;},{&quot;name&quot;:&quot;\r\n<a href=\&quot;https://ncore.models.nasdanika.org/references/eClassifiers/ModelElement/index.html\&quot; title=\&quot;Base class for many Nasdanika model classes.\&quot;>\r\n  <img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/><i>ModelElement<\/i><\/a>&quot;},{&quot;name&quot;:&quot;\r\n<a href=\&quot;https://ncore.models.nasdanika.org/references/eClassifiers/NamedElement/index.html\&quot; title=\&quot;A model element with name.\&quot;>\r\n  <img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/>NamedElement<\/a>&quot;},{&quot;name&quot;:&quot;\r\n<a href=\&quot;https://ncore.models.nasdanika.org/references/eClassifiers/Documented/index.html\&quot; title=\&quot;Mix-in interface for classess with documentation.\&quot;>\r\n  <img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EInterface.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/><i>Documented<\/i><\/a>&quot;},{&quot;name&quot;:&quot;\r\n<b>\r\n<a href=\&quot;https://ncore.models.nasdanika.org/references/eClassifiers/DocumentedNamedElement/index.html\&quot;>\r\n  <img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/>DocumentedNamedElement<\/a><\/b>&quot;}]" config-key="eclass-supertypes" transitive-label="All" />
+  </div>
+  <script>new Vue({ el: '#supertypes-table' });</script>
+</div></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

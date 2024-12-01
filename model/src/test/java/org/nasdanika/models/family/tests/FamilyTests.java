@@ -15,17 +15,26 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.junit.jupiter.api.Test;
+import org.nasdanika.capability.CapabilityLoader;
+import org.nasdanika.capability.ServiceCapabilityFactory;
+import org.nasdanika.capability.ServiceCapabilityFactory.Requirement;
+import org.nasdanika.capability.emf.ResourceSetRequirement;
+import org.nasdanika.common.PrintStreamProgressMonitor;
+import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.models.family.Family;
 import org.nasdanika.models.family.Man;
 import org.nasdanika.models.family.Person;
-import org.nasdanika.models.family.util.FamilyDrawioResourceFactory;
 import org.nasdanika.models.family.util.FamilyWorkbookResourceFactory;
 
 public class FamilyTests {
 	
 	@Test
 	public void testLoadFamilyFromWorkbook() throws Exception {
-		ResourceSet resourceSet = new ResourceSetImpl();
+		CapabilityLoader capabilityLoader = new CapabilityLoader();
+		ProgressMonitor progressMonitor = new PrintStreamProgressMonitor();
+		Requirement<ResourceSetRequirement, ResourceSet> requirement = ServiceCapabilityFactory.createRequirement(ResourceSet.class);		
+		ResourceSet resourceSet = capabilityLoader.loadOne(requirement, progressMonitor);
+		
 		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xlsx", new FamilyWorkbookResourceFactory());
 		File test = new File("family.xlsx").getCanonicalFile();
 		Resource familyResource = resourceSet.getResource(URI.createFileURI(test.getAbsolutePath()), true);
@@ -59,8 +68,11 @@ public class FamilyTests {
 	
 	@Test
 	public void testLoadFamilyFromDrawioDiagram() throws Exception {
-		ResourceSet resourceSet = new ResourceSetImpl();
-		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("drawio", new FamilyDrawioResourceFactory(uri -> (Person) resourceSet.getEObject(uri, true)));
+		CapabilityLoader capabilityLoader = new CapabilityLoader();
+		ProgressMonitor progressMonitor = new PrintStreamProgressMonitor();
+		Requirement<ResourceSetRequirement, ResourceSet> requirement = ServiceCapabilityFactory.createRequirement(ResourceSet.class);		
+		ResourceSet resourceSet = capabilityLoader.loadOne(requirement, progressMonitor);
+		
 		File familyDiagramFile = new File("family.drawio").getCanonicalFile();
 		Resource familyResource = resourceSet.getResource(URI.createFileURI(familyDiagramFile.getAbsolutePath()), true);
 		assertEquals(1, familyResource.getContents().size());
