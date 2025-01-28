@@ -1,21 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="EN">
   <head>
     <title>Circular Graph</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nasdanika-Models/html-app@master/gen/web-resources/css/app.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jstree@3.3.16/dist/themes/default/style.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.5.0/github-markdown.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/default.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.23.0/dist/bootstrap-vue.css">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nasdanika-Models/html-app@master/gen/web-resources/css/app.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jstree@3.3.16/dist/themes/default/style.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.5.0/github-markdown.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.23.0/dist/bootstrap-vue.css"/>
     <script src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/html-app@master/gen/web-resources/js/common.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/html-app@master/gen/web-resources/js/dark-head.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jstree@3.3.16/dist/jstree.min.js"></script>
@@ -34,45 +34,9 @@
 
   gtag('config', 'G-9BRJVLK8CC');
 </script>    
-
-<script src="../../../search-documents.js"></script>
-
-<script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>
-
-<script>
-// Script for full-text search of JsTree
-
-window.nsdJsTreeSearchCallback = function(str, node) { 
-    var sf = new $.vakata.search(str, true, { caseSensitive : false, fuzzy : false }); 
-    if (sf.search(node.text).isMatch) {
-		return true;
-	} 
-    let searchResult = this.search(str); 
-    for (const sr in searchResult) {
-        if (searchResult[sr].ref === node.original['data-nsd-label-uuid']) {
-            return true;
-        } 
-    } 
-    return false; 
-}.bind(lunr(function () {
-			  this.ref('id');
-			  this.field('title');
-			  this.field('content');
-
-			  for (const key in searchDocuments) {
-				  let doc = searchDocuments[key];
-				this.add({
-					id: doc['link-uuid'],
-					title: doc.title,
-					path: doc.path,
-					content: doc.content
-				});  
-			  }
-			}));
-</script>
 </head>
   <body>
-    <div tabindex="-1" id="nsd_dv" class="modal">
+    <div tabindex="-1" id="nsd_62" class="modal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">Hover mouse over nodes elements to display tooltips.
@@ -85,14 +49,14 @@ Drag to rearrange.
     <div class="container-fluid nsd-app-container">
       <div class="row">
         <div class="col nsd-app-header">
-          <a href="https://github.com/Nasdanika-Models" data-nsd-label-uuid="4f730266-e4e0-4bc2-87dd-2c9b081ae243" class="nsd-app-header-title">
-            <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon">Nasdanika Models</a>
+          <a href="https://github.com/Nasdanika-Models" data-nsd-label-uuid="d6344f25-f7c4-4dd4-ad93-0d91ec1f8315" class="nsd-app-header-title">
+            <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon"/>Nasdanika Models</a>
           <ul class="nav nsd-app-header-navs">
             <li class="nav-item">
-              <a href="../../../search.html" data-nsd-label-uuid="9b006d27-8c2d-4d43-a338-cbb002a854c9" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
+              <a href="../../../search.html" data-nsd-label-uuid="cbe00d10-e92e-46d2-90c4-c73f8a59aa05" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
             </li>
             <li class="nav-item">
-              <a href="../../../glossary.html" data-nsd-label-uuid="3bfdc6a5-5b70-4105-981b-a055bd9cb51e" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
+              <a href="../../../glossary.html" data-nsd-label-uuid="44a17ae6-16c3-4234-b2a3-0d4571fbcf42" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
             </li>
           </ul>
         </div>
@@ -100,33 +64,33 @@ Drag to rearrange.
       <div class="row">
         <div class="col nsd-app-navbar">
           <ul class="navbar navbar-light navbar-expand-lg">
-            <a href="../../../index.html" title="A model of a family" data-nsd-label-uuid="e73482ba-b121-47a7-b687-fd9539b4e0f5" class="navbar-brand">
-              <img src="https://img.icons8.com/officel/30/family--v2.png" class="nsd-app-label-icon">Family Model</a>
-            <button type="button" data-toggle="collapse" data-target="#nsd_dp" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            <a href="../../../index.html" title="A model of a family" data-nsd-label-uuid="f416d06b-7183-48c8-8aec-0e555d658f42" class="navbar-brand">
+              <img src="https://img.icons8.com/officel/30/family--v2.png" class="nsd-app-label-icon"/>Family Model</a>
+            <button type="button" data-toggle="collapse" data-target="#nsd_5w" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
             </button>
-            <div id="nsd_dp" class="collapse navbar-collapse">
+            <div id="nsd_5w" class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a href="../../../classifiers.html" data-nsd-label-uuid="3480246f-5c5c-473c-9ee2-23690d0c70a8" class="nav-link">Classifiers</a>
+                  <a href="../../../classifiers.html" data-nsd-label-uuid="d70ab2f3-0f2b-4b61-a9f8-e76a4ba1cc5c" class="nav-link">Classifiers</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../../../diagram.html" data-nsd-label-uuid="8b3f43f1-6368-4918-94f1-0d63165e4d40" class="nav-link"><span class="fas fa-project-diagram nsd-app-label-icon"></span>Diagram</a>
+                  <a href="../../../diagram.html" data-nsd-label-uuid="6bdfeccd-87c0-40ae-96f7-bb7b8d7bd054" class="nav-link"><span class="fas fa-project-diagram nsd-app-label-icon"></span>Diagram</a>
                 </li>
                 <li class="nav-item">
-                  </li><li data-nsd-label-uuid="5f1f5e02-c988-45e7-9994-f41fa71c680b" class="dropdown">
+                  <li data-nsd-label-uuid="915b053d-31f3-44d8-97be-ba816b2ceac3" class="dropdown">
                     <a role="button" data-toggle="dropdown" class="nav-link dropdown-toggle">
-                      <img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/external-diagram-seo-media-dreamstale-lineal-dreamstale.png" class="nsd-app-label-icon">Graphs</a>
+                      <img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/external-diagram-seo-media-dreamstale-lineal-dreamstale.png" class="nsd-app-label-icon"/>Graphs</a>
                     <div class="dropdown-menu">
-                      <a href="../../../default-graph.html" data-nsd-label-uuid="5dc62a24-061c-434b-92ce-6088bb170b89" class="dropdown-item">Default Graph</a>
-                      <a href="../../../circular-layout-graph.html" data-nsd-label-uuid="10108d31-97b2-4bc6-aba0-3a6a390f6c83" class="dropdown-item">Circular Graph</a>
-                      <a href="../../../force-layout-graph.html" data-nsd-label-uuid="6005aa9a-5880-48c4-ad81-003fbffd1351" class="dropdown-item">Force Graph</a>
+                      <a href="../../../default-graph.html" data-nsd-label-uuid="17ee2389-4416-4252-b587-d985ce7c19b0" class="dropdown-item">Default Graph</a>
+                      <a href="../../../circular-layout-graph.html" data-nsd-label-uuid="0c05601e-b9d1-415d-be31-a3360899ed3f" class="dropdown-item">Circular Graph</a>
+                      <a href="../../../force-layout-graph.html" data-nsd-label-uuid="1be6c871-0e0b-4e9f-ab99-7c6c26f5dabe" class="dropdown-item">Force Graph</a>
                       <div title="With dependencies and sub-packages" class="dropdown-divider"></div>
-                      <a href="../../../default-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="f21bb76b-d193-45ab-aeea-66f037d0974f" class="dropdown-item">Default Graph</a>
-                      <a href="../../../circular-layout-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="49a09ee2-8a52-4f94-a80e-caba61c3d94a" class="dropdown-item">Circular Graph</a>
-                      <a href="../../../force-layout-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="f37e8029-22f5-4a9d-97c7-9570b5d31524" class="dropdown-item">Force Graph</a>
+                      <a href="../../../default-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="96886118-cd41-4f4e-ac52-79bd6499fa37" class="dropdown-item">Default Graph</a>
+                      <a href="../../../circular-layout-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="3742ab1d-e016-4716-9882-f54644010d97" class="dropdown-item">Circular Graph</a>
+                      <a href="../../../force-layout-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="e7045259-149e-4e5f-bb08-c617dc9897a7" class="dropdown-item">Force Graph</a>
                     </div>
                   </li>
-                
+                </li>
               </ul>
             </div>
           </ul>
@@ -135,30 +99,30 @@ Drag to rearrange.
       <div class="row nsd-app-content-row">
         <div class="col nsd-app-navigation-panel">
           <div class="list-group list-group-flush">
-            <a href="../Family/index.html" title="Family is a group of related people" data-nsd-label-uuid="862970bf-719f-426e-8a46-a2539f8cd530" class="list-group-item list-group-action">
-              <img src="https://img.icons8.com/officexs/24/family--v1.png" class="nsd-app-label-icon">Family</a>
-            <a href="../Man/index.html" title="An adult male human" data-nsd-label-uuid="174060c5-d102-4121-80ef-92e2932f4754" class="list-group-item list-group-action">
-              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon">Man</a>
-            <a href="../Person/index.html" title="In this model a person is an abstract supertype of Man and Woman" data-nsd-label-uuid="63010949-3f94-4988-add2-e3a6e6bc37cd" class="list-group-item list-group-action"><span class="fas fa-user nsd-app-label-icon"></span><i>Person</i></a>
-            <a href="index.html" data-nsd-label-uuid="8a55bad6-ac65-414b-83c4-7498004d95de" class="list-group-item list-group-action active">
-              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Polity</a>
-            <a href="../Woman/index.html" title="An adult female human" data-nsd-label-uuid="ceefe414-f944-4615-9a91-d2c26d009026" class="list-group-item list-group-action">
-              <img src="https://img.icons8.com/officexs/24/guest-female.png" class="nsd-app-label-icon">Woman</a>
+            <a href="../Family/index.html" title="Family is a group of related people" data-nsd-label-uuid="0689fd45-e7c2-4697-9a2f-609894cd5691" class="list-group-item list-group-action">
+              <img src="https://img.icons8.com/officexs/24/family--v1.png" class="nsd-app-label-icon"/>Family</a>
+            <a href="../Man/index.html" title="An adult male human" data-nsd-label-uuid="db6e3c53-f0b6-4ad7-84b5-da51f33e264d" class="list-group-item list-group-action">
+              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon"/>Man</a>
+            <a href="../Person/index.html" title="In this model a person is an abstract supertype of Man and Woman" data-nsd-label-uuid="d075256e-2cb0-416a-a1d6-2f2db8d20ac9" class="list-group-item list-group-action"><span class="fas fa-user nsd-app-label-icon"></span><i>Person</i></a>
+            <a href="index.html" data-nsd-label-uuid="f43f60e8-1985-4a04-b8e9-1d5b10a4f284" class="list-group-item list-group-action active">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"/>Polity</a>
+            <a href="../Woman/index.html" title="An adult female human" data-nsd-label-uuid="42d92a9a-05bc-4853-9c65-c1cf16249063" class="list-group-item list-group-action">
+              <img src="https://img.icons8.com/officexs/24/guest-female.png" class="nsd-app-label-icon"/>Woman</a>
           </div>
         </div>
-        <div data-nsd-label-uuid="09a08bf7-e7b8-4417-a5dd-a998e593dcb8" data-nsd-action-uris="uuid:09a08bf7-e7b8-4417-a5dd-a998e593dcb8" class="col nsd-app-content-panel">
+        <div data-nsd-label-uuid="373132d8-f383-4692-b75f-54bb83cc72f1" data-nsd-action-uris="uuid:373132d8-f383-4692-b75f-54bb83cc72f1" class="col nsd-app-content-panel">
           <div class="container-fluid">
             <div class="row nsd-app-content-panel-breadcrumb-row">
               <div class="col">
                 <nav aria-label="breadcrumb" class="nsd-app-content-panel-breadcrumb">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                      <a href="index.html" data-nsd-label-uuid="8a55bad6-ac65-414b-83c4-7498004d95de">
-                        <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Polity</a>
+                      <a href="index.html" data-nsd-label-uuid="f43f60e8-1985-4a04-b8e9-1d5b10a4f284">
+                        <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"/>Polity</a>
                     </li>
-                    <li class="breadcrumb-item"><span data-nsd-label-uuid="e38d0ba9-0887-4657-8b12-77e800a604a2"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/external-diagram-seo-media-dreamstale-lineal-dreamstale.png" class="nsd-app-label-icon">Graphs</span>
+                    <li class="breadcrumb-item"><span data-nsd-label-uuid="01331b24-9fc2-4c21-a639-42b28b06c255"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/external-diagram-seo-media-dreamstale-lineal-dreamstale.png" class="nsd-app-label-icon"/>Graphs</span>
                     </li>
-                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="09a08bf7-e7b8-4417-a5dd-a998e593dcb8">Circular Graph</span>
+                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="373132d8-f383-4692-b75f-54bb83cc72f1">Circular Graph</span>
                     </li>
                   </ol>
                 </nav>
@@ -166,8 +130,8 @@ Drag to rearrange.
             </div>
             <div class="row nsd-app-content-panel-title-and-items-row">
               <div class="col-auto">
-                <h1><span data-nsd-label-uuid="09a08bf7-e7b8-4417-a5dd-a998e593dcb8" class="nsd-app-content-panel-title">Circular Graph<a data-toggle="modal" data-target="#nsd_dv" href="#" title="A circular layout graph of this classifier and related classifiers showing relationships between them" style="vertical-align:super;font-size:x-small;margin-left:0.2em"><span class="far fa-question-circle nsd-app-label-icon"></span></a></span>
-                </h1>
+                <H1><span data-nsd-label-uuid="373132d8-f383-4692-b75f-54bb83cc72f1" class="nsd-app-content-panel-title">Circular Graph<a data-toggle="modal" data-target="#nsd_62" href="#" title="A circular layout graph of this classifier and related classifiers showing relationships between them" style="vertical-align:super;font-size:x-small;margin-left:0.2em"><span class="far fa-question-circle nsd-app-label-icon"></span></a></span>
+                </H1>
               </div>
             </div>
             <div class="row nsd-app-content-panel-content-row">
@@ -183,7 +147,7 @@ Drag to rearrange.
 			render: "canvas",
 			useDirtyRect: false
 		});
-		var option = {"legend":{},"series":[{"type":"graph","emphasis":{"focus":"adjacency"},"data":[{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"DocumentedNamedElement@ecore://nasdanika.org/core/ncore","name":"DocumentedNamedElement","value":{"externalLink":"https://ncore.models.nasdanika.org/references/eClassifiers/DocumentedNamedElement/index.html"},"x":280.7108519747974,"y":57.9713111896803,"category":0},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"Polity@ecore://nasdanika.org/models/family","name":"Polity","value":{"externalLink":""},"x":342.7588094134075,"y":347.7558446508833,"category":1},{"id":"Person@ecore://nasdanika.org/models/family","name":"Person","value":{"description":"In this model a person is an abstract supertype of Man and Woman","externalLink":"../Person/index.html"},"x":404.63335202949753,"y":636.7304733946108,"category":1}],"symbolSize":20,"roam":true,"layout":"circular","links":[{"source":0,"target":1},{"source":1,"target":0},{"source":1,"target":2},{"source":2,"target":1}],"categories":[{"name":"ncore"},{"name":"family"}],"draggable":true,"label":{"show":true,"position":"right"},"lineStyle":{"color":"source","curveness":0.3},"circular":{"rotateLabel":true}}]};
+		var option = {"legend":{},"series":[{"type":"graph","emphasis":{"focus":"adjacency"},"data":[{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"Polity@ecore://nasdanika.org/models/family","name":"Polity","value":{"externalLink":""},"x":480.4052701090509,"y":581.624412210915,"category":0},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"DocumentedNamedElement@ecore://nasdanika.org/core/ncore","name":"DocumentedNamedElement","value":{"externalLink":"https://ncore.models.nasdanika.org/references/eClassifiers/DocumentedNamedElement/index.html"},"x":281.95030948989626,"y":362.4113125853471,"category":1},{"id":"Person@ecore://nasdanika.org/models/family","name":"Person","value":{"description":"In this model a person is an abstract supertype of Man and Woman","externalLink":"../Person/index.html"},"x":678.217189897046,"y":799.983208144597,"category":0}],"symbolSize":20,"roam":true,"layout":"circular","links":[{"source":0,"target":1},{"source":0,"target":2},{"source":1,"target":0},{"source":2,"target":0}],"categories":[{"name":"family"},{"name":"ncore"}],"draggable":true,"label":{"show":true,"position":"right"},"lineStyle":{"color":"source","curveness":0.3},"circular":{"rotateLabel":true}}]};
 		option.tooltip = {};
 		option.series[0].tooltip = {
 			formatter: function(arg) {
@@ -215,13 +179,13 @@ Drag to rearrange.
         <div class="col nsd-app-footer">
           <ul class="nav nsd-app-footer-navs">
             <li class="nav-item">
-              <a href="https://github.com/Nasdanika-Models/family" data-nsd-label-uuid="c57ced1e-5de7-488e-8d7f-0faffc94bf36" class="nav-link"><span class="fab fa-github nsd-app-label-icon"></span>Sources</a>
+              <a href="https://github.com/Nasdanika-Models/family" data-nsd-label-uuid="bb67a957-4272-4bdd-a50b-4f987cc70ce4" class="nav-link"><span class="fab fa-github nsd-app-label-icon"></span>Sources</a>
             </li>
-            <li class="nav-item"><span class="navbar-text">&nbsp;•&nbsp;</span>
+            <li class="nav-item"><span class="navbar-text">&nbsp;&bull;&nbsp;</span>
             </li>
             <li class="nav-item">
               <a href="https://icons8.com/" title="Icons from ICONS8" class="nav-link">
-                <img src="https://img.icons8.com/fluency/16/icons8-new-logo.png" class="nsd-app-label-icon">
+                <img src="https://img.icons8.com/fluency/16/icons8-new-logo.png" class="nsd-app-label-icon"/>
               </a>
             </li>
           </ul>
