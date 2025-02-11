@@ -48,11 +48,11 @@ public class EcoreGenFamilyProcessorsFactory {
 	@EPackageNodeProcessorFactory(
 			label = "Family Model",
 			//actionPrototypeRef = "test-package.yml",
-			actionPrototype = """
-                    app-action:
-                        text: Param
-                        icon: fas fa-user					
-					""",
+//			actionPrototype = """
+//                    app-action:
+//                        text: Param
+//                        icon: fas fa-user					
+//					""",
 			icon = "https://img.icons8.com/officel/30/family--v2.png",
 			description = "A model of a family",
 			documentation =  """
