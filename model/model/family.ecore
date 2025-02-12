@@ -23,7 +23,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Woman" eSuperTypes="#//Person"/>
   <eClassifiers xsi:type="ecore:EClass" name="Polity" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//DocumentedNamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="constituents" upperBound="-1"
-        eType="#//Polity" containment="true"/>
+        eType="#//Polity" containment="true" eKeys="../../org.nasdanika.ncore/model/ncore.ecore#//NamedElement/name"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="residents" upperBound="-1"
         eType="#//Person" containment="true"/>
   </eClassifiers>

@@ -358,6 +358,7 @@ public class FamilyPackageImpl extends EPackageImpl implements FamilyPackage {
 
 		initEClass(polityEClass, Polity.class, "Polity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPolity_Constituents(), this.getPolity(), null, "constituents", null, 0, -1, Polity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		getPolity_Constituents().getEKeys().add(theNcorePackage.getNamedElement_Name());
 		initEReference(getPolity_Residents(), this.getPerson(), null, "residents", null, 0, -1, Polity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

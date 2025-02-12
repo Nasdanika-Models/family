@@ -30,7 +30,7 @@ public interface Polity extends DocumentedNamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Constituents</em>' containment reference list.
 	 * @see org.nasdanika.models.family.FamilyPackage#getPolity_Constituents()
-	 * @model containment="true"
+	 * @model containment="true" keys="name"
 	 * @generated
 	 */
 	EList<Polity> getConstituents();

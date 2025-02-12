@@ -3,7 +3,6 @@
 package org.nasdanika.models.family.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.nasdanika.models.family.FamilyPackage;
 import org.nasdanika.models.family.Man;
 
@@ -33,5 +32,5 @@ public class ManImpl extends PersonImpl implements Man {
 	protected EClass eStaticClass() {
 		return FamilyPackage.Literals.MAN;
 	}
-
+	
 } //ManImpl
