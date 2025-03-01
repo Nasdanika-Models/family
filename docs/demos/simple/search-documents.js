@@ -1,1 +1,1 @@
-var searchDocuments = {"references/members/albert/index.html":{"link-uuid":"fa3a6a16-ab3c-498f-82b5-2e482fa1b235","title":"Albert","content":"Some documentation about Albert\n\nMultiple lines\n\n* Item 1\n* Item 2"}}
+var searchDocuments = {"references/members/albert/index.html":{"link-uuid":"1d98d1aa-5da3-4ac8-bb50-52638d2f69a8","title":"Albert","content":"Some documentation about Albert\n\nMultiple lines\n\n* Item 1\n* Item 2"}}
