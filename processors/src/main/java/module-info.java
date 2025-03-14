@@ -1,3 +1,7 @@
+import org.nasdanika.capability.CapabilityFactory;
+import org.nasdanika.models.family.processors.doc.FamilyNodeProcessorFactoryCapabilityFactory;
+import org.nasdanika.models.family.processors.ecore.ECoreGenFamilyProcessorsCapabilityFactory;
+
 module org.nasdanika.models.family.processors {
 		
 	requires transitive org.nasdanika.models.family;
@@ -8,5 +12,9 @@ module org.nasdanika.models.family.processors {
 	
 	exports org.nasdanika.models.family.processors.doc;
 	opens org.nasdanika.models.family.processors.doc; // For loading resources
+
+	provides CapabilityFactory with 
+		FamilyNodeProcessorFactoryCapabilityFactory,
+		ECoreGenFamilyProcessorsCapabilityFactory; 	
 	
 }

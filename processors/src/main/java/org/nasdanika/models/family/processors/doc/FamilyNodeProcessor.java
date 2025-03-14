@@ -26,8 +26,7 @@ public class FamilyNodeProcessor extends EObjectNodeProcessor<Family> {
 		Context context,
 		java.util.function.Function<ProgressMonitor, Action> prototypeProvider) {
 		super(config, context, prototypeProvider);
-	}	
-	
+	}		
 	
 	/**
 	* Suppressing default behavior, explicit specification of how to build.
