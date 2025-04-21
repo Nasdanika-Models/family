@@ -1,47 +1,47 @@
 {
   "references/eClassifiers/Person/index.html": {
-    "link-uuid": "000e4623-e5ac-4485-9c1d-b23fa8dd2265",
+    "link-uuid": "7c3a665b-fbee-4942-8e88-65070277b27d",
     "title": "Person",
     "content": "A person (pl.: people or persons, depending on context) is a being who has certain capacities or attributes such as reason, morality, consciousness or self-consciousness, and being a part of a culturally established form of social relations such as kinship, ownership of property, or legal responsibility. The defining features of personhood and, consequently, what makes a person count as a person, differ widely among cultures and contexts. In addition to the question of personhood, of what makes a being count as a person to begin with, there are further questions about personal identity and self: both about what makes any particular person that particular person instead of another, and about what makes a person at one time the same person as they were or will be at another time despite any intervening changes. The plural form &ldquo;people&rdquo; is often used to refer to an entire nation or ethnic group (as in &ldquo;a people&rdquo;), and this was the original meaning of the word; it subsequently acquired its use as a plural form of person. The plural form &ldquo;persons&rdquo; is often used in philosophical and legal writing."
   },
   "references/eClassifiers/Person/inheritance.html": {
     "path": "Person/Inheritance",
-    "link-uuid": "232750e2-ad6f-4872-b13c-ece240302ce6",
+    "link-uuid": "00297797-3359-4da1-9157-127be139d9a0",
     "title": "Inheritance",
     "content": "Supertypes Subtypes  "
   },
   "references/eClassifiers/Family/references/eStructuralFeatures/members/load-specification.html": {
     "path": "Family/References/Members/Load specification",
-    "link-uuid": "52f1fd05-73dd-4cc9-bd65-8979e0ddb40e",
+    "link-uuid": "df463315-5229-4886-9426-4547f8e3ca45",
     "title": "Load specification",
     "content": "Load Key members Default Multiplicity Homogeneous Strict Containment Exclusive With Description Some documentation: key: value"
   },
   "references/eClassifiers/Family/inheritance.html": {
     "path": "Family/Inheritance",
-    "link-uuid": "9cb3d25f-81b4-4887-9fb9-8a57014f1fad",
+    "link-uuid": "9ce13e97-c367-4490-bb96-9e76010abc8d",
     "title": "Inheritance",
     "content": "Supertypes "
   },
   "references/eClassifiers/Man/load-specification.html": {
     "path": "Man/Load specification",
-    "link-uuid": "64e86eb1-71bf-4acc-8f3b-3698e244a9ce",
+    "link-uuid": "63fba3b9-5b8e-4b99-8f35-658245471e38",
     "title": "Load specification",
     "content": "Some documentation: key: value"
   },
   "references/eClassifiers/Polity/references/eStructuralFeatures/residents/index.html": {
     "path": "Polity/References/residents",
-    "link-uuid": "9b2a83ef-d361-4533-8224-3909f44abdd0",
+    "link-uuid": "5fa4627e-3604-4edf-9e94-0c055d0a61e1",
     "title": "residents",
     "content": "Type Person Multiplicity 0..*"
   },
   "references/eClassifiers/Woman/index.html": {
-    "link-uuid": "5ae3cce7-fbdf-4d7f-8cf5-b3f5dc2f0a45",
+    "link-uuid": "e6f8fbbb-eab7-4ce6-bf2c-9a12a3b2cbb8",
     "title": "Woman",
-    "content": "A woman is an adult female human. Prior to adulthood, one is referred to as a girl (a female child or adolescent). Etymology The spelling of &ldquo;woman&rdquo; in English has progressed over the past millennium from wīfmann to wīmmann to wumman, and finally, the modern spelling woman. In Old English, wīfmann meant &lsquo;woman&rsquo; (literally &lsquo;woman-person&rsquo;), whereas wermann meant &lsquo;man&rsquo;. Mann had a gender-neutral meaning of &lsquo;human&rsquo;, corresponding to Modern English &lsquo;person&rsquo; or &lsquo;someone&rsquo;; however, subsequent to the Norman Conquest, man began to be used more in reference to &lsquo;male human&rsquo;, and by the late 13th century it had begun to eclipse usage of the older term wer. The medial labial consonants f and m in wīfmann coalesced into the modern form &ldquo;woman&rdquo;, while the initial element wīf, which had also meant &lsquo;woman&rsquo;, underwent semantic narrowing to the sense of a married woman (&lsquo;wife&rsquo;)."
+    "content": "A woman is an adult female human. Prior to adulthood, one is referred to as a girl (a female child or adolescent). Etymology The spelling of &ldquo;woman&rdquo; in English has progressed over the past millennium from w?fmann to w?mmann to wumman, and finally, the modern spelling woman. In Old English, w?fmann meant &lsquo;woman&rsquo; (literally &lsquo;woman-person&rsquo;), whereas wermann meant &lsquo;man&rsquo;. Mann had a gender-neutral meaning of &lsquo;human&rsquo;, corresponding to Modern English &lsquo;person&rsquo; or &lsquo;someone&rsquo;; however, subsequent to the Norman Conquest, man began to be used more in reference to &lsquo;male human&rsquo;, and by the late 13th century it had begun to eclipse usage of the older term wer. The medial labial consonants f and m in w?fmann coalesced into the modern form &ldquo;woman&rdquo;, while the initial element w?f, which had also meant &lsquo;woman&rsquo;, underwent semantic narrowing to the sense of a married woman (&lsquo;wife&rsquo;)."
   },
   "references/eClassifiers/Woman/inheritance.html": {
     "path": "Woman/Inheritance",
-    "link-uuid": "ca1ec847-c93c-466d-9fcd-d7cdf0a99da6",
+    "link-uuid": "deb19616-5af1-40b1-86bd-462f5cde7957",
     "title": "Inheritance",
     "content": "Supertypes "
   },
@@ -57,19 +57,19 @@
   },
   "references/eClassifiers/Family/references/eStructuralFeatures/members/index.html": {
     "path": "Family/References/Members",
-    "link-uuid": "6a03e2d7-734a-4a37-932f-716e4b1e5d96",
+    "link-uuid": "8c1d754c-70f4-459c-b991-7c7cae219f38",
     "title": "Members",
     "content": "Type Person Multiplicity 0..* Some documentation about family members reference"
   },
   "references/eClassifiers/Person/references/eStructuralFeatures/father/index.html": {
     "path": "Person/References/father",
-    "link-uuid": "e6889004-a8eb-4c12-aa52-c6bf8a794b11",
+    "link-uuid": "1d649ba0-13a2-435e-ba1e-2595781d7f53",
     "title": "father",
     "content": "Type Man Multiplicity 0..1"
   },
   "references/eClassifiers/Person/references/eStructuralFeatures/parents/index.html": {
     "path": "Person/References/parents",
-    "link-uuid": "c34a1d26-c34c-457b-b991-9015c99c1e91",
+    "link-uuid": "a353a855-540b-492a-9fb2-5fa73da6b2bd",
     "title": "parents",
     "content": "Type Person Multiplicity 0..2"
   },
@@ -79,59 +79,59 @@
     "content": "Some documentation about Albert\n\nMultiple lines\n\n* Item 1\n* Item 2"
   },
   "references/eClassifiers/Man/index.html": {
-    "link-uuid": "2fc61c66-b0e7-4c9c-9935-75a82f166b25",
+    "link-uuid": "2d32f395-b227-4b73-af39-269656960cd6",
     "title": "Man",
-    "content": "A man is an adult male human. Prior to adulthood, a male human is referred to as a boy (a male child or adolescent). Etymology The English term &ldquo;man&rdquo; is derived from the Proto-Indo-European root *man- (see Sanskrit/Avestan manu-, Slavic mǫž &ldquo;man, male&rdquo;). More directly, the word derives from Old English mann. The Old English form primarily meant &ldquo;person&rdquo; or &ldquo;human being&rdquo; and referred to men, women, and children alike. The Old English word for &ldquo;man&rdquo; as distinct from &ldquo;woman&rdquo; or &ldquo;child&rdquo; was wer. Mann only came to mean &ldquo;man&rdquo; in Middle English, replacing wer, which survives today only in the compounds &ldquo;werewolf&rdquo; (from Old English werwulf, literally &ldquo;man-wolf&rdquo;), and &ldquo;wergild&rdquo;, literally &ldquo;man-payment&rdquo;."
+    "content": "A man is an adult male human. Prior to adulthood, a male human is referred to as a boy (a male child or adolescent). Etymology The English term &ldquo;man&rdquo; is derived from the Proto-Indo-European root *man- (see Sanskrit/Avestan manu-, Slavic m?? &ldquo;man, male&rdquo;). More directly, the word derives from Old English mann. The Old English form primarily meant &ldquo;person&rdquo; or &ldquo;human being&rdquo; and referred to men, women, and children alike. The Old English word for &ldquo;man&rdquo; as distinct from &ldquo;woman&rdquo; or &ldquo;child&rdquo; was wer. Mann only came to mean &ldquo;man&rdquo; in Middle English, replacing wer, which survives today only in the compounds &ldquo;werewolf&rdquo; (from Old English werwulf, literally &ldquo;man-wolf&rdquo;), and &ldquo;wergild&rdquo;, literally &ldquo;man-payment&rdquo;."
   },
   "references/eClassifiers/Family/index.html": {
-    "link-uuid": "51a5ae52-3881-43de-a27d-f461105276b3",
+    "link-uuid": "622c94ea-62f7-4aa6-a64b-d6d01a3aecea",
     "title": "Family",
     "content": "Family (from Latin: familia) is a group of people related either by consanguinity (by recognized birth) or affinity (by marriage or other relationship). It forms the basis for social order. The purpose of the family is to maintain the well-being of its members and of society. Ideally, families offer predictability, structure, and safety as members mature and learn to participate in the community. Historically, most human societies use family as the primary locus of attachment, nurturance, and socialization. Anthropologists classify most family organizations as matrifocal (a mother and her children), patrifocal (a father and his children), conjugal (a married couple with children, also called the nuclear family), avuncular (a man, his sister, and her children), or extended (in addition to parents and children, may include grandparents, aunts, uncles, or cousins). The field of genealogy aims to trace family lineages through history. The family is also an important economic unit studied in family economics. The word &ldquo;families&rdquo; can be used metaphorically to create more inclusive categories such as community, nationhood, and global village."
   },
   "references/eClassifiers/Family/load-specification.html": {
     "path": "Family/Load specification",
-    "link-uuid": "c7da3c1e-77d9-4073-96d1-e1771cc0b781",
+    "link-uuid": "1401bd87-5b72-458d-8441-adf389515e21",
     "title": "Load specification",
     "content": "Load documentation with code snippets: key: value"
   },
   "index.html": {
-    "link-uuid": "5129b7bc-b2a5-49ef-a9ab-c2eba34e29b2",
+    "link-uuid": "3aed2582-29dc-497a-b51f-774b268ebf9c",
     "title": "Family Model",
     "content": "Family model is used to demonstrate different Nasdanika technologies such as: Generating of metamodel (Ecore) documentation like this one Loading of models from MS Excel and Drawio diagrams Generation of HTML sites from loaded models The model was created to mimic the model from Eclipse Sirius Basic Family tutorial. This site uses fee icons from Icons8 and quotes Wikipedia articles. The diagram below is interactive: Hover the mouse pointer over the shapes and connections to see tooltips Click on the shapes and connections to navigate to the pages of the respective model elements. Click on the diagram to make it fullscreen. Then you may click on the pencil icon to edit it in the browser. A model of a family consisting of persons Woman An adult female human Man An adult male human Father [0..1] Mother [0..1] A mother is the female parent of a child. In this model the &ldquo;mother&rdquo; reference is derived (computed) from the parents reference. Person In this model a person is an abstract supertype of Man and Woman Members [2..*] Family Family is a group of related people parents [0..2] children [0..*] Polity Constituents * Residents Family"
   },
   "references/eClassifiers/Person/references/eStructuralFeatures/mother/index.html": {
     "path": "Person/References/mother",
-    "link-uuid": "f9c48e1b-6785-4bc5-8e8a-5cadfa420c42",
+    "link-uuid": "987dcd67-ca89-4d34-9df4-1b8df1caa703",
     "title": "mother",
     "content": "Type Woman Multiplicity 0..1 A mother is the female parent of a child. In this model the &ldquo;mother&rdquo; reference is derived (computed) from the parents reference. A woman may be considered a mother by virtue of having given birth, by raising a child who may or may not be her biological offspring, or by supplying her ovum for fertilisation in the case of gestational surrogacy. A biological mother is the female genetic contributor to the creation of the infant, through sexual intercourse or egg donation. A biological mother may have legal obligations to a child not raised by her, such as an obligation of monetary support. An adoptive mother is a female who has become the child&rsquo;s parent through the legal process of adoption. A putative mother is a female whose biological relationship to a child is alleged but has not been established. A stepmother is a non-biological female parent married to a child&rsquo;s preexisting parent, and may form a family unit but generally does not have the legal rights and responsibilities of a parent in relation to the child."
   },
   "references/eClassifiers/Person/references/eStructuralFeatures/dateOfBirth/index.html": {
     "path": "Person/Attributes/dateOfBirth",
-    "link-uuid": "10f4c2c1-eed3-4437-863f-1765d705fec5",
+    "link-uuid": "9e96a75a-5e1a-43dc-ba36-e13c7d289997",
     "title": "dateOfBirth",
     "content": "Type EDate Multiplicity 0..1"
   },
   "references/eClassifiers/Man/inheritance.html": {
     "path": "Man/Inheritance",
-    "link-uuid": "d6f9f655-ab7e-421b-9348-4c3e34c998a4",
+    "link-uuid": "9a2765ac-fc2d-437a-983c-faccb6c252be",
     "title": "Inheritance",
     "content": "Supertypes "
   },
   "references/eClassifiers/Person/references/eStructuralFeatures/children/index.html": {
     "path": "Person/References/children",
-    "link-uuid": "dfeba595-65b8-4673-b0d7-2c458bcbd19f",
+    "link-uuid": "e5370fe2-7cf4-4278-b031-b817b8813916",
     "title": "children",
     "content": "Type Person Multiplicity 0..*"
   },
   "references/eClassifiers/Polity/inheritance.html": {
     "path": "Polity/Inheritance",
-    "link-uuid": "b4145a66-9297-49e4-be7a-7d926bef7eb2",
+    "link-uuid": "22216b59-f9ba-4abf-ba0b-887bdff18811",
     "title": "Inheritance",
     "content": "Supertypes "
   },
   "references/eClassifiers/Polity/references/eStructuralFeatures/constituents/index.html": {
     "path": "Polity/References/constituents",
-    "link-uuid": "8d82f183-7131-4dbf-94f1-1e7534760db5",
+    "link-uuid": "b529d52f-e97f-4d9e-9f42-d581575efe05",
     "title": "constituents",
     "content": "Type Polity Multiplicity 0..*"
   }

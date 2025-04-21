@@ -105,7 +105,7 @@ public class TestFamilyModelDocGen {
 		
 		System.out.println("There are " + errorCount + " site errors");
 		
-		if (errorCount != 65) {
+		if (errorCount != 52) {
 			throw new ExecutionException("There are problems with pages: " + errorCount);
 		}		
 	}
