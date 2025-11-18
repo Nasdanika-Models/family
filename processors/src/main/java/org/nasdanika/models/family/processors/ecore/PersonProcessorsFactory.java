@@ -2,6 +2,7 @@ package org.nasdanika.models.family.processors.ecore;
 
 import java.util.function.BiConsumer;
 
+import org.eclipse.emf.ecore.EObject;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.common.Util;
@@ -53,7 +54,7 @@ public class PersonProcessorsFactory {
 	)
 	public EClassNodeProcessor createPersonProcessor(
 			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
-			java.util.function.Function<ProgressMonitor, Action> prototypeProvider,
+			java.util.function.BiFunction<EObject, ProgressMonitor, Action> prototypeProvider,
 			BiConsumer<Label, ProgressMonitor> labelConfigurator,
 			ProgressMonitor progressMonitor) {		
 		return new EClassNodeProcessor(config, context, prototypeProvider) {
@@ -100,7 +101,7 @@ public class PersonProcessorsFactory {
 	)
 	public EAttributeNodeProcessor createAnimalNameProcessor(
 			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
-			java.util.function.Function<ProgressMonitor, Action> prototypeProvider,
+			java.util.function.BiFunction<EObject, ProgressMonitor, Action> prototypeProvider,
 			BiConsumer<Label, ProgressMonitor> labelConfigurator,
 			ProgressMonitor progressMonitor) {		
 		return new EAttributeNodeProcessor(config, context, prototypeProvider) {

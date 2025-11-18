@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="EN">
   <head>
-    <title>Inheritance</title>
+    <title>Force Graph 3D</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet"/>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -36,6 +36,19 @@
 </script>    
 </head>
   <body>
+    <div tabindex="-1" id="nsd_90" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">Hover mouse over nodes elements to display tooltips.
+Double-click on nodes to navigate go documentation.
+Left click - rotate.
+Mouse wheel - zoom.
+Right click - pan.
+Drag to rearrange.
+</div>
+        </div>
+      </div>
+    </div>
     <div class="container-fluid nsd-app-container">
       <div class="row">
         <div class="col nsd-app-header">
@@ -56,9 +69,9 @@
           <ul class="navbar navbar-light navbar-expand-lg">
             <a href="../../../index.html" title="A model of a family" data-nsd-label-uuid="ddd0e47b-aaf9-4064-a7f2-71ee97d05497" class="navbar-brand">
               <img src="https://img.icons8.com/officel/30/family--v2.png" class="nsd-app-label-icon"/>Family Model</a>
-            <button type="button" data-toggle="collapse" data-target="#nsd_4m" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            <button type="button" data-toggle="collapse" data-target="#nsd_8u" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
             </button>
-            <div id="nsd_4m" class="collapse navbar-collapse">
+            <div id="nsd_8u" class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                   <a href="../../../classifiers.html" data-nsd-label-uuid="d6c100cd-b034-4288-88ab-c548dca7e862" class="nav-link">Classifiers</a>
@@ -104,7 +117,7 @@
               <img src="https://img.icons8.com/officexs/24/guest-female.png" class="nsd-app-label-icon"/>Woman</a>
           </div>
         </div>
-        <div data-nsd-label-uuid="9dbf923b-45a6-41dc-af54-f8d20b6812ce" data-nsd-action-uris="uuid:9dbf923b-45a6-41dc-af54-f8d20b6812ce" class="col nsd-app-content-panel">
+        <div data-nsd-label-uuid="3e39763c-a686-4af5-8188-40bf1d30ea65" data-nsd-action-uris="uuid:3e39763c-a686-4af5-8188-40bf1d30ea65" class="col nsd-app-content-panel">
           <div class="container-fluid">
             <div class="row nsd-app-content-panel-breadcrumb-row">
               <div class="col">
@@ -114,7 +127,9 @@
                       <a href="index.html" data-nsd-label-uuid="8144674f-0aa4-4a32-ae00-1733e2e72488">
                         <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"/>Polity</a>
                     </li>
-                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="9dbf923b-45a6-41dc-af54-f8d20b6812ce"><img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif" class="nsd-app-label-icon"/>Inheritance</span>
+                    <li class="breadcrumb-item"><span data-nsd-label-uuid="dc6b2346-b36d-4644-9bbb-cbb52a811fe1"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/external-diagram-seo-media-dreamstale-lineal-dreamstale.png" class="nsd-app-label-icon"/>Graphs</span>
+                    </li>
+                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="3e39763c-a686-4af5-8188-40bf1d30ea65">Force Graph 3D</span>
                     </li>
                   </ol>
                 </nav>
@@ -122,7 +137,7 @@
             </div>
             <div class="row nsd-app-content-panel-title-and-items-row">
               <div class="col-auto">
-                <H1><span data-nsd-label-uuid="9dbf923b-45a6-41dc-af54-f8d20b6812ce" class="nsd-app-content-panel-title"><img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif" class="nsd-app-label-icon"/>Inheritance</span>
+                <H1><span data-nsd-label-uuid="3e39763c-a686-4af5-8188-40bf1d30ea65" class="nsd-app-content-panel-title">Force Graph 3D<a data-toggle="modal" data-target="#nsd_90" href="#" title="A live force-layout graph of package classifiers showing detailed relationships between them" style="vertical-align:super;font-size:x-small;margin-left:0.2em"><span class="far fa-question-circle nsd-app-label-icon"></span></a></span>
                 </H1>
               </div>
             </div>
@@ -130,31 +145,124 @@
               <div class="col">
                 <div class="container-fluid">
                   <div class="row">
-                    <div data-nsd-action-uris="uuid:32d06e1a-c710-47df-91c0-60458b2ccaeb" class="col">
-                      <div class="container-fluid">
-                        <div class="row nsd-app-content-panel-title-and-items-row">
-                          <div class="col-auto">
-                            <H2><span data-nsd-label-uuid="32d06e1a-c710-47df-91c0-60458b2ccaeb" class="nsd-app-content-panel-title">Supertypes</span>
-                            </H2>
-                          </div>
-                        </div>
-                        <div class="row nsd-app-content-panel-content-row">
-                          <div class="col">
-                            <div class="container-fluid">
-                              <div class="row">
-                                <div class="col">
-<div>
-  <div id="supertypes-table">
-    <nsd-ecore-doc-table :columns="[{&quot;key&quot;:&quot;name&quot;,&quot;visible&quot;:true,&quot;label&quot;:&quot;Name&quot;},{&quot;key&quot;:&quot;description&quot;,&quot;visible&quot;:true,&quot;label&quot;:&quot;Description&quot;}]" :items="[{&quot;name&quot;:&quot;\r\n&lt;a href=\&quot;https://ncore.models.nasdanika.org/references/eClassifiers/IMarked/index.html\&quot;&gt;\r\n  &lt;img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EInterface.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/&gt;&lt;i&gt;IMarked&lt;\/i&gt;&lt;\/a&gt;&quot;},{&quot;name&quot;:&quot;\r\n&lt;a href=\&quot;https://ncore.models.nasdanika.org/references/eClassifiers/Marked/index.html\&quot;&gt;\r\n  &lt;img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EInterface.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/&gt;&lt;i&gt;Marked&lt;\/i&gt;&lt;\/a&gt;&quot;},{&quot;name&quot;:&quot;\r\n&lt;a href=\&quot;https://ncore.models.nasdanika.org/references/eClassifiers/Adaptable/index.html\&quot;&gt;\r\n  &lt;img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EInterface.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/&gt;&lt;i&gt;Adaptable&lt;\/i&gt;&lt;\/a&gt;&quot;},{&quot;name&quot;:&quot;\r\n&lt;a href=\&quot;https://ncore.models.nasdanika.org/references/eClassifiers/ModelElement/index.html\&quot;&gt;\r\n  &lt;img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/&gt;&lt;i&gt;ModelElement&lt;\/i&gt;&lt;\/a&gt;&quot;},{&quot;name&quot;:&quot;\r\n&lt;a href=\&quot;https://ncore.models.nasdanika.org/references/eClassifiers/NamedElement/index.html\&quot;&gt;\r\n  &lt;img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/&gt;NamedElement&lt;\/a&gt;&quot;},{&quot;name&quot;:&quot;\r\n&lt;a href=\&quot;https://ncore.models.nasdanika.org/references/eClassifiers/Documented/index.html\&quot;&gt;\r\n  &lt;img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EInterface.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/&gt;&lt;i&gt;Documented&lt;\/i&gt;&lt;\/a&gt;&quot;},{&quot;name&quot;:&quot;\r\n&lt;b&gt;\r\n&lt;a href=\&quot;https://ncore.models.nasdanika.org/references/eClassifiers/DocumentedNamedElement/index.html\&quot;&gt;\r\n  &lt;img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/&gt;DocumentedNamedElement&lt;\/a&gt;&lt;\/b&gt;&quot;}]" config-key="eclass-supertypes" transitive-label="All"/>
-  </div>
-  <script>new Vue({ el: '#supertypes-table' });</script>
-</div></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <div class="col"><div id="force-graph-20" class="row" style="height:70vh;width:100%">
+</div>
+<script type="module">
+	import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+	import SpriteText from "https://cdn.jsdelivr.net/npm/three-spritetext@1.10.0/dist/three-spritetext.mjs";
+
+	        new ForceGraph3D(
+                document.getElementById('force-graph-20'), 
+                {
+                        extraRenderers: [
+                                new CSS2DRenderer()
+                        ]
+                })
+                .graphData({
+          "nodes": [
+            {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif",
+              "size": 3,
+              "name": "DocumentedNamedElement",
+              "id": "DocumentedNamedElement@ecore://nasdanika.org/core/ncore",
+              "value": [{"externalLink": "https://ncore.models.nasdanika.org/references/eClassifiers/DocumentedNamedElement/index.html"}],
+              "group": "ecore://nasdanika.org/core/ncore"
+            },
+            {
+              "size": 3,
+              "name": "Person",
+              "description": "In this model a person is an abstract supertype of Man and Woman",
+              "id": "Person@ecore://nasdanika.org/models/family",
+              "value": [{"externalLink": "../Person/index.html"}],
+              "group": "ecore://nasdanika.org/models/family"
+            },
+            {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif",
+              "size": 3,
+              "name": "Polity",
+              "id": "Polity@ecore://nasdanika.org/models/family",
+              "value": [{"externalLink": ""}],
+              "group": "ecore://nasdanika.org/models/family"
+            }
+          ],
+          "links": [
+            {
+              "rotation": 0,
+              "source": "Polity@ecore://nasdanika.org/models/family",
+              "target": "DocumentedNamedElement@ecore://nasdanika.org/core/ncore",
+              "group": "inheritance",
+              "curvature": 0
+            },
+            {
+              "rotation": 0,
+              "name": "residents",
+              "source": "Polity@ecore://nasdanika.org/models/family",
+              "target": "Person@ecore://nasdanika.org/models/family",
+              "group": "reference",
+              "curvature": 0
+            }
+          ]
+        })
+                .nodeAutoColorBy('group')
+                .nodeVal('size')
+                .linkDirectionalArrowLength(2.5)
+                .linkDirectionalArrowRelPos(1)
+                .linkCurvature('curvature')
+                .linkCurveRotation('rotation')
+                .linkAutoColorBy('group')
+                .onNodeClick((node, event) => {
+       if (node.lastClick) {
+        if (event.timeStamp - node.lastClick < 500) {
+			if (Array.isArray(node.value) && node.value.length > 0) {
+				if (node.value[0].link) {
+					window.open(node.value[0].link, "_self");
+				} else if (node.value[0].externalLink) {
+					window.open(node.value[0].externalLink);
+				}
+			}
+			delete node.lastClick;
+		} else {
+			node.lastClick = event.timeStamp;
+		}
+	} else {
+		node.lastClick = event.timeStamp;
+	}
+   })
+                .nodeThreeObject(node => {
+        const nodeEl = document.createElement('div');
+        nodeEl.textContent = node.name;
+        nodeEl.style.color = node.color;
+        nodeEl.className = 'node-label';
+        return new CSS2DObject(nodeEl);
+      })
+                .nodeThreeObjectExtend(true)
+                .linkThreeObject(link => {
+         // extend link with text sprite
+         if (link.name && !link.curvature) {
+           const sprite = new SpriteText(link.name);
+           sprite.color = 'lightgrey';
+           sprite.textHeight = 1.5;
+           return sprite;
+         }
+       })
+                .linkPositionUpdate((sprite, { start, end }) => {
+		if (sprite) {
+          const pos = Object.assign(...['x', 'y', 'z'].map(c => ({
+            [c]: start[c] + (end[c] - start[c]) / 1.3
+          })));
+
+          // Position sprite
+          Object.assign(sprite.position, pos);
+        }
+       })
+                .linkThreeObjectExtend(true)
+                .onNodeDragEnd(node => {
+          node.fx = node.x;
+          node.fy = node.y;
+          node.fz = node.z;
+        })
+</script>
+</div>
                   </div>
                 </div>
               </div>
