@@ -11,7 +11,7 @@ import org.nasdanika.models.family.Woman;
 public class WomanNodeProcessor extends PersonNodeProcessor<Woman> {
 	
 	public WomanNodeProcessor(
-		NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
+		NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
 		Context context,
 		java.util.function.BiFunction<EObject, ProgressMonitor, Action> prototypeProvider) {
 		super(config, context, prototypeProvider);

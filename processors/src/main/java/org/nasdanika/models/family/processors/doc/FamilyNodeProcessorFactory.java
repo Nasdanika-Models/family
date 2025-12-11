@@ -30,7 +30,7 @@ public class FamilyNodeProcessorFactory {
 	private Context context;
 	private java.util.function.BiFunction<URI, ProgressMonitor, Label> prototypeProvider;
 
-	protected java.util.function.BiFunction<EObject, ProgressMonitor, Action> getPrototypeProvider(NodeProcessorConfig<WidgetFactory, WidgetFactory> config) {
+	protected java.util.function.BiFunction<EObject, ProgressMonitor, Action> getPrototypeProvider(NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config) {
 		return (eObject, progressMonitor) -> {
 			if (prototypeProvider != null) {
 				for (URI identifier: NcoreUtil.getIdentifiers(((EObjectNode) config.getElement()).get())) {
@@ -58,9 +58,9 @@ public class FamilyNodeProcessorFactory {
 	
 	@EObjectNodeProcessor(type = Family.class)
 	public Object createFamilyNodeProcessor(
-			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
+			NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
 			boolean parallel, 
-			BiConsumer<Element,BiConsumer<ProcessorInfo<Object>,ProgressMonitor>> infoProvider,
+			BiConsumer<Element,BiConsumer<ProcessorInfo<WidgetFactory, WidgetFactory, Object, Object>,ProgressMonitor>> infoProvider,
 			ProgressMonitor progressMonitor) {
 		
 		return new FamilyNodeProcessor(config, context, getPrototypeProvider(config));
@@ -68,9 +68,9 @@ public class FamilyNodeProcessorFactory {
 	
 	@EObjectNodeProcessor(type = Man.class)
 	public Object createManNodeProcessor(
-			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
+			NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
 			boolean parallel, 
-			BiConsumer<Element,BiConsumer<ProcessorInfo<Object>,ProgressMonitor>> infoProvider,
+			BiConsumer<Element,BiConsumer<ProcessorInfo<WidgetFactory, WidgetFactory, Object, Object>,ProgressMonitor>> infoProvider,
 			ProgressMonitor progressMonitor) {
 		
 		return new ManNodeProcessor(config, context, getPrototypeProvider(config));
@@ -78,9 +78,9 @@ public class FamilyNodeProcessorFactory {
 	
 	@EObjectNodeProcessor(type = Woman.class)
 	public Object createWomanNodeProcessor(
-			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
+			NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
 			boolean parallel, 
-			BiConsumer<Element,BiConsumer<ProcessorInfo<Object>,ProgressMonitor>> infoProvider,
+			BiConsumer<Element,BiConsumer<ProcessorInfo<WidgetFactory, WidgetFactory, Object, Object>,ProgressMonitor>> infoProvider,
 			ProgressMonitor progressMonitor) {
 		
 		return new WomanNodeProcessor(config, context, getPrototypeProvider(config));

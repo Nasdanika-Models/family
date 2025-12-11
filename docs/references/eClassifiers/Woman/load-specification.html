@@ -12,20 +12,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nasdanika-Models/html-app@master/gen/web-resources/css/app.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jstree@3.3.16/dist/themes/default/style.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.5.0/github-markdown.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/default.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.23.0/dist/bootstrap-vue.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/themes/default/style.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.1.0/github-markdown.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.css"/>
     <script src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/html-app@master/gen/web-resources/js/common.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/html-app@master/gen/web-resources/js/dark-head.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jstree@3.3.16/dist/jstree.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.23.0/dist/bootstrap-vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/jstree.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/html-app@master/gen/web-resources/js/components/table.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/components/table.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script><!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/3d-force-graph"></script><script type="importmap">
+{
+    "imports" : {
+        "three": "https://cdn.jsdelivr.net/npm/three@v0.177.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.177.0/examples/jsm/"
+    }
+}
+</script>    
+<!-- Node text styling -->      
+<style>
+  .node-label {
+        font-size: 12px;
+        padding: 1px 4px;
+        border-radius: 4px;
+        background-color: rgba(0,0,0,0.5);
+        user-select: none;
+      }               
+</style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BRJVLK8CC"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -39,14 +59,14 @@
     <div class="container-fluid nsd-app-container">
       <div class="row">
         <div class="col nsd-app-header">
-          <a href="https://github.com/Nasdanika-Models" data-nsd-label-uuid="17afac7d-f397-4877-aecd-d03ca586e90c" class="nsd-app-header-title">
+          <a href="https://github.com/Nasdanika-Models" data-nsd-label-uuid="6300dc28-49e2-4f6e-8fc7-50a8d5d93054" class="nsd-app-header-title">
             <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon"/>Nasdanika Models</a>
           <ul class="nav nsd-app-header-navs">
             <li class="nav-item">
-              <a href="../../../search.html" data-nsd-label-uuid="32b6d16c-8966-486e-8fb5-ec0da93ae427" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
+              <a href="../../../search.html" data-nsd-label-uuid="ae14eb59-0cef-4f87-afe9-97ecde9c7587" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
             </li>
             <li class="nav-item">
-              <a href="../../../glossary.html" data-nsd-label-uuid="443d3d31-3244-41f7-8e24-533a0649f62b" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
+              <a href="../../../glossary.html" data-nsd-label-uuid="2c05b314-41ca-47c0-9dfb-e385143dc16e" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
             </li>
           </ul>
         </div>
@@ -54,34 +74,34 @@
       <div class="row">
         <div class="col nsd-app-navbar">
           <ul class="navbar navbar-light navbar-expand-lg">
-            <a href="../../../index.html" title="A model of a family" data-nsd-label-uuid="ddd0e47b-aaf9-4064-a7f2-71ee97d05497" class="navbar-brand">
+            <a href="../../../index.html" title="A model of a family" data-nsd-label-uuid="eef9ca10-6203-47f9-8960-69d84d09c206" class="navbar-brand">
               <img src="https://img.icons8.com/officel/30/family--v2.png" class="nsd-app-label-icon"/>Family Model</a>
-            <button type="button" data-toggle="collapse" data-target="#nsd_ag" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            <button type="button" data-toggle="collapse" data-target="#nsd_ef" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
             </button>
-            <div id="nsd_ag" class="collapse navbar-collapse">
+            <div id="nsd_ef" class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a href="../../../classifiers.html" data-nsd-label-uuid="d6c100cd-b034-4288-88ab-c548dca7e862" class="nav-link">Classifiers</a>
+                  <a href="../../../classifiers.html" data-nsd-label-uuid="60ce893f-8917-4138-b411-46e5d6a80569" class="nav-link">Classifiers</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../../../diagram.html" data-nsd-label-uuid="ec3d5f32-9a15-447e-8020-a5aea4a4d3ab" class="nav-link"><span class="fas fa-project-diagram nsd-app-label-icon"></span>Diagram</a>
+                  <a href="../../../diagram.html" data-nsd-label-uuid="dc7eb08a-7a50-4446-ab0c-33e502b57400" class="nav-link"><span class="fas fa-project-diagram nsd-app-label-icon"></span>Diagram</a>
                 </li>
                 <li class="nav-item">
-                  <li data-nsd-label-uuid="c044afe0-eefd-4b84-9a49-be58b55683ee" class="dropdown">
+                  <li data-nsd-label-uuid="9cb4e6a1-b0f7-44f2-be16-782565df2069" class="dropdown">
                     <a role="button" data-toggle="dropdown" class="nav-link dropdown-toggle">
                       <img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/external-diagram-seo-media-dreamstale-lineal-dreamstale.png" class="nsd-app-label-icon"/>Graphs</a>
                     <div class="dropdown-menu">
-                      <a href="../../../default-graph.html" data-nsd-label-uuid="ba4a9f2a-9b37-40d1-884d-ed06ed8e5dc4" class="dropdown-item">Default Graph</a>
-                      <a href="../../../circular-layout-graph.html" data-nsd-label-uuid="ad8be5e2-ea36-4531-b9ed-5c853794afa4" class="dropdown-item">Circular Graph</a>
-                      <a href="../../../force-layout-graph.html" data-nsd-label-uuid="89240778-1c53-49ed-90df-07602cae2d5e" class="dropdown-item">Force Graph</a>
-                      <a href="../../../force-layout-graph-3d.html" data-nsd-label-uuid="883923cb-d55b-4bf5-8967-47f74064dfac" class="dropdown-item">Force Graph 3D</a>
-                      <a href="../../../force-layout-graph-3d-detailed.html" data-nsd-label-uuid="1ffa0837-fa80-42e7-96d5-ecbbdf60975d" class="dropdown-item">Force Graph 3D Detailed</a>
+                      <a href="../../../default-graph.html" data-nsd-label-uuid="b9178671-4764-4a3a-bab2-f6c43920c088" class="dropdown-item">Default Graph</a>
+                      <a href="../../../circular-layout-graph.html" data-nsd-label-uuid="1272c39c-91fa-41ea-9edc-aec0d9df466a" class="dropdown-item">Circular Graph</a>
+                      <a href="../../../force-layout-graph.html" data-nsd-label-uuid="b59feef4-0e8a-48f1-8ee9-1a2a7e8a0e2a" class="dropdown-item">Force Graph</a>
+                      <a href="../../../force-layout-graph-3d.html" data-nsd-label-uuid="501c1d9e-c842-45fa-9c9e-3de1133be3a9" class="dropdown-item">Force Graph 3D</a>
+                      <a href="../../../force-layout-graph-3d-detailed.html" data-nsd-label-uuid="6b065a85-dad1-4189-a4d5-2cdfbafa029b" class="dropdown-item">Force Graph 3D Detailed</a>
                       <div title="With dependencies and sub-packages" class="dropdown-divider"></div>
-                      <a href="../../../default-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="753548ea-70d3-4f32-add6-bc6f3e590e8f" class="dropdown-item">Default Graph</a>
-                      <a href="../../../circular-layout-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="787b4e40-9b07-4714-b356-36857830bdb5" class="dropdown-item">Circular Graph</a>
-                      <a href="../../../force-layout-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="5a594ae6-640c-448f-93ba-42a369453c05" class="dropdown-item">Force Graph</a>
-                      <a href="../../../force-layout-graph-3d-with-dependencies-and-subpackages.html" data-nsd-label-uuid="2356044b-6b6e-44e5-9947-78e45bc6bd5e" class="dropdown-item">Force Graph 3D</a>
-                      <a href="../../../force-layout-graph-3d-with-dependencies-and-subpackages-detailed.html" data-nsd-label-uuid="2249e0b4-5dc7-4e3f-b13c-afa51f49fe67" class="dropdown-item">Force Graph 3D Detailed</a>
+                      <a href="../../../default-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="1382067c-5a19-4c0e-908a-447c8bc3546e" class="dropdown-item">Default Graph</a>
+                      <a href="../../../circular-layout-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="21c37571-3b87-40e0-94a6-fe10c1330a89" class="dropdown-item">Circular Graph</a>
+                      <a href="../../../force-layout-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="df6494f2-6188-4f2e-9a79-75f55102f53d" class="dropdown-item">Force Graph</a>
+                      <a href="../../../force-layout-graph-3d-with-dependencies-and-subpackages.html" data-nsd-label-uuid="47f666a8-cceb-4fb7-a505-ad14d33d39c3" class="dropdown-item">Force Graph 3D</a>
+                      <a href="../../../force-layout-graph-3d-with-dependencies-and-subpackages-detailed.html" data-nsd-label-uuid="0d2aa56e-96df-49c2-9c2a-2fd57df4aede" class="dropdown-item">Force Graph 3D Detailed</a>
                     </div>
                   </li>
                 </li>
@@ -92,29 +112,34 @@
       </div>
       <div class="row nsd-app-content-row">
         <div class="col nsd-app-navigation-panel">
-          <div class="list-group list-group-flush">
-            <a href="../Family/index.html" title="Family is a group of related people" data-nsd-label-uuid="f8cf432b-1f84-47bc-aad1-29ce2c17caf9" class="list-group-item list-group-action">
-              <img src="https://img.icons8.com/officexs/24/family--v1.png" class="nsd-app-label-icon"/>Family</a>
-            <a href="../Man/index.html" title="An adult male human" data-nsd-label-uuid="68931896-2810-4aa1-b686-0d98c70c292c" class="list-group-item list-group-action">
-              <img src="https://img.icons8.com/officexs/24/user.png" class="nsd-app-label-icon"/>Man</a>
-            <a href="../Person/index.html" title="In this model a person is an abstract supertype of Man and Woman" data-nsd-label-uuid="9c644f2a-82a4-4236-b8d2-543444c81c47" class="list-group-item list-group-action"><span class="fas fa-user nsd-app-label-icon"></span><i>Person</i></a>
-            <a href="../Polity/index.html" data-nsd-label-uuid="8144674f-0aa4-4a32-ae00-1733e2e72488" class="list-group-item list-group-action">
-              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"/>Polity</a>
-            <a href="index.html" title="An adult female human" data-nsd-label-uuid="99e3645c-8fb5-43b0-a62b-51607951b632" class="list-group-item list-group-action active">
-              <img src="https://img.icons8.com/officexs/24/guest-female.png" class="nsd-app-label-icon"/>Woman</a>
-          </div>
+          <input type="text" id="609d0fc9-0adf-4c86-9a6b-5d7cb2e88438-navigation-panel_searchInput" title="Full-text search. You can use wildcards, e.g. 'foo*' or 'f*o'; title or content fields, e.g. 'title:foo* bar'; boosts, e.g. 'foo^10 bar'; fuzzy matches, e.g. 'foo~1'; and term presence, e.g. '+foo bar -baz'" class="form-control mt-1"/>
+          <div id="609d0fc9-0adf-4c86-9a6b-5d7cb2e88438-navigation-panel"></div>
+          <script>$(document).ready( function() {
+$('#609d0fc9-0adf-4c86-9a6b-5d7cb2e88438-navigation-panel').jstree(function(tree) { tree.state.filter = function(state) { delete state.core.selected; return state; };  tree.search.search_callback = function(searchStr, node) { if (typeof window.nsdJsTreeSearchCallback === 'function') return window.nsdJsTreeSearchCallback(searchStr, node); var sf = new $.vakata.search(searchStr, true, { caseSensitive : false, fuzzy : false }); return sf.search(node.text).isMatch; }; return tree; }({"core":{"data":[{"a_attr":{"title":"Family is a group of related people","onclick":"window.location='../Family/index.html';"},"data-nsd-label-uuid":"0e2253e5-af66-4037-a57d-15df245cc0b8","icon":"https://img.icons8.com/officexs/24/family--v1.png","id":"nsd-app-nav-item-a90cba68-23d9-4081-a751-bacbf85c2edf","text":"Family","type":"leaf"},{"a_attr":{"title":"An adult male human","onclick":"window.location='../Man/index.html';"},"data-nsd-label-uuid":"7afff24f-904f-4ed8-a1df-41e29e506706","icon":"https://img.icons8.com/officexs/24/user.png","id":"nsd-app-nav-item-6d347cfb-2202-4129-802a-a69009c9d9d7","text":"Man","type":"leaf"},{"a_attr":{"title":"In this model a person is an abstract supertype of Man and Woman","onclick":"window.location='../Person/index.html';"},"data-nsd-label-uuid":"1011c442-ffb8-4c08-b96a-8b1c2228ae54","icon":"fas fa-user","id":"nsd-app-nav-item-bce2ff35-c640-4157-818d-6db6785d2e14","text":"<i>Person<\/i>","type":"leaf"},{"a_attr":{"onclick":"window.location='../Polity/index.html';"},"data-nsd-label-uuid":"2f645196-ed10-4efa-a53e-eeb7e3387035","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"nsd-app-nav-item-0d783c53-3a09-421e-b814-5846ea6fea44","text":"Polity","type":"leaf"},{"a_attr":{"title":"An adult female human","onclick":"window.location='index.html';"},"data-nsd-label-uuid":"add1ebcf-e0ca-4669-87f1-5cec78a5f9e6","icon":"https://img.icons8.com/officexs/24/guest-female.png","state":{"selected":true},"id":"nsd-app-nav-item-3636b6fb-a98a-4a1c-a345-ea72222ebb31","text":"Woman","type":"leaf"}]},"search":{"show_only_matches":true,"show_only_matches_children":true},"types":{"leaf":{"icon":"jstree-file"}},"plugins":["state","type","search"],"state":{"key":"609d0fc9-0adf-4c86-9a6b-5d7cb2e88438-navigation-panel"}}));
+// Tokens: searchInputSelector, timer, treeSelector
+$('#609d0fc9-0adf-4c86-9a6b-5d7cb2e88438-navigation-panel_searchInput').keyup(function () {
+    if (window['nsd_jstTreeSearchTimer_nsd_el']) { 
+		clearTimeout(window['nsd_jstTreeSearchTimer_nsd_el']); 
+	}
+    window['nsd_jstTreeSearchTimer_nsd_el'] = setTimeout(function () {
+      var v = $('#609d0fc9-0adf-4c86-9a6b-5d7cb2e88438-navigation-panel_searchInput').val();
+      $('#609d0fc9-0adf-4c86-9a6b-5d7cb2e88438-navigation-panel').jstree(true).search(v);
+    }, 250);
+  });
+
+});</script>
         </div>
-        <div data-nsd-label-uuid="f39b1555-798b-46a2-8b03-ea6aa9ff6144" data-nsd-action-uris="uuid:f39b1555-798b-46a2-8b03-ea6aa9ff6144" class="col nsd-app-content-panel">
+        <main data-nsd-label-uuid="3cad6364-d38a-46ee-8790-80e6e915fad2" data-nsd-action-uris="uuid:3cad6364-d38a-46ee-8790-80e6e915fad2" class="col nsd-app-content-panel">
           <div class="container-fluid">
             <div class="row nsd-app-content-panel-breadcrumb-row">
               <div class="col">
                 <nav aria-label="breadcrumb" class="nsd-app-content-panel-breadcrumb">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                      <a href="index.html" title="An adult female human" data-nsd-label-uuid="99e3645c-8fb5-43b0-a62b-51607951b632">
+                      <a href="index.html" title="An adult female human" data-nsd-label-uuid="add1ebcf-e0ca-4669-87f1-5cec78a5f9e6">
                         <img src="https://img.icons8.com/officexs/24/guest-female.png" class="nsd-app-label-icon"/>Woman</a>
                     </li>
-                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="f39b1555-798b-46a2-8b03-ea6aa9ff6144">Load specification</span>
+                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="3cad6364-d38a-46ee-8790-80e6e915fad2">Load specification</span>
                     </li>
                   </ol>
                 </nav>
@@ -122,7 +147,7 @@
             </div>
             <div class="row nsd-app-content-panel-title-and-items-row">
               <div class="col-auto">
-                <H1><span data-nsd-label-uuid="f39b1555-798b-46a2-8b03-ea6aa9ff6144" class="nsd-app-content-panel-title">Load specification</span>
+                <H1><span data-nsd-label-uuid="3cad6364-d38a-46ee-8790-80e6e915fad2" class="nsd-app-content-panel-title">Load specification</span>
                 </H1>
               </div>
             </div>
@@ -142,13 +167,13 @@
               </div>
             </div>
           </div>
-        </div>
+        </main>
       </div>
       <div class="row">
         <div class="col nsd-app-footer">
           <ul class="nav nsd-app-footer-navs">
             <li class="nav-item">
-              <a href="https://github.com/Nasdanika-Models/family" data-nsd-label-uuid="3b05a59b-be90-4cf9-ae93-53785f79b0e2" class="nav-link"><span class="fab fa-github nsd-app-label-icon"></span>Sources</a>
+              <a href="https://github.com/Nasdanika-Models/family" data-nsd-label-uuid="ce3fd83a-2444-48c1-982d-125124efff5e" class="nav-link"><span class="fab fa-github nsd-app-label-icon"></span>Sources</a>
             </li>
             <li class="nav-item"><span class="navbar-text">&nbsp;&bull;&nbsp;</span>
             </li>

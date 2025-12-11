@@ -23,7 +23,7 @@ import org.nasdanika.models.family.FamilyPackage;
 public class FamilyNodeProcessor extends EObjectNodeProcessor<Family> {
 	
 	public FamilyNodeProcessor(
-		NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
+		NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
 		Context context,
 		java.util.function.BiFunction<EObject, ProgressMonitor, Action> prototypeProvider) {
 		super(config, context, prototypeProvider);

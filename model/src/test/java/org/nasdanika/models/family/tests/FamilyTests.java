@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.io.File;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 import org.eclipse.emf.common.util.EList;
@@ -50,10 +51,12 @@ public class FamilyTests {
 		Date albertDOB = albert.getDateOfBirth();
 		System.out.println(albertDOB);
 		assertNotNull(albertDOB);
-		Calendar calendar = Calendar.getInstance();
-		calendar.set(1947, 2, 10);
+		Calendar calendar = Calendar.getInstance(Locale.getDefault());
+		calendar.set(1947, 2, 10, 0, 0, 0);
 		Date expectedDOB = calendar.getTime();
 		System.out.println(expectedDOB);
+		System.out.println("Albert DOB: " + albertDOB);
+		System.out.println("Albert expected DOB: " + expectedDOB);
 		assertEquals(
 				TimeUnit.DAYS.convert(expectedDOB.getTime(), TimeUnit.MILLISECONDS) , 
 				TimeUnit.DAYS.convert(albertDOB.getTime(), TimeUnit.MILLISECONDS));

@@ -12,7 +12,7 @@ import org.nasdanika.models.family.Person;
 public class PersonNodeProcessor<T extends Person> extends EObjectNodeProcessor<T> {
 	
 	public PersonNodeProcessor(
-		NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
+		NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
 		Context context,
 		java.util.function.BiFunction<EObject, ProgressMonitor, Action> prototypeProvider) {
 		super(config, context, prototypeProvider);

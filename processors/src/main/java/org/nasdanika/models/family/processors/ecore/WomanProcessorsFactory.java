@@ -47,7 +47,7 @@ public class WomanProcessorsFactory {
 			icon = "https://img.icons8.com/officexs/24/guest-female.png"
 	)
 	public EClassNodeProcessor createFoxProcessor(
-			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
+			NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
 			java.util.function.BiFunction<EObject, ProgressMonitor, Action> prototypeProvider,
 			BiConsumer<Label, ProgressMonitor> labelConfigurator,
 			ProgressMonitor progressMonitor) {		

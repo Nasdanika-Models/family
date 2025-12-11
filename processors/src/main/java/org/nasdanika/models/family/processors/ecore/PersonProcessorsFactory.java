@@ -53,7 +53,7 @@ public class PersonProcessorsFactory {
 			icon = "fas fa-user"
 	)
 	public EClassNodeProcessor createPersonProcessor(
-			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
+			NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
 			java.util.function.BiFunction<EObject, ProgressMonitor, Action> prototypeProvider,
 			BiConsumer<Label, ProgressMonitor> labelConfigurator,
 			ProgressMonitor progressMonitor) {		
@@ -100,7 +100,7 @@ public class PersonProcessorsFactory {
 					"""
 	)
 	public EAttributeNodeProcessor createAnimalNameProcessor(
-			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
+			NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
 			java.util.function.BiFunction<EObject, ProgressMonitor, Action> prototypeProvider,
 			BiConsumer<Label, ProgressMonitor> labelConfigurator,
 			ProgressMonitor progressMonitor) {		

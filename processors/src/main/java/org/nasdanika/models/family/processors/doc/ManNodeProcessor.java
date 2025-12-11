@@ -13,7 +13,7 @@ import org.nasdanika.models.family.Man;
 public class ManNodeProcessor extends PersonNodeProcessor<Man> {
 	
 	public ManNodeProcessor(
-		NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
+		NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
 		Context context,
 		java.util.function.BiFunction<EObject, ProgressMonitor, Action> prototypeProvider) {
 		super(config, context, prototypeProvider);

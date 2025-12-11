@@ -51,7 +51,7 @@ public class ManProcessorsFactory {
 			icon = "https://img.icons8.com/officexs/24/user.png"
 	)
 	public EClassNodeProcessor createFoxProcessor(
-			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
+			NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
 			java.util.function.BiFunction<EObject, ProgressMonitor, Action> prototypeProvider,
 			BiConsumer<Label, ProgressMonitor> labelConfigurator,
 			ProgressMonitor progressMonitor) {		

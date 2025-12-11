@@ -84,11 +84,13 @@ public class TestFamilyModelDocGen {
 				return !"CNAME".equals(path) && !path.startsWith("demos/");			
 			};
 			
-		};		
+		};	
+		
+		URI pageTemplateURI = URI.createFileURI(new File("page-template.yml").getAbsolutePath());//.appendFragment("/");		
 		
 		Map<String, Collection<String>> errors = actionSiteGenerator.generate(
 				rootActionURI, 
-				Theme.Cerulean.pageTemplateCdnURI, 
+				pageTemplateURI, // Theme.Cerulean.pageTemplateCdnURI, 
 				siteMapDomain, 
 				new File("../docs"), 
 				new File("target/doc-site-work-dir"), 
@@ -105,7 +107,7 @@ public class TestFamilyModelDocGen {
 		
 		System.out.println("There are " + errorCount + " site errors");
 		
-		if (errorCount != 61) {
+		if (errorCount != 64) {
 			throw new ExecutionException("There are problems with pages: " + errorCount);
 		}		
 	}
