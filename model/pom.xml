@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.nasdanika.models.family</groupId>
-		<version>2025.12.0</version>
+		<version>2026.2.0</version>
 		<artifactId>parent</artifactId>
 		<relativePath>..</relativePath>
 	</parent>
@@ -65,12 +65,18 @@
 		<dependency>
 		    <groupId>org.nasdanika.models.party</groupId>
 		    <artifactId>model</artifactId>
-		    <version>2025.12.0</version>
+		    <version>2026.2.0</version>
 		</dependency>
+        <dependency>
+            <groupId>org.nasdanika.core</groupId>
+            <artifactId>emf-json</artifactId>
+            <version>${core.version}</version>
+        </dependency>
+		
 		<dependency>
 		    <groupId>org.nasdanika.models.excel</groupId>
 		    <artifactId>model</artifactId>
-		    <version>2025.12.0</version>
+		    <version>2026.2.0</version>
 		</dependency>
 	</dependencies>
 </project>

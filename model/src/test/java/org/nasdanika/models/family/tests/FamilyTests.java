@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.junit.jupiter.api.Test;
 import org.nasdanika.capability.CapabilityLoader;
 import org.nasdanika.capability.ServiceCapabilityFactory;
@@ -67,6 +67,27 @@ public class FamilyTests {
 		assertEquals(4, dave.getFather().getChildren().size());
 		assertEquals(1, dave.getChildren().size());
 		assertEquals(1, dave.getParents().size());
+		
+		URI xmiURI = URI.createFileURI(new File("target/family.xmi").getAbsolutePath());
+		Resource xmiResource = resourceSet.createResource(xmiURI);
+		xmiResource.getContents().add(EcoreUtil.copy(family));
+		xmiResource.save(null);
+				
+		URI jsonURI = URI.createFileURI(new File("target/family.json").getAbsolutePath());
+		Resource jsonResource = resourceSet.createResource(jsonURI);
+		jsonResource.getContents().add(EcoreUtil.copy(family));
+		jsonResource.save(null);
+		
+		URI yamlURI = URI.createFileURI(new File("target/family.yaml").getAbsolutePath());
+		Resource yamlResource = resourceSet.createResource(yamlURI);
+		yamlResource.getContents().add(EcoreUtil.copy(family));
+		yamlResource.save(null);
+		
+		URI binURI = URI.createFileURI(new File("target/family.ebin").getAbsolutePath());
+		Resource binResource = resourceSet.createResource(binURI);
+		binResource.getContents().add(EcoreUtil.copy(family));
+		binResource.save(null);
+		
 	}
 	
 	@Test
