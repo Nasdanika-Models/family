@@ -8,7 +8,7 @@ An [Ecore](https://www.eclipse.org/modeling/emf/) micro-model of the family as a
 [TOC levels=6]
 
 
-This model takes over [family.models.nasdanika.org](https://family.models.nasdanika.org/original).
+This model takes over the [original family model](https://family.models.nasdanika.org/original).
 The original family model purpose was to mimic the [Eclipse Sirius Basic Family Model](https://wiki.eclipse.org/Sirius/Tutorials/BasicFamily) at a time when Draw.io was the only authoring surface, and it is kept for side-by-side comparison and as the teaching example behind the [semantic mapping demo](https://nasdanika-demos.github.io/family-semantic-mapping/).
 
 ## Position: the top of the tower
