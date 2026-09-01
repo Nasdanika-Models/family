@@ -9,6 +9,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.nasdanika.capability.CapabilityLoader;
+import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.common.Util;
 import org.nasdanika.models.excel.Cell;
 import org.nasdanika.models.excel.CellRow;
@@ -28,6 +30,10 @@ import org.nasdanika.ncore.NcorePackage;
  */
 public class FamilyWorkbookResourceFactory extends MappingWorkbookResourceFactory {
 	
+	public FamilyWorkbookResourceFactory(CapabilityLoader capabilityLoader, ProgressMonitor progressMonitor) {
+		super(capabilityLoader, progressMonitor);
+	}
+
 	@Override
 	protected EObject createRoot() {
 		return FamilyFactory.eINSTANCE.createFamily();

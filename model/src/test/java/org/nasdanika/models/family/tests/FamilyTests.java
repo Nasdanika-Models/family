@@ -36,7 +36,7 @@ public class FamilyTests {
 		Requirement<ResourceSetRequirement, ResourceSet> requirement = ServiceCapabilityFactory.createRequirement(ResourceSet.class);		
 		ResourceSet resourceSet = capabilityLoader.loadOne(requirement, progressMonitor);
 		
-		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xlsx", new FamilyWorkbookResourceFactory());
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xlsx", new FamilyWorkbookResourceFactory(capabilityLoader, progressMonitor));
 		File test = new File("family.xlsx").getCanonicalFile();
 		Resource familyResource = resourceSet.getResource(URI.createFileURI(test.getAbsolutePath()), true);
 		assertEquals(1, familyResource.getContents().size());
