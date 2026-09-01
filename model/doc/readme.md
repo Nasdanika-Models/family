@@ -69,6 +69,18 @@ Audience-tiered publishing works the same way: full site for close family, names
 
 **Family as capability provider.** The family is not only a consumer: mentoring, caregiving, housing, introductions, and investment are capabilities members provide to each other, and the model makes the exchange visible, which is what turns a tree of ancestors into a living capability ecosystem.
 
+**Ties beyond kinship, and their quality.** A family graph that stops at blood and marriage is missing most of what a family is.
+Godparents, caregivers, step-relations, the neighbour who is effectively an aunt, the friend a member would call first: genealogical practice has always recorded these, and family-systems practice records them as a matter of course.
+They need no new classes here, because a tie is a relationship with a kind, and *friend*, *mentor*, *godparent*, *caregiver*, *household member* are catalog entries beside *parent* and *spouse*.
+What they do need is **quality**. Standard genogram notation, which practitioners have used for decades, draws a tie's character as well as its existence: close, distant, conflictual, estranged, cut off, fused.
+Modeled as a dated valence on the tie - an assessment like every other assessment on the tower, so a reconciliation is a new record rather than an overwritten field - the tree gains explanatory power: patterns repeat across generations, estrangements have dates, and "who in this family actually talks to whom" becomes answerable.
+
+**Personal development, and coaching as a provided capability.** The floors that answer a family's concerns answer an individual member's.
+A member holds concerns in the product management sense - goals, needs, pain points - and capabilities whose maturity is a dated, evidenced assessment rather than a self-rating.
+That is, structurally, the instrument a coach already uses: the wheel of life is a concern-domain catalog scored per person, a strengths inventory is a capability assessment, and GROW is decision plus work.
+Because these are tower floors rather than a separate app, a member's development plan and the family's provisioning decisions are one graph: a teenager's career concern pulls against the family's own capability network, and the mentor uncle is a provider like any other.
+A coach, therapist, tutor, or financial planner engaged by the family is likewise a capability provider working against a scoped, access-controlled projection - never the model itself.
+
 ## Resources
 
 * [GEDCOM specifications](https://gedcom.io/): GEDCOM 7 specification with sample and test files, and the 5.5.1 specification the major vendors still export.
