@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.nasdanika.models.family</groupId>
 	<artifactId>parent</artifactId>
-	<version>2026.6.0</version>
+	<version>2026.8.0</version>
 	<packaging>pom</packaging>
-	<name>Family model, processors, doc generator</name>
-	<description>Family model to demonstrate generation of Ecore documentation, loading from Excel and Drawio, and generation of model documentation</description>
-	<url>https://github.com/Nasdanika-Models/family</url>
+	<name>Nasdanika Family Model</name>
+	<description>Family model, resource and resource factory</description>
+	<url>https://family.models.nasdanika.org/</url>
 
 	<licenses>
 		<license>
@@ -32,26 +32,26 @@
 
 	<build>
 		<plugins>
-<plugin>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-enforcer-plugin</artifactId>
-<version>3.5.0</version>
-<executions>
-<execution>
-<id>enforce-maven</id>
-<goals>
-<goal>enforce</goal>
-</goals>
-<configuration>
-<rules>
-<requireMavenVersion>
-<version>3.9.16</version>
-</requireMavenVersion>
-</rules>
-</configuration>
-</execution>
-</executions>
-</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>3.5.0</version>
+				<executions>
+					<execution>
+						<id>enforce-maven</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireMavenVersion>
+									<version>3.9.16</version>
+								</requireMavenVersion>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -186,10 +186,41 @@
 
 	<modules>
 		<module>model</module>
-		<module>processors</module>
-		<module>generator</module>
 	</modules>
 
+	 <profiles>
+		<profile>
+			<id>central</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>3.2.8</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>	
+					<plugin>					
+						<groupId>org.sonatype.central</groupId>
+						<artifactId>central-publishing-maven-plugin</artifactId>
+						<version>0.9.0</version>
+						<extensions>true</extensions>
+						<configuration>
+							<publishingServerId>central</publishingServerId>
+							<autoPublish>true</autoPublish>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
 
 
