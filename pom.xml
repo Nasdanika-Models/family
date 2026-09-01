@@ -186,6 +186,7 @@
 
 	<modules>
 		<module>model</module>
+		<module>gedcom</module>
 	</modules>
 
 	 <profiles>
