@@ -13,8 +13,7 @@ The original family model purpose was to mimic the [Eclipse Sirius Basic Family 
 
 ## Position: the top of the tower
 
-The family model sits at the very top of the micro-model tower, on the [org design model](https://org-design.models.nasdanika.org/), and more precisely on the AI org model (org design plus [AI governance](https://ai.governance.models.nasdanika.org/)) once it is available.
-Two reasons for taking the AI governance branch: it does not hurt those who never touch AI, because tower floors are additive; and anyone providing services over family models (a family advisor running agents, for instance) needs exactly that vocabulary: oversight, evaluations, incidents, risk tiers.
+The family model sits at the very top of the micro-model tower, on the [org design model](https://org-design.models.nasdanika.org/).
 
 The initial design went the other way: a genealogy balcony off the lowest floor, climbing as the tower grew.
 The reversal is the insight. A family *is* an organization: members with capabilities, concerns to resolve, decisions to make and bind, work to do, events to remember, things to govern.
