@@ -1,0 +1,1 @@
+`gedcom4j` is a git sub-tree of `https://github.com/frizbog/gedcom4j.git gedcom4j-4.0.1` 
